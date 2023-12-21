@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": ".vscode",
+			"path": "D:/ĐẠI HỌC/2023 - 2024. Năm 3/I/TK Web/Bai tap Lon/Thuc hanh/.vscode"
+		},
+		{
+			"name": "KinhMatMoon_SoiSangMoiCungDuong",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "KinhMatMoon_SoiSangMoiCungDuong",
+		"liveServer.settings.port": 5504
+	}
+}
