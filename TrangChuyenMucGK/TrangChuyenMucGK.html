@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chuyên mục Sản phẩm</title>
+  <meta charset="utf-8">
+  <style>
+/* CSS để tùy chỉnh giao diện trang */
+body{
+  font-family:Arial, Helvetica, sans-serif;
+}
+header {
+  color: white;
+  background: url(bannerHong.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 400px;
+  height: 200px;
+  height: 15em;
+  position: relative;
+  filter: contrast(50%);
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-title {
+  text-align: center;
+}
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.product-list-container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.filter-container {
+  background-color: #FFD1DC;
+  padding: 10px;
+  color: rgb(97, 97, 97);
+  border-radius: 10px;
+}
+
+#product-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.product {
+  position: relative;
+  border: 1px solid #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fff;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 2px 4px rgb(255, 255, 255);
+
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  transition: filter 0.3s ease-in-out;
+}
+
+.product:hover img {
+  filter: brightness(80%);
+}
+
+.product h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color:#414141;
+}
+
+.product .price {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #414141;
+}
+
+.add-to-cart{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFD1DC;
+  padding: 10px;
+  display: none;
+  cursor: pointer;
+  /* border-radius: ; */
+  z-index: 1;
+}
+
+.product:hover .add-to-cart,
+.product:hover  {
+  display: block;
+}
+
+.pagination {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.pagination a {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 5px 10px;
+  background-color: #f1f1f1;
+  text-decoration: none;
+  color: #333333;
+}
+
+.pagination a.current {
+  background-color: #ccc;
+  color: #fff;
+}
+
+/* Sản phẩm nổi bật */
+.product-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Ẩn thanh cuộn */
+  -ms-overflow-style: none; /* Ẩn thanh cuộn trên Microsoft Edge */
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+.product-item {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 300px;
+  margin-right: 10px;
+  scroll-snap-align: start;
+  background-color: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgb(255, 255, 255);
+
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.product-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.product-item h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #FFD1DC;
+}
+
+.product-item p {
+  margin: 5px 0;
+}
+
+.product-item p.price {
+  font-weight: bold;
+  color: #FFD1DC;
+  font-size: 14px;
+}
+/* phân trang */
+.page-link {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1 class="header-title">Gọng kính</h1>
+    </div>
+  </header>
+<main>
+  <div class="product-list-container">
+    <div class="filter-container">
+      <h3>Giá:</h3>
+        <div class="price-filter">
+          <label><input type="radio" name="price" value="100-200">100,000-200,000</label><br>
+          <label><input type="radio" name="price" value="200-300">200,000-300,000</label><br>
+          <label><input type="radio" name="price" value="300-500">300,000-500,000</label><br>
+          <label><input type="radio" name="price" value="all">Tất cả</label><br>
+        </div>
+      <h3>Chất liệu:</h3>
+      <label><input type="checkbox" class="filter-material" value="metal"> Kim loại</label><br>
+      <label><input type="checkbox" class="filter-material" value="plastic1"> Nhựa</label><br>
+      <label><input type="checkbox" class="filter-material" value="plasti2"> Nhựa dẻo</label><br>
+
+      <h3>Hình dáng:</h3>
+      <label><input type="checkbox" class="filter-shape" value="round"> Tròn</label><br>
+      <label><input type="checkbox" class="filter-shape" value="square"> Vuông</label><br>
+      <label><input type="checkbox" class="filter-shape" value="oval"> Oval</label><br>
+      <label><input type="checkbox" class="filter-shape" value="cat"> Mắt mèo</label><br>
+    </div>
+    <div>
+      <div id="product-list">
+        <div class="product" data-price="100" data-material="wood" data-shape="round">
+          <img src="Images/A.png" alt="Sản phẩm 1">
+          <h3>Sản phẩm 1</h3>
+          <p class="price">Giá: 100,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" data-price="500" data-material="metal" data-shape="square">
+          <img src="Images/B1.png" alt="Sản phẩm 2">
+          <h3>Sản phẩm 2</h3>
+          <p class="price">Giá: 500,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" data-price="100" data-material="wood" data-shape="round">
+          <img src="Images/A.png" alt="Sản phẩm 3">
+          <h3>Sản phẩm 3</h3>
+          <p class="price">Giá: 100,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" data-price="100" data-material="wood" data-shape="round">
+          <img src="Images/A.png" alt="Sản phẩm 4">
+          <h3>Sản phẩm 4</h3>
+          <p class="price">Giá: 100,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" data-price="100" data-material="wood" data-shape="round">
+          <img src="Images/A.png" alt="Sản phẩm 1">
+          <h3>Sản phẩm 1</h3>
+          <p class="price">Giá: 100,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" data-price="500" data-material="metal" data-shape="square">
+          <img src="Images/B1.png" alt="Sản phẩm 2">
+          <h3>Sản phẩm 2</h3>
+          <p class="price">Giá: 500,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" data-price="100" data-material="wood" data-shape="round">
+          <img src="Images/A.png" alt="Sản phẩm 3">
+          <h3>Sản phẩm 3</h3>
+          <p class="price">Giá: 100,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" data-price="100" data-material="wood" data-shape="round">
+          <img src="Images/A.png" alt="Sản phẩm 4">
+          <h3>Sản phẩm 4</h3>
+          <p class="price">Giá: 100,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+          <img src="Images/B1.png" alt="Sản phẩm 5">
+          <h3>Sản phẩm 5</h3>
+          <p class="price">Giá: 500,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+\        </div>
+        <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+          <img src="Images/B1.png" alt="Sản phẩm 5">
+          <h3>Sản phẩm 5</h3>
+          <p class="price">Giá: 500,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+          <img src="Images/B1.png" alt="Sản phẩm 6">
+          <h3>Sản phẩm 6</h3>
+          <p class="price">Giá: 500,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
+          <img src="Images/B10.png" alt="Sản phẩm 7">
+          <h3>Sản phẩm 7</h3>
+          <p class="price">Giá: 150,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
+          <img src="Images/B11.png" alt="Sản phẩm 8">
+          <h3>Sản phẩm 8</h3>
+          <p class="price">Giá: 250,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+\        </div>
+        <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+          <img src="Images/B1.png" alt="Sản phẩm 5">
+          <h3>Sản phẩm 5</h3>
+          <p class="price">Giá: 500,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+          <img src="Images/B1.png" alt="Sản phẩm 6">
+          <h3>Sản phẩm 6</h3>
+          <p class="price">Giá: 500,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
+          <img src="Images/B10.png" alt="Sản phẩm 7">
+          <h3>Sản phẩm 7</h3>
+          <p class="price">Giá: 150,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
+          <img src="Images/B11.png" alt="Sản phẩm 8">
+          <h3>Sản phẩm 8</h3>
+          <p class="price">Giá: 250,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+\        </div>
+        <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+          <img src="Images/B1.png" alt="Sản phẩm 6">
+          <h3>Sản phẩm 6</h3>
+          <p class="price">Giá: 500,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
+          <img src="Images/B10.png" alt="Sản phẩm 7">
+          <h3>Sản phẩm 7</h3>
+          <p class="price">Giá: 150,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
+          <img src="Images/B11.png" alt="Sản phẩm 8">
+          <h3>Sản phẩm 8</h3>
+          <p class="price">Giá: 250,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+          <img src="Images/B1.png" alt="Sản phẩm 5">
+          <h3>Sản phẩm 5</h3>
+          <p class="price">Giá: 500,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+          <img src="Images/B1.png" alt="Sản phẩm 6">
+          <h3>Sản phẩm 6</h3>
+          <p class="price">Giá: 500,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
+          <img src="Images/B10.png" alt="Sản phẩm 7">
+          <h3>Sản phẩm 7</h3>
+          <p class="price">Giá: 150,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
+          <img src="Images/B11.png" alt="Sản phẩm 8">
+          <h3>Sản phẩm 8</h3>
+          <p class="price">Giá: 250,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+      </div>
+        <div class="pagination" style="margin-top: 10px;">
+          <ul>
+            <a href="#" class="page-link">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link">3</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- Sản phẩm nổi bật -->
+<div>
+  <h2 style="text-align: center;">Sản phẩm nổi bật</h2>
+  <div class="product-container">
+    <div class="product-item">
+      <img src="Images/B13.png" alt="Product 1" class="product-img">
+      <h3>Mã sản phẩm: SP001</h3>
+      <p>Giá: 400,000 VND</p>
+    </div>
+    <div class="product-item">
+      <img src="Images/B18.png" alt="Product 2" class="product-img">
+      <h3>Mã sản phẩm: SP002</h3>
+      <p>Giá: 150,000 VND</p>
+    </div>
+    <div class="product-item">
+      <img src="Images/B13.png" alt="Product 3" class="product-img">
+      <h3>Mã sản phẩm: SP003</h3>
+      <p>Giá: 200,000 VND</p>
+    </div>
+    <div class="product-item">
+      <img src="Images/B18.png" alt="Product 4" class="product-img">
+      <h3>Mã sản phẩm: SP004</h3>
+      <p>Giá: 350,000 VND</p>
+    </div>
+    <div class="product-item">
+      <img src="Images/B14.png" alt="Product 5" class="product-img">
+      <h3>Mã sản phẩm: SP005</h3>
+      <p>Giá: 450,000 VND</p>
+    </div>
+    <div class="product-item">
+        <img src="Images/B14.png" alt="Product 5" class="product-img">
+        <h3>Mã sản phẩm: SP005</h3>
+        <p>Giá: 550,000 VND</p>
+      </div>
+      <div class="product-item">
+        <img src="Images/B14.png" alt="Product 5" class="product-img">
+        <h3>Mã sản phẩm: SP005</h3>
+        <p>Giá: 200,000 VND</p>
+      </div>
+    </div>
+  </div>
+  
+
+  <script>
+    // Trang 1,2,3
+    document.addEventListener('DOMContentLoaded', function() {
+      // Lấy danh sách các sản phẩm
+      var productList = document.getElementById('product-list').children;
+
+      // Lấy danh sách các link phân trang
+      var pageLinks = document.getElementsByClassName('page-link');
+
+      // Xử lý sự kiện khi nhấp vào một link phân trang
+      for (var i = 0; i < pageLinks.length; i++) {
+        pageLinks[i].addEventListener('click', function(e) {
+          e.preventDefault();
+
+          // Lấy số trang từ nội dung của link
+          var page = parseInt(this.textContent);
+
+          // Ẩn tất cả các sản phẩm
+          for (var j = 0; j < productList.length; j++) {
+            productList[j].style.display = 'none';
+          }
+
+          // Hiển thị các sản phẩm ở trang tương ứng
+          var startIndex = (page - 1) * 8; // 3 là số sản phẩm hiển thị trên mỗi trang
+          var endIndex = startIndex + 8;
+          for (var k = startIndex; k < endIndex; k++) {
+            if (productList[k]) {
+              productList[k].style.display = 'block';
+            }
+          }
+        });
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var priceFilters = document.querySelectorAll(".price-filter input");
+      var products = document.querySelectorAll(".product");
+  
+      for (var j = 0; j < priceFilters.length; j++) {
+        priceFilters[j].addEventListener("click", handlePriceFilterClick);
+      }
+  
+  
+      function handlePriceFilterClick(event) {
+        var selectedFilter = event.target;
+        var selectedPriceRange = selectedFilter.value;
+  
+        // Xóa lớp ẩn/hiện tất cả các sản phẩm
+        for (var k = 0; k < products.length; k++) {
+          var product = products[k];
+          var productPrice = parseInt(product.getAttribute("data-price"));
+  
+          if (selectedPriceRange === "all" || isProductWithinPriceRange(productPrice, selectedPriceRange)) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        }
+      }
+  
+      function isProductWithinPriceRange(price, range) {
+        var priceRange = range.split("-");
+        var minPrice = parseInt(priceRange[0]);
+        var maxPrice = parseInt(priceRange[1]);
+        return price >= minPrice && price <= maxPrice;
+      }
+    });
+  
+    const filterPriceCheckboxes = document.querySelectorAll('.filter-price');
+    const filterMaterialCheckboxes = document.querySelectorAll('.filter-material');
+    const filterShapeCheckboxes = document.querySelectorAll('.filter-shape');
+    const products = document.querySelectorAll('.product');
+  
+    function filterProducts() {
+      const selectedPrices = Array.from(filterPriceCheckboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => parseInt(checkbox.value));
+  
+      const selectedMaterials = Array.from(filterMaterialCheckboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+  
+      const selectedShapes = Array.from(filterShapeCheckboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+  
+      products.forEach(product => {
+        const price = parseInt(product.dataset.price);
+        const material = product.dataset.material;
+        const shape = product.dataset.shape;
+  
+        const meetsPriceCriteria = selectedPrices.length === 0 || selectedPrices.includes(price);
+        const meetsMaterialCriteria = selectedMaterials.length === 0 || selectedMaterials.includes(material);
+        const meetsShapeCriteria = selectedShapes.length === 0 || selectedShapes.includes(shape);
+  
+        if (meetsPriceCriteria && meetsMaterialCriteria && meetsShapeCriteria) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+  
+    filterPriceCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', filterProducts);
+    });
+  
+    filterMaterialCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', filterProducts);
+    });
+  
+    filterShapeCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', filterProducts);
+    });
+  </script>
+  </main>
+</body>
+</html>
