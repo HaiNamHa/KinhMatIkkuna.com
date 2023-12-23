@@ -72,25 +72,23 @@
 
 })()
 /*slide show */
-
 let slideIndex1 = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides-fade");
+showSlides1();
+function showSlides1() {
+  let j;
+  let slides1 = document.getElementsByClassName("mySlides1");
   let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  for (j = 0; j < slides1.length; j++) {
+    slides1[j].style.display = "none";  
   }
   slideIndex1++;
-  if (slideIndex1 > slides.length) {slideIndex1 = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  if (slideIndex1 > slides1.length) {slideIndex1 = 1}    
+  for (j = 0; j < dots.length; j++) {
+    dots[j].className = dots[j].className.replace(" active1", "");
   }
-  slides[slideIndex1-1].style.display = "block";  
-  dots[slideIndex1-1].className += " active";
-  setTimeout(showSlides, 5000); // 
+  slides1[slideIndex1-1].style.display = "block";  
+  dots[slideIndex1-1].className += " active1";
+  setTimeout(showSlides1, 5000); // Change image every 2 seconds
 }
 /*slide show */
 
