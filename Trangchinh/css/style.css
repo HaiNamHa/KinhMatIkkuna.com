@@ -235,6 +235,9 @@ a {
     .product-section .product-item:hover:before {
       height: 70%; }
 
+
+
+
       /*Tab*/
 
 /* Style the tab */
@@ -284,10 +287,21 @@ a {
 
            /*End Tab*/
 
+/*Hang moi */
+.hangmoi{
+  text-align: center;
+  margin-top: 20px;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+}
+.hangmoiht{
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
 
 
 
-
+/*Hang moi */
 
 .bao-hanh {
   padding: 7rem 0; }
