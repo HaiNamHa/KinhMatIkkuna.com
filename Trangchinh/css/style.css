@@ -31,7 +31,7 @@ a {
     font-weight: 600; }
 
 .custom-navbar {
-  background: #f16262 !important;
+  background: #e97b7e !important;
   padding-top: 20px;
   padding-bottom: 25px; }
   .custom-navbar .navbar-brand {
@@ -263,7 +263,7 @@ a {
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #39cfd5;
 }
 
 /* Style the tab content */
@@ -272,7 +272,15 @@ a {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+  background-image: url('../images/anhmo1.png'); /* Đường dẫn đến hình ảnh */
+  background-size: cover; /* Kích thước hình ảnh sẽ được điều chỉnh để bao phủ toàn bộ kích thước của div */
+  background-position: center; /* Canh lề hình ảnh vào giữa */
+  background-repeat: no-repeat; 
 }
+
+
+
+
 
            /*End Tab*/
 
