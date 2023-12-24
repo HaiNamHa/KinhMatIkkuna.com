@@ -23,17 +23,52 @@ a {
   -o-transition: .3s all ease;
   transition: .3s all ease;
   color: #2f2f2f;
-  text-decoration: underline; }
+ }
   a:hover {
     color: #2f2f2f;
     text-decoration: none; }
   a.more {
     font-weight: 600; }
 
+    /*header phụ
+*/
+header {
+  background-color: #b46e70;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  margin-left: 130px;
+
+}
+.ikkuna{
+  height: 60px;
+  width: 60px;
+}
+
+#search-box {
+  width: 300px;
+}
+.input-group{
+  border-radius: 120px;
+}
+
+#login-link {
+  margin-right: 100px;
+  display: flex;
+}
+    /* header phụ
+*/
+
 .custom-navbar {
   background: #e97b7e !important;
   padding-top: 20px;
-  padding-bottom: 25px; }
+  padding-bottom: 25px; 
+  display: flex;}
   .custom-navbar .navbar-brand {
     font-size: 32px;
     font-weight: 600; }
@@ -91,10 +126,13 @@ a {
         margin-left: 40px !important; } }
     .custom-navbar .custom-navbar-cta li {
       margin-left: 0px;
-      margin-right: 0px; }
+      margin-right: 0px; 
+      margin-bottom: -5px;}
       .custom-navbar .custom-navbar-cta li:first-child {
         margin-right: 20px; }
-
+        .navbar-dark .navbar-nav .nav-link{
+          color: #000000;
+        }
 
       /* Dropdown */
       .dropbtn {
@@ -113,7 +151,7 @@ a {
       .dropdown-content {
         display: none;
         position: absolute;
-       /* background-color: #f1f1f1; */
+        background-color: #f1f1f1; 
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
@@ -275,7 +313,7 @@ a {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-  background-image: url('../images/anhmo1.png'); /* Đường dẫn đến hình ảnh */
+  background-image: url('../images/anhmo2.png'); /* Đường dẫn đến hình ảnh */
   background-size: cover; /* Kích thước hình ảnh sẽ được điều chỉnh để bao phủ toàn bộ kích thước của div */
   background-position: center; /* Canh lề hình ảnh vào giữa */
   background-repeat: no-repeat; 
@@ -417,7 +455,8 @@ a {
   padding: 7rem 0 12rem 0 !important; }
 
 .footer-section {
-  padding: 80px 0;
+  padding-top: 20px;
+  padding-bottom: 1px;
   background: #e6e3e3; }
   .footer-section .relative {
     position: relative; }
