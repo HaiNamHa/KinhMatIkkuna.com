@@ -254,7 +254,7 @@ ol {
 
         a {
             font-size: 20px;
-            color: $normal-color;
+            color: black;
             font-weight: 700;
         }
     }
@@ -557,7 +557,7 @@ ol {
 
     a {
         font-size: 16px;
-        color: $para-color;
+        color: black;
         background: $background;
         display: inline-block;
         padding: 7px 26px 5px;
