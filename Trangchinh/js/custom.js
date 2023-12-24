@@ -112,3 +112,24 @@ function HOTTREND(evt, theloai) {
   document.getElementById("defaultOpen").click();
 
   /*Tab*/
+/*Phần khách hàng thân thiết */
+  var swiper = new Swiper(".swiper", {
+	effect: "coverflow",
+	grabCursor: true,
+	centeredSlides: true,
+	slidesPerView: "auto",
+	coverflowEffect: {
+	  rotate: 0,
+	  stretch: 0,
+	  depth: 100,
+	  modifier: 2,
+	  slideShadows: true
+	},
+	spaceBetween: 60,
+	loop: true,
+	pagination: {
+	  el: ".swiper-pagination",
+	  clickable: true
+	}
+  });
+  /*Phần khách hàng thân thiết */

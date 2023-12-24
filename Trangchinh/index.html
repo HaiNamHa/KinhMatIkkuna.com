@@ -10,6 +10,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet"> 
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font1|Font2|Font3&display=swap">
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
 	<link href="css/style.css" rel="stylesheet">
 	<title>Trang chu</title>
 </head>
@@ -57,17 +58,17 @@
 					</li>
 					<li>
 						<div class="dropdown">
-							<a class="nav-link" href="index.html">Sản phẩm</a>
+							<a class="nav-link" href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Sản phẩm</a>
 							<div class="dropdown-content">
-								<a href="#">Gọng kính</a>
-								<a href="#">Kính râm</a>
-								<a href="#">Kính áp tròng</a>
-								<a href="#">Kính trẻ em</a>
-								<a href="#">Mắt kính</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Gọng kính</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kính râm</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kính áp tròng</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kính trẻ em</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Mắt kính</a>
 							</div>
 						</div>
 					</li>
-					<li><a class="nav-link" href="#">Giới thiệu</a></li>
+					<li><a class="nav-link" href="/GioiThieu.html">Giới thiệu</a></li>
 					<li><a class="nav-link" href="#">Khuyến mãi</a></li>
 					<li><a class="nav-link" href="#">Blog</a></li>
 					<li><a class="nav-link" href="#">Liên hệ</a></li>
@@ -116,7 +117,49 @@
 
 	<!-- Slideshow container -->
 
-
+	<!--Phần popup-->
+	<div class="overlay" id="overlay">
+		<div class="popup">
+		  <span class="close-btn" onclick="closePopup()">×</span>
+		  <img src="/Trangchinh/images/christmas_menu_specials_1_4_.jpg" alt="Khuyến Mãi" class="imgpop">
+		  <div class="countdown" id="countdown"></div>
+		</div>
+	  </div>
+	  
+	  <script>
+		window.onload = function() {
+		  var endDate = new Date("Dec 31, 2023 00:00:00").getTime(); // Đặt ngày kết thúc khuyến mãi
+	  
+		  function updateCountdown() {
+			var now = new Date().getTime();
+			var timeLeft = endDate - now;
+	  
+			if (timeLeft <= 0) {
+			  closePopup();
+			  return;
+			}
+	  
+			var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+	  
+			document.getElementById('countdown').innerHTML = "Thời gian còn lại: " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây";
+		  }
+	  
+		  setInterval(updateCountdown, 1000); // Cập nhật thời gian còn lại mỗi giây
+		  showPopup();
+		};
+	  
+		function showPopup() {
+		  document.getElementById('overlay').style.display = 'flex';
+		}
+	  
+		function closePopup() {
+		  document.getElementById('overlay').style.display = 'none';
+		}
+	  </script>
+	<!--Phần popup-->
 
 	<!-- Start Product Section_1 -->
 	<div class="product-section">
@@ -877,7 +920,7 @@
 
 
 
-		<!-- Start We Help Section -->
+		<!-- Start Vutrutruyenthong -->
 		<div class="we-help-section">
 			<div class="container">
 				<div class="row justify-content-between">
@@ -913,8 +956,94 @@
 				</div>
 			</div>
 		</div>
-		<!-- End We Help Section -->
+		<!-- End Vutrutruyenthong -->
+		<!-- start Khách hàng thân thiết-->
+		<h2 class="PKHTT">KHÁCH HÀNG THÂN THIẾT</h2>
+		<section class="section-slide">
 
+			<div class="swiper">
+			  <div class="swiper-wrapper">
+				<div class="swiper-slide swiper-slide--one">
+				 <!-- <span>Bảo An & Gia Khiêm</span> -->
+				  <div>
+					<h2>Bảo An & Gia Khiêm</h2>
+					<p>
+					  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+					  
+						<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+					  </svg>
+					  TP.HCM
+					</p>
+				  </div>
+				</div>
+				<div class="swiper-slide swiper-slide--two">
+				<!-- <span>Khánh Huyền</span> -->  
+				  <div>
+					<h2>Khánh Huyền</h2>
+					<p>
+					  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+					  </svg>
+					  Đà Nẵng
+					</p>
+				  </div>
+				</div>
+		  
+				<div class="swiper-slide swiper-slide--three">
+				   <!--<span>Ngọc Matcha</span>-->
+				  <div>
+					<h2>Ngọc Matcha</h2>
+					<p>
+					  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+					  </svg>
+					  Hà Tĩnh
+					</p>
+				  </div>
+				</div>
+		  
+				<div class="swiper-slide swiper-slide--four">
+				  <!--<span>Trâm Anh</span>-->
+				  <div>
+					<h2>Trâm Anh</h2>
+					<p>
+					  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+					  </svg>
+					  Hà Nội
+					</p>
+				  </div>
+				</div>
+		  
+				<div class="swiper-slide swiper-slide--five">
+				  <!--<span>Trần Vân</span>-->
+				  <div>
+					<h2>Trần Vân</h2>
+					<p>
+		  
+					  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+						<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+					  </svg>
+					  Bắc Ninh
+					</p>
+				  </div>
+				</div>
+			  </div>
+			  <!-- Add Pagination -->
+			  <div class="swiper-pagination"></div>
+			</div>
+		  </section>
+		  
+		  <!-- scripts -->
+		  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+
+
+		<!--end Khách hàng thân thiết-->
 
 		<!-- Start Blog Section -->
 		<div class="blog-section">
