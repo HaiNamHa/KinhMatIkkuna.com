@@ -342,7 +342,7 @@ header {
 /*Hang moi */
 
 .bao-hanh {
-  padding: 7rem 0; }
+  padding: 7rem 0 5px 0; }
   .bao-hanh .img-wrap {
     position: relative; }
     .bao-hanh .img-wrap:before {
