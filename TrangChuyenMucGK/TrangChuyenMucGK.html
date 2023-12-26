@@ -3,32 +3,54 @@
 <head>
   <title>Chuyên mục Sản phẩm</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="ImagesGK/LOGO.png">
+
   <style>
 /* CSS để tùy chỉnh giao diện trang */
 body{
   font-family:Arial, Helvetica, sans-serif;
 }
-header {
-  color: white;
-  background: url(Images/bannerHong.jpg) no-repeat center center;
-  background-size: cover;
-  min-height: 400px;
-  height: 200px;
-  height: 15em;
-  position: relative;
-  filter: contrast(50%);
-}
+.header {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
 
-.header-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+        /* CSS cho ảnh banner */
+        .header-image {
+            width: 100%;
+            opacity: 0.5;
+           filter: contrast(30%);
+            /* filter: brightness(80%); */
+        }
 
-.header-title {
-  text-align: center;
-}
+        /* CSS cho tiêu đề */
+        .header-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* CSS cho nút về trang chủ */
+        .home-button {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            text-shadow: none;
+            text-decoration:underline;
+        }
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -169,7 +191,7 @@ h1 {
 .product-item h3 {
   margin-top: 10px;
   font-size: 16px;
-  color: #FFD1DC;
+  color: black;
 }
 
 .product-item p {
@@ -178,7 +200,7 @@ h1 {
 
 .product-item p.price {
   font-weight: bold;
-  color: #FFD1DC;
+  color: black;
   font-size: 14px;
 }
 /* phân trang */
@@ -189,8 +211,10 @@ h1 {
 </head>
 <body>
   <header>
-    <div class="header-content">
-      <h1 class="header-title" style="color: white;">Gọng kính</h1>
+    <div class="header">
+        <img src="ImagesGK/bannerHong.jpgut.jpg" alt="Banner" class="header-image">
+        <h1 class="header-title">Gọng kính</h1>
+        <a href="path/to/home" class="home-button"><i>Trang chủ</i></a>
     </div>
   </header>
 <main>
@@ -217,146 +241,146 @@ h1 {
     <div>
       <div id="product-list">
         <div class="product" data-price="100" data-material="wood" data-shape="round">
-          <img src="Images/A.png" alt="Sản phẩm 1">
-          <h3>Sản phẩm 1</h3>
+          <img src="ImagesGK/GK01.png" alt="Sản phẩm 1">
+          <h3>GK01</h3>
           <p class="price">Giá: 100,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" data-price="500" data-material="metal" data-shape="square">
-          <img src="Images/B1.png" alt="Sản phẩm 2">
-          <h3>Sản phẩm 2</h3>
+          <img src="ImagesGK/GK02.png" alt="Sản phẩm 2">
+          <h3>GK02</h3>
           <p class="price">Giá: 500,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" data-price="100" data-material="wood" data-shape="round">
-          <img src="Images/A.png" alt="Sản phẩm 3">
-          <h3>Sản phẩm 3</h3>
+          <img src="ImagesGK/GK03.png" alt="Sản phẩm 3">
+          <h3>GK03</h3>
           <p class="price">Giá: 100,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" data-price="100" data-material="wood" data-shape="round">
-          <img src="Images/A.png" alt="Sản phẩm 4">
-          <h3>Sản phẩm 4</h3>
+          <img src="ImagesGK/GK04.png" alt="Sản phẩm 4">
+          <h3>GK04</h3>
           <p class="price">Giá: 100,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" data-price="100" data-material="wood" data-shape="round">
-          <img src="Images/A.png" alt="Sản phẩm 1">
-          <h3>Sản phẩm 1</h3>
+          <img src="ImagesGK/GK05.png" alt="Sản phẩm 5">
+          <h3>GK05</h3>
           <p class="price">Giá: 100,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" data-price="500" data-material="metal" data-shape="square">
-          <img src="Images/B1.png" alt="Sản phẩm 2">
-          <h3>Sản phẩm 2</h3>
+          <img src="ImagesGK/GK06.png" alt="Sản phẩm 6">
+          <h3>GK06</h3>
           <p class="price">Giá: 500,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" data-price="100" data-material="wood" data-shape="round">
-          <img src="Images/A.png" alt="Sản phẩm 3">
-          <h3>Sản phẩm 3</h3>
+          <img src="ImagesGK/GK07.png" alt="Sản phẩm 7">
+          <h3>GK07</h3>
           <p class="price">Giá: 100,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" data-price="100" data-material="wood" data-shape="round">
-          <img src="Images/A.png" alt="Sản phẩm 4">
-          <h3>Sản phẩm 4</h3>
+          <img src="ImagesGK/GK08.png" alt="Sản phẩm 8">
+          <h3>GK08</h3>
           <p class="price">Giá: 100,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-          <img src="Images/B1.png" alt="Sản phẩm 5">
-          <h3>Sản phẩm 5</h3>
-          <p class="price">Giá: 500,000 VND</p>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
-\        </div>
-        <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-          <img src="Images/B1.png" alt="Sản phẩm 5">
-          <h3>Sản phẩm 5</h3>
+          <img src="ImagesGK/GK09.png" alt="Sản phẩm 5">
+          <h3>GK09</h3>
           <p class="price">Giá: 500,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-          <img src="Images/B1.png" alt="Sản phẩm 6">
-          <h3>Sản phẩm 6</h3>
+          <img src="ImagesGK/GK10.png" alt="Sản phẩm 5">
+          <h3>GK10</h3>
+          <p class="price">Giá: 500,000 VND</p>
+          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+          <img src="ImagesGK/GK11.png" alt="Sản phẩm 6">
+          <h3>GK11</h3>
           <p class="price">Giá: 500,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
-          <img src="Images/B10.png" alt="Sản phẩm 7">
-          <h3>Sản phẩm 7</h3>
+          <img src="ImagesGK/GK12.png" alt="Sản phẩm 7">
+          <h3>GK12</h3>
           <p class="price">Giá: 150,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
-          <img src="Images/B11.png" alt="Sản phẩm 8">
-          <h3>Sản phẩm 8</h3>
+          <img src="ImagesGK/GK13.png" alt="Sản phẩm 8">
+          <h3>GK13</h3>
           <p class="price">Giá: 250,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
-\        </div>
+       </div>
         <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-          <img src="Images/B1.png" alt="Sản phẩm 5">
-          <h3>Sản phẩm 5</h3>
+          <img src="ImagesGK/GK14.png" alt="Sản phẩm 5">
+          <h3>GK14</h3>
           <p class="price">Giá: 500,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-          <img src="Images/B1.png" alt="Sản phẩm 6">
-          <h3>Sản phẩm 6</h3>
+          <img src="ImagesGK/GK15.png" alt="Sản phẩm 6">
+          <h3>GK15</h3>
           <p class="price">Giá: 500,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
-          <img src="Images/B10.png" alt="Sản phẩm 7">
-          <h3>Sản phẩm 7</h3>
+          <img src="ImagesGK/GK16.png" alt="Sản phẩm 7">
+          <h3>GK16</h3>
           <p class="price">Giá: 150,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
-          <img src="Images/B11.png" alt="Sản phẩm 8">
-          <h3>Sản phẩm 8</h3>
+          <img src="ImagesGK/GK17.png" alt="Sản phẩm 8">
+          <h3>GK17</h3>
           <p class="price">Giá: 250,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
-\        </div>
+       </div>
         <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-          <img src="Images/B1.png" alt="Sản phẩm 6">
-          <h3>Sản phẩm 6</h3>
+          <img src="ImagesGK/GK18.png" alt="Sản phẩm 6">
+          <h3>GK18</h3>
           <p class="price">Giá: 500,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
-          <img src="Images/B10.png" alt="Sản phẩm 7">
-          <h3>Sản phẩm 7</h3>
+          <img src="ImagesGK/GK19.png" alt="Sản phẩm 7">
+          <h3>GK19</h3>
           <p class="price">Giá: 150,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
-          <img src="Images/B11.png" alt="Sản phẩm 8">
-          <h3>Sản phẩm 8</h3>
+          <img src="ImagesGK/GK20.png" alt="Sản phẩm 8">
+          <h3>GK20</h3>
           <p class="price">Giá: 250,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-          <img src="Images/B1.png" alt="Sản phẩm 5">
-          <h3>Sản phẩm 5</h3>
+          <img src="ImagesGK/GK21.png" alt="Sản phẩm 5">
+          <h3>GK21</h3>
           <p class="price">Giá: 500,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-          <img src="Images/B1.png" alt="Sản phẩm 6">
-          <h3>Sản phẩm 6</h3>
+          <img src="ImagesGK/GK22.png" alt="Sản phẩm 6">
+          <h3>GK22</h3>
           <p class="price">Giá: 500,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
-          <img src="Images/B10.png" alt="Sản phẩm 7">
-          <h3>Sản phẩm 7</h3>
+          <img src="ImagesGK/GK23.png" alt="Sản phẩm 7">
+          <h3>GK23</h3>
           <p class="price">Giá: 150,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
         <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
-          <img src="Images/B11.png" alt="Sản phẩm 8">
-          <h3>Sản phẩm 8</h3>
+          <img src="ImagesGK/GK24.png" alt="Sản phẩm 8">
+          <h3>GK24</h3>
           <p class="price">Giá: 250,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
@@ -375,38 +399,38 @@ h1 {
   <h2 style="text-align: center;">Sản phẩm nổi bật</h2>
   <div class="product-container">
     <div class="product-item">
-      <img src="Images/B13.png" alt="Product 1" class="product-img">
-      <h3>Mã sản phẩm: SP001</h3>
+      <img src="ImagesGK/GK02.png" alt="Product 1" class="product-img">
+      <h3>Mã sản phẩm: GK02</h3>
       <p>Giá: 400,000 VND</p>
     </div>
     <div class="product-item">
-      <img src="Images/B18.png" alt="Product 2" class="product-img">
-      <h3>Mã sản phẩm: SP002</h3>
+      <img src="ImagesGK/GK05.png" alt="Product 2" class="product-img">
+      <h3>Mã sản phẩm: GK05</h3>
       <p>Giá: 150,000 VND</p>
     </div>
     <div class="product-item">
-      <img src="Images/B13.png" alt="Product 3" class="product-img">
-      <h3>Mã sản phẩm: SP003</h3>
+      <img src="ImagesGK/GK20.png" alt="Product 3" class="product-img">
+      <h3>Mã sản phẩm: GK20</h3>
       <p>Giá: 200,000 VND</p>
     </div>
     <div class="product-item">
-      <img src="Images/B18.png" alt="Product 4" class="product-img">
-      <h3>Mã sản phẩm: SP004</h3>
+      <img src="ImagesGK/GK09.png" alt="Product 4" class="product-img">
+      <h3>Mã sản phẩm: GK09</h3>
       <p>Giá: 350,000 VND</p>
     </div>
     <div class="product-item">
-      <img src="Images/B14.png" alt="Product 5" class="product-img">
-      <h3>Mã sản phẩm: SP005</h3>
+      <img src="ImagesGK/GK07.png" alt="Product 5" class="product-img">
+      <h3>Mã sản phẩm: GK07</h3>
       <p>Giá: 450,000 VND</p>
     </div>
     <div class="product-item">
-        <img src="Images/B14.png" alt="Product 5" class="product-img">
-        <h3>Mã sản phẩm: SP005</h3>
+        <img src="ImagesGK/GK11.png" alt="Product 5" class="product-img">
+        <h3>Mã sản phẩm: GK11</h3>
         <p>Giá: 550,000 VND</p>
       </div>
       <div class="product-item">
-        <img src="Images/B14.png" alt="Product 5" class="product-img">
-        <h3>Mã sản phẩm: SP005</h3>
+        <img src="ImagesGK/GK19.png" alt="Product 5" class="product-img">
+        <h3>Mã sản phẩm: GK19</h3>
         <p>Giá: 200,000 VND</p>
       </div>
     </div>
