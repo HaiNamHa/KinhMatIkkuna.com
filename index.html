@@ -40,7 +40,7 @@
 	<!--End Header 1-->
 
 	<!-- Start Header/Navigation -->
-	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+	<nav class="custom-navbar navbar navbar navbar-expand-md nagvbar-dark b-dark" arial-label="Furni navigation bar" >
 		<div class="container">
 			<div class="collapse navbar-collapse" id="navbarsFurni">
 				<ul class="custom-navbar-nav navbar-nav me-auto mb-2 mb-md-0">
@@ -66,8 +66,12 @@
 				</ul>
 
 				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-					<li><p class="nav-link">|</p></li>
-					<li><p class="nav-link" >Hotline: </p></li>
+					<li>
+						<p class="nav-link">|</p>
+					</li>
+					<li>
+						<p class="nav-link">Hotline: </p>
+					</li>
 					<li><a class="nav-link" href="#">0366764577</a></li>
 
 				</ul>
@@ -75,8 +79,11 @@
 		</div>
 	</nav>
 
-	<!-- Slideshow container -->
 
+
+
+	<!-- Slideshow container -->
+	
 	<div class="slideshow-container1">
 		<div class="mySlides1 fade1">
 			<img src="/Trangchinh/images/slide4.png" style="width:100%">
@@ -101,9 +108,12 @@
 	<!--CRO-BT-->
 	<div class="BT">
 		<div class="cro-buttons">
-			<a href="https://www.facebook.com/profile.php?id=61553810680047" class="facebook" target="_blank"><img src="/Trangchinh/images/facebook.jpg" alt="Facebook"></a>
-			<a href="https://www.tiktok.com/@kinhmatikkuna" class="tiktok" target="_blank"><img src="/Trangchinh/images/tiktok.png" alt="TikTok"></a>
-			<a href="https://www.instagram.com/kinhmat_ikkuna/" class="instagram" target="_blank"><img src="/Trangchinh/images/ig.png" alt="Instagram"></a>
+			<a href="https://www.facebook.com/profile.php?id=61553810680047" class="facebook" target="_blank"><img
+					src="/Trangchinh/images/facebook.jpg" alt="Facebook"></a>
+			<a href="https://www.tiktok.com/@kinhmatikkuna" class="tiktok" target="_blank"><img
+					src="/Trangchinh/images/tiktok.png" alt="TikTok"></a>
+			<a href="https://www.instagram.com/kinhmat_ikkuna/" class="instagram" target="_blank"><img
+					src="/Trangchinh/images/ig.png" alt="Instagram"></a>
 		</div>
 	</div>
 	<!--CRO-BT-->
@@ -120,24 +130,19 @@
 	<script>
 		window.onload = function () {
 			var endDate = new Date("Dec 31, 2023 00:00:00").getTime(); // Đặt ngày kết thúc khuyến mãi
-
 			function updateCountdown() {
 				var now = new Date().getTime();
 				var timeLeft = endDate - now;
-
 				if (timeLeft <= 0) {
 					closePopup();
 					return;
 				}
-
 				var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
 				var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 				var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
 				var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
 				document.getElementById('countdown').innerHTML = "Thời gian còn lại: " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây";
 			}
-
 			setInterval(updateCountdown, 1000); // Cập nhật thời gian còn lại mỗi giây
 			showPopup();
 		};
@@ -168,7 +173,8 @@
 				<!-- Start Column 2 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Kính áp tròng Cosplay Crazy Red.jpg" class="img-fluid product-thumbnail">
+						<img src="/Trangchinh/images/Kính áp tròng Cosplay Crazy Red.jpg"
+							class="img-fluid product-thumbnail">
 						<h3 class="product-title">Nordic Chair</h3>
 						<strong class="product-price">$50.00</strong>
 
@@ -182,7 +188,8 @@
 				<!-- Start Column 3 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Kính áp tròng trong suốt có độ cận.jpg" class="img-fluid product-thumbnail">
+						<img src="/Trangchinh/images/Kính áp tròng trong suốt có độ cận.jpg"
+							class="img-fluid product-thumbnail">
 						<h3 class="product-title">Kính áp tròng trong suốt có độ cận</h3>
 						<strong class="product-price">$78.00</strong>
 
@@ -196,7 +203,8 @@
 				<!-- Start Column 4 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Kính áp tròng trong suốt có độ cận.jpg" class="img-fluid product-thumbnail">
+						<img src="/Trangchinh/images/Kính áp tròng trong suốt có độ cận.jpg"
+							class="img-fluid product-thumbnail">
 						<h3 class="product-title">Kính áp tròng trong suốt có độ cận</h3>
 						<strong class="product-price">$43.00</strong>
 
@@ -250,7 +258,8 @@
 				<!-- Start Column 3 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Gọng kính Clubmaster đen viền bạc.jpg" class="img-fluid product-thumbnail">
+						<img src="/Trangchinh/images/Gọng kính Clubmaster đen viền bạc.jpg"
+							class="img-fluid product-thumbnail">
 						<h3 class="product-title">Gọng kính Clubmaster đen viền bạ</h3>
 						<strong class="product-price">$78.00</strong>
 
@@ -367,7 +376,8 @@
 					<!-- Start Column 1 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính Clubmaster đen viền bạc.jpg" class="img-fluid product-thumbnail">
+							<img src="/Trangchinh/images/Gọng kính Clubmaster đen viền bạc.jpg"
+								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính Clubmaster đen viền bạc</h3>
 							<strong class="product-price">$50.00</strong>
 
@@ -381,7 +391,8 @@
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính kim loại vuông.jpg" class="img-fluid product-thumbnail">
+							<img src="/Trangchinh/images/Gọng kính kim loại vuông.jpg"
+								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính kim loại vuông</h3>
 							<strong class="product-price">$50.00</strong>
 
@@ -395,7 +406,8 @@
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính kim loại vàng hồng.jpg" class="img-fluid product-thumbnail">
+							<img src="/Trangchinh/images/Gọng kính kim loại vàng hồng.jpg"
+								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính kim loại vàng hồng</h3>
 							<strong class="product-price">$78.00</strong>
 
@@ -409,7 +421,8 @@
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính kim loại đa giác.jpg" class="img-fluid product-thumbnail">
+							<img src="/Trangchinh/images/Gọng kính kim loại đa giác.jpg"
+								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính kim loại đa giác</h3>
 							<strong class="product-price">$43.00</strong>
 
@@ -433,7 +446,8 @@
 					<!-- Start Column 1 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính nâu vàng Oval.jpg" class="img-fluid product-thumbnail">
+							<img src="/Trangchinh/images/Gọng kính nâu vàng Oval.jpg"
+								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính nâu vàng Oval</h3>
 							<strong class="product-price">$50.00</strong>
 
@@ -447,7 +461,8 @@
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính nửa viền thân gỗ.jpg" class="img-fluid product-thumbnail">
+							<img src="/Trangchinh/images/Gọng kính nửa viền thân gỗ.jpg"
+								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính nửa viền thân gỗ</h3>
 							<strong class="product-price">$50.00</strong>
 
@@ -461,7 +476,8 @@
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính đen bóng vuông.jpg" class="img-fluid product-thumbnail">
+							<img src="/Trangchinh/images/Gọng kính đen bóng vuông.jpg"
+								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính đen bóng vuông</h3>
 							<strong class="product-price">$78.00</strong>
 
@@ -475,7 +491,8 @@
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính đen nhám Oval.jpg" class="img-fluid product-thumbnail">
+							<img src="/Trangchinh/images/Gọng kính đen nhám Oval.jpg"
+								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính đen nhám Oval</h3>
 							<strong class="product-price">$43.00</strong>
 
@@ -502,7 +519,8 @@
 					<!-- Start Column 1 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Kính áp tròng Cosplay Crazy Red.jpg" class="img-fluid product-thumbnail">
+							<img src="/Trangchinh/images/Kính áp tròng Cosplay Crazy Red.jpg"
+								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Kính áp tròng Cosplay Crazy Red</h3>
 							<strong class="product-price">$50.00</strong>
 
@@ -531,7 +549,8 @@
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Kính áp tròng mắt nhỏ Fuji Gray.jpg" class="img-fluid product-thumbnail">
+							<img src="/Trangchinh/images/Kính áp tròng mắt nhỏ Fuji Gray.jpg"
+								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Kính áp tròng mắt nhỏ Fuji Gray</h3>
 							<strong class="product-price">$78.00</strong>
 
@@ -867,7 +886,8 @@
 				<!-- Start Column 2 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Gọng kính kim loại vàng hồng.jpg" class="img-fluid product-thumbnail">
+						<img src="/Trangchinh/images/Gọng kính kim loại vàng hồng.jpg"
+							class="img-fluid product-thumbnail">
 						<h3 class="product-title">Gọng kính kim loại vàng hồng</h3>
 						<strong class="product-price">$50.00</strong>
 
@@ -895,7 +915,8 @@
 				<!-- Start Column 4 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Gọng kính kim loại đa giác.jpg" class="img-fluid product-thumbnail">
+						<img src="/Trangchinh/images/Gọng kính kim loại đa giác.jpg"
+							class="img-fluid product-thumbnail">
 						<h3 class="product-title">Gọng kính kim loại đa giác</h3>
 						<strong class="product-price">$43.00</strong>
 
@@ -957,7 +978,7 @@
 		<div class="swiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide swiper-slide--one">
-				
+
 					<div>
 						<h2>Bảo An & Gia Khiêm</h2>
 						<p>
@@ -974,7 +995,7 @@
 					</div>
 				</div>
 				<div class="swiper-slide swiper-slide--two">
-					
+
 					<div>
 						<h2>Khánh Huyền</h2>
 						<p>
@@ -991,7 +1012,7 @@
 				</div>
 
 				<div class="swiper-slide swiper-slide--three">
-					
+
 					<div>
 						<h2>Ngọc Matcha</h2>
 						<p>
@@ -1008,7 +1029,7 @@
 				</div>
 
 				<div class="swiper-slide swiper-slide--four">
-					
+
 					<div>
 						<h2>Trâm Anh</h2>
 						<p>
@@ -1065,9 +1086,11 @@
 
 				<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
 					<div class="post-entry">
-						<a href="#" class="post-thumbnail"><img src="/Trangchinh/images/blog.png" alt="Image" class="img-fluid"></a>
+						<a href="#" class="post-thumbnail"><img src="/Trangchinh/images/blog.png" alt="Image"
+								class="img-fluid"></a>
 						<div class="post-content-entry">
-							<h6 style="margin-top: 10px;"><a href="#">[GIẢI ĐÁP] BỊ CẬN CÓ NÊN ĐEO KÍNH KHI DÙNG MÁY TÍNH HAY KHÔNG?</a></h6>
+							<h6 style="margin-top: 10px;"><a href="#">[GIẢI ĐÁP] BỊ CẬN CÓ NÊN ĐEO KÍNH KHI DÙNG MÁY
+									TÍNH HAY KHÔNG?</a></h6>
 							<div class="meta">
 								<span>by <a href="#">Ha Hai Nam</a></span> <span>on <a href="#">Dec 19,
 										2023</a></span>
@@ -1081,7 +1104,8 @@
 						<a href="#" class="post-thumbnail"><img src="/Trangchinh/images/blog1.jpg" alt="Image"
 								class="img-fluid"></a>
 						<div class="post-content-entry">
-							<h6 style="margin-top: 10px;"><a href="#">NÊN CHỌN GỌNG KÍNH CHO NGƯỜI CẬN NẶNG NHƯ THẾ NÀO?</a></h6>
+							<h6 style="margin-top: 10px;"><a href="#">NÊN CHỌN GỌNG KÍNH CHO NGƯỜI CẬN NẶNG NHƯ THẾ
+									NÀO?</a></h6>
 							<div class="meta">
 								<span>by <a href="#">Pham Ha Trang</a></span> <span>on <a href="#">Dec 15,
 										2023</a></span>
@@ -1116,8 +1140,10 @@
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="subscription-form">
-						<h3 class="d-flex align-items-center"><span class="me-1"><img src="/Trangchinh/images/envelope-outline.svg"
-									alt="Image" class="img-fluid"></span><span>Hãy gửi phản hồi cho chúng tôi nếu bạn gặp vấn đề gì.</span></h3>
+						<h3 class="d-flex align-items-center"><span class="me-1"><img
+									src="/Trangchinh/images/envelope-outline.svg" alt="Image"
+									class="img-fluid"></span><span>Hãy gửi phản hồi cho chúng tôi nếu bạn gặp vấn đề
+								gì.</span></h3>
 
 						<form action="#" class="row g-3">
 							<div class="col-auto">
@@ -1147,17 +1173,22 @@
 						Pellentesque habitant</p>
 
 					<ul class="list-unstyled custom-social">
-						<li><a href="https://www.facebook.com/profile.php?id=61553810680047" target="_blank"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-						<li><a href="https://www.tiktok.com/@kinhmatikkuna" target="_blank"><span class="fa fa-brands fa-tiktok"></span></a></li>
-						<li><a href="https://www.instagram.com/kinhmat_ikkuna/" target="_blank"><span class="fa fa-brands fa-instagram"></span></a></li>
+						<li><a href="https://www.facebook.com/profile.php?id=61553810680047" target="_blank"><span
+									class="fa fa-brands fa-facebook-f"></span></a></li>
+						<li><a href="https://www.tiktok.com/@kinhmatikkuna" target="_blank"><span
+									class="fa fa-brands fa-tiktok"></span></a></li>
+						<li><a href="https://www.instagram.com/kinhmat_ikkuna/" target="_blank"><span
+									class="fa fa-brands fa-instagram"></span></a></li>
 					</ul>
 				</div>
 
 				<div class="col-lg-8">
 					<div class="row links-wrap">
 						<div class="col-6 col-sm-6 col-md-3">
-							<ul class="list-unstyled">								
-								<li><p style="color: black;"><b>Tất cả sản phẩm</b></p></li>
+							<ul class="list-unstyled">
+								<li>
+									<p style="color: black;"><b>Tất cả sản phẩm</b></p>
+								</li>
 								<li><a href="#">Gọng kính</a></li>
 								<li><a href="#">Kính áp tròng</a></li>
 								<li><a href="#">Kính râm</a></li>
@@ -1168,7 +1199,9 @@
 
 						<div class="col-6 col-sm-6 col-md-3">
 							<ul class="list-unstyled">
-								<li><p style="color: black;"><b>Chính sách mua hàng</b></p></li>
+								<li>
+									<p style="color: black;"><b>Chính sách mua hàng</b></p>
+								</li>
 								<li><a href="#">Hình thức thanh toán</a></li>
 								<li><a href="#">Chính sách giao hàng</a></li>
 								<li><a href="#">Chính sách bảo hành</a></li>
@@ -1178,17 +1211,21 @@
 
 						<div class="col-6 col-sm-6 col-md-3">
 							<ul class="list-unstyled">
-								<li><p style="color: black;"><b>Thông tin liên hệ</b></p></li>
+								<li>
+									<p style="color: black;"><b>Thông tin liên hệ</b></p>
+								</li>
 								<li><a href="#">Hotline: 0366764577</a></li>
 								<li><a href="#">Email: kinhmatIkkuna@gmail.com</a></li>
 								<li><a href="#">Cơ sở 1: số 1 Chùa Bộc, Quang Trung, Đống Đa, Hà Nội </a></li>
-								
+
 							</ul>
 						</div>
 
 						<div class="col-6 col-sm-6 col-md-3">
 							<ul class="list-unstyled">
-								<li><p style="color: black;"><b>Về Ikkuna</b></p></li>
+								<li>
+									<p style="color: black;"><b>Về Ikkuna</b></p>
+								</li>
 								<li><a href="#">Giới thiệu</a></li>
 								<li><a href="#">Liên hệ</a></li>
 								<li><a href="#">Hệ thống cửa hàng</a></li>
