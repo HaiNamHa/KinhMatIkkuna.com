@@ -112,7 +112,8 @@ function HOTTREND(evt, theloai) {
   document.getElementById("defaultOpen").click();
 
   /*Tab*/
-/*Phần khách hàng thân thiết */
+
+ /*Phần khách hàng thân thiết */
   var swiper = new Swiper(".swiper", {
 	effect: "coverflow",
 	grabCursor: true,
@@ -130,6 +131,10 @@ function HOTTREND(evt, theloai) {
 	pagination: {
 	  el: ".swiper-pagination",
 	  clickable: true
+	},
+	autoplay: {
+	  delay: 3000, 
+	  disableOnInteraction: false 
 	}
   });
   /*Phần khách hàng thân thiết */
