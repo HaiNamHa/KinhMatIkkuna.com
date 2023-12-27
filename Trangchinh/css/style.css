@@ -33,7 +33,7 @@ a.more {
 
 /*header phụ*/
 header {
-  background-color: #7c3a3c;
+  background-color: #a55457;
   color: #fff;
   padding: 10px;
   display: flex;
@@ -80,7 +80,7 @@ header {
   background: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 2000;
 }
 
 .popup {
@@ -151,15 +151,13 @@ header {
 }
 
 .cro-buttons a:hover {
-  background-color: #0056b3;
+  background-color: #c4423e;
 }
-
-
+.cro-buttons img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
 /* CRO-botton*/
-
-
-
-
 
 .custom-navbar {
   background: #e97b7e !important;
@@ -339,17 +337,20 @@ header {
     font-size: 11px
   }
 }
-
 /* Slide show*/
 
 
-
 .section-title {
-  color: #2f2f2f;
+  color: #3A3A3A;
+}
+.section-title2{
+  margin-left: 50px;
+  color: #000000;
 }
 
 .product-section {
   padding: 1rem 0;
+  margin-top: 5px;
 }
 
 .product-section .product-item {
@@ -443,9 +444,19 @@ header {
 .product-section .product-item:hover:before {
   height: 70%;
 }
-
-
-
+.imgflashsale{
+  margin-bottom: -160px;
+  margin-left: 70px;
+  display: inline-block;
+}
+.imgSPGT{
+  margin-bottom: -160px;
+  margin-left: 960px;
+}
+#xemthem{
+  margin-left: 40px;
+  margin-top: 10px;
+}
 
 /*Tab*/
 
@@ -454,12 +465,12 @@ header {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  text-align: center;
 }
 
 
 .tab button {
   background-color: inherit;
-  float: left;
   border: none;
   outline: none;
   cursor: pointer;
@@ -499,17 +510,25 @@ header {
   margin-top: 20px;
   color: #000000;
   font-family: "Inter", sans-serif;
+  margin-bottom: 30px;
+}
+.vectoHM{
+  text-align: center;
+  margin-left: 462px;
+  margin-bottom: -74px;
+}
+.vectoHM2{
+  text-align: center;
+  margin-left: 460px;
+  margin-bottom: -45px;
+
 }
 
-.hangmoiht {
-  text-align: center;
-  font-family: "Inter", sans-serif;
-}
 /*Hang moi */
 
 
 .bao-hanh {
-  padding: 7rem 0 5px 0;
+  padding: 4rem 0 0px 0;
 }
 
 .bao-hanh .img-wrap {
@@ -634,6 +653,7 @@ header {
 .PKHTT {
   text-align: center;
   margin-bottom: -40px;
+  color: #0f2027;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap");
