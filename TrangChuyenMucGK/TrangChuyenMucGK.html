@@ -21,7 +21,8 @@ body{
         .header-image {
             width: 100%;
             opacity: 0.5;
-           filter: contrast(30%);
+            
+           /* filter: contrast(30%); */
             /* filter: brightness(80%); */
         }
 
@@ -70,11 +71,13 @@ h1 {
 }
 
 .filter-container {
-  background-color: #FFD1DC;
+  background-color: rgb(255, 99, 71,0.2);
   padding: 10px;
   color: rgb(97, 97, 97);
   border-radius: 10px;
+  /* position: sticky; */
 }
+
 
 #product-list {
   position: relative;
@@ -123,11 +126,11 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #FFD1DC;
+  background-color: #ffd1dcd2;
   padding: 10px;
   display: none;
   cursor: pointer;
-  /* border-radius: ; */
+  border-radius: 10px; 
   z-index: 1;
 }
 
@@ -139,6 +142,7 @@ h1 {
 .pagination {
   margin-top: 10px;
   text-align: center;
+  /* position: fixed; */
 }
 
 .pagination a {
@@ -214,7 +218,7 @@ h1 {
     <div class="header">
         <img src="ImagesGK/bannerHong.jpgut.jpg" alt="Banner" class="header-image">
         <h1 class="header-title">Gọng kính</h1>
-        <a href="path/to/home" class="home-button"><i>Trang chủ</i></a>
+        <!-- <a href="path/to/home" class="home-button"><i>Trang chủ</i></a> -->
     </div>
   </header>
 <main>
@@ -239,20 +243,32 @@ h1 {
       <label><input type="checkbox" class="filter-shape" value="cat"> Mắt mèo</label><br>
     </div>
     <div>
+      <div class="filters">
+        <div class="filter-item">
+          <label for="sort">Sắp xếp:</label>
+          <select id="sort" onchange="sortProducts()">
+            <option value="price-high-low">Tùy chọn</option>
+            <option value="price-high-low">Giá cao đến thấp</option>
+            <option value="price-low-high">Giá thấp đến cao</option>
+            <option value="newest">Mới nhất</option>
+            <option value="popularity">Quan tâm nhiều</option>
+          </select>
+        </div>
+      </div>
       <div id="product-list">
-        <div class="product" data-price="100" data-material="wood" data-shape="round">
+        <div class="product" data-price="100" data-material="wood" data-shape="round" data-date="2022-01-01" data-views="10">
           <img src="ImagesGK/GK01.png" alt="Sản phẩm 1">
           <h3>GK01</h3>
           <p class="price">Giá: 100,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
-        <div class="product" data-price="500" data-material="metal" data-shape="square">
+        <div class="product" data-price="500" data-material="metal" data-shape="square" data-date="2023-01-01" data-views="30">
           <img src="ImagesGK/GK02.png" alt="Sản phẩm 2">
           <h3>GK02</h3>
           <p class="price">Giá: 500,000 VND</p>
           <p class="add-to-cart">Thêm vào giỏ hàng</p>
         </div>
-        <div class="product" data-price="100" data-material="wood" data-shape="round">
+        <div class="product" data-price="100" data-material="wood" data-shape="round"  data-date="2023-01-01" data-views="5">
           <img src="ImagesGK/GK03.png" alt="Sản phẩm 3">
           <h3>GK03</h3>
           <p class="price">Giá: 100,000 VND</p>
@@ -438,7 +454,7 @@ h1 {
   
 
   <script>
-    // Trang 1,2,3
+// Pagination
     document.addEventListener('DOMContentLoaded', function() {
       // Lấy danh sách các sản phẩm
       var productList = document.getElementById('product-list').children;
@@ -460,7 +476,7 @@ h1 {
           }
 
           // Hiển thị các sản phẩm ở trang tương ứng
-          var startIndex = (page - 1) * 8; // 3 là số sản phẩm hiển thị trên mỗi trang
+          var startIndex = (page - 1) * 8; // 8 là số sản phẩm hiển thị trên mỗi trang
           var endIndex = startIndex + 8;
           for (var k = startIndex; k < endIndex; k++) {
             if (productList[k]) {
@@ -470,7 +486,7 @@ h1 {
         });
       }
     });
-
+// Filter sản phẩm
     document.addEventListener("DOMContentLoaded", function() {
       var priceFilters = document.querySelectorAll(".price-filter input");
       var products = document.querySelectorAll(".product");
@@ -478,7 +494,6 @@ h1 {
       for (var j = 0; j < priceFilters.length; j++) {
         priceFilters[j].addEventListener("click", handlePriceFilterClick);
       }
-  
   
       function handlePriceFilterClick(event) {
         var selectedFilter = event.target;
@@ -551,6 +566,57 @@ h1 {
     filterShapeCheckboxes.forEach(checkbox => {
       checkbox.addEventListener('change', filterProducts);
     });
+// Sắp xếp sản phẩm
+    function sortProducts() {
+  var sortCriteria = document.getElementById('sort').value;
+  var productList = document.getElementById('product-list');
+  var products = Array.from(productList.getElementsByClassName('product'));
+
+  if (sortCriteria === 'price-high-low') {
+    products.sort(function(a, b) {
+      var priceA = parseInt(a.getAttribute('data-price'));
+      var priceB = parseInt(b.getAttribute('data-price'));
+      return priceB - priceA;
+    });
+  } else if (sortCriteria === 'price-low-high') {
+    products.sort(function(a, b) {
+      var priceA = parseInt(a.getAttribute('data-price'));
+      var priceB = parseInt(b.getAttribute('data-price'));
+      return priceA - priceB;
+    });
+  } else if (sortCriteria === 'newest') {
+    products.sort(function(a, b) {
+      var dateA = new Date(a.getAttribute('data-date'));
+      var dateB = new Date(b.getAttribute('data-date'));
+      return dateB - dateA;
+    });
+  } else if (sortCriteria === 'popularity') {
+    products.sort(function(a, b) {
+      var viewsA = parseInt(a.getAttribute('data-views'));
+      var viewsB = parseInt(b.getAttribute('data-views'));
+      return viewsB - viewsA;
+    });
+  }
+
+  products.forEach(function(product) {
+    productList.appendChild(product);
+  });
+}
+// Hiển thị sau khi lọc
+var numberOfProducts = 8;
+
+// Cập nhật chiều dài của filter-container
+var filterContainer = document.querySelector('.filter-container');
+filterContainer.style.height = numberOfProducts * 70 + 'px';
+
+// Cập nhật vị trí sticky của filter-container
+var productContainer = document.querySelector('.product-list-container');
+var productContainerRect = productContainer.getBoundingClientRect();
+filterContainer.style.top = productContainerRect.top + 'px';
+
+// Cập nhật vị trí sticky của pagination-container
+var paginationContainer = document.querySelector('.pagination');
+paginationContainer.style.top = productContainerRect.bottom + 'px';
   </script>
   </main>
 </body>
