@@ -81,6 +81,7 @@ p {
 	font-weight: 400;
 	line-height: 26px;
 	margin: 0 0 15px 0;
+	text-align: justify;
 }
 
 img {
@@ -430,6 +431,8 @@ ol {
 .blog__sidebar__recent__item__pic {
 	float: left;
 	margin-right: 20px;
+	width: 70px;
+	height: 70px;
 }
 
 .blog__sidebar__recent__item__text {
