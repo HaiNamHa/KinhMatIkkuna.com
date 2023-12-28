@@ -752,27 +752,27 @@ header {
 
 .swiper-slide--one {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("Trangchinh/images/Bảo\ An\ &\ Gia\ Khiêm.jpg") no-repeat 50% 50% / cover;
+    url("/Trangchinh/images/BAGK.jpg") no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--two {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("Trangchinh/images/Khánh\ Huyền.jpg") no-repeat 50% 50% / cover;
+    url("/Trangchinh/images/KhanhHuyen.jpg") no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--three {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("Trangchinh/images/Ngọc\ MatCha.jpg") no-repeat 50% 50% / cover;
+    url("/Trangchinh/images/NgocMatCha.jpg") no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--four {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("Trangchinh/images/Trâm\ Anh.jpg") no-repeat 50% 50% / cover;
+    url("/Trangchinh/images/TramAnh.jpg") no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--five {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("Trangchinh/images/Trần\ Vân.jpg") no-repeat 50% 50% / cover;
+    url("/Trangchinh/images/TranVan.jpg") no-repeat 50% 50% / cover;
 }
 
 .swiper-3d .swiper-slide-shadow-left,
