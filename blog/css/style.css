@@ -36,6 +36,7 @@ body {
 	font-family: "Cairo", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+	background-color: white;
 }
 
 h1,
@@ -431,8 +432,8 @@ ol {
 .blog__sidebar__recent__item__pic {
 	float: left;
 	margin-right: 20px;
-	width: 70px;
-	height: 70px;
+	width: 75px;
+	height: 75px;
 }
 
 .blog__sidebar__recent__item__text {
@@ -531,6 +532,8 @@ ol {
 
 .blog__details__text img {
 	margin-bottom: 30px;
+	display: block;
+    margin: auto;
 }
 
 .blog__details__text p {
