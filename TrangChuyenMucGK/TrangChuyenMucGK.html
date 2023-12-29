@@ -11,6 +11,9 @@
 body{
   font-family:Arial, Helvetica, sans-serif;
 }
+a{
+  text-decoration: none;
+}
 .header {
             position: relative;
             height: 300px;
@@ -150,7 +153,6 @@ h1 {
   cursor: pointer;
   /* width: fit-content; */
 }
-
 
 .quick-view {
   position: absolute;
@@ -359,8 +361,8 @@ button:hover {
       <h3>Giá:</h3>
         <div class="price-filter">
           <label><input type="radio" name="price" value="100-200">100,000-200,000</label><br>
-          <label><input type="radio" name="price" value="200-300">200,000-300,000</label><br>
-          <label><input type="radio" name="price" value="300-500">300,000-500,000</label><br>
+          <label><input type="radio" name="price" value="200-300">200,000-500,000</label><br>
+          <label><input type="radio" name="price" value="300-500">500,000-1,000,000</label><br>
           <label><input type="radio" name="price" value="all">Tất cả</label><br>
         </div>
     </div>
@@ -381,8 +383,8 @@ button:hover {
         <div class="product" data-price="250" data-material="plastic2" data-shape="5-tangle" data-date="2022-01-01" data-views="10">
             <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK01.png" alt="Sản phẩm 1">              
             <div style="text-align: center;">  
-            <h3>Mã sản phẩm: GK01</h3>
-            <p class="price"><span class="original-price">350,000 VND</span> Giá: 250,000 VND</p>
+              <a href="../trangchitiet/ana2.html"> <h3>Mã sản phẩm: GK01</h3></a>
+              <p class="price"><span class="original-price">350,000 VND</span> Giá: 250,000 VND</p>
               <button onclick="toggleModal('01')" class="quick-view" >Xem nhanh</button>
               <p class="add-to-cart">Thêm vào giỏ hàng</p>
               <div class="sale-badge">Sale</div> 
@@ -406,7 +408,7 @@ button:hover {
         <div class="product" data-price="250" data-material="metal" data-shape="round" data-date="2022-12-03" data-views="17">
             <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK02.png" alt="Sản phẩm 2">              
             <div style="text-align: center;">  
-            <h3>Mã sản phẩm: GK02</h3>
+            <a href="C:\Users\LAPTOP24H\OneDrive\Documents\GitHub\KinhMatMoon_SoiSangMoiCungDuong\chitietsp\GK02.html"><h3>Mã sản phẩm: GK02</h3></a>
             <p class="price"><span class="original-price">350,000 VND</span> Giá: 250,000 VND</p>
               <button onclick="toggleModal('02')" class="quick-view" >Xem nhanh</button>
               <p class="add-to-cart">Thêm vào giỏ hàng</p>
@@ -430,7 +432,7 @@ button:hover {
         <div class="product" data-price="700" data-material="plastic2" data-shape="rectangle" data-date="2023-01-01" data-views="50">
             <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK03.png" alt="Sản phẩm 3">              
             <div style="text-align: center;">  
-            <h3>Mã sản phẩm: GK03</h3>
+            <a href="C:\Users\LAPTOP24H\OneDrive\Documents\GitHub\KinhMatMoon_SoiSangMoiCungDuong\chitietsp\GK03.html"><h3>Mã sản phẩm: GK03</h3></a>
             <p class="price"><span class="original-price">800,000 VND</span> Giá: 700,000 VND</p>
               <button onclick="toggleModal('03')" class="quick-view" >Xem nhanh</button>
               <p class="add-to-cart">Thêm vào giỏ hàng</p>
@@ -576,18 +578,83 @@ button:hover {
             </div>
         </div>
         
-        <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-          <img src="ImagesGK/GK09.png" alt="Sản phẩm 5">
-          <h3>GK09</h3>
-          <p class="price">Giá: 500,000 VND</p>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        <div class="product" style="display: none;" data-price="300" data-material="metal" data-shape="round" data-date="2023-11-1" data-views="4">
+          <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK09.png" alt="Sản phẩm 9">              
+          <div style="text-align: center;">  
+          <h3>Mã sản phẩm: GK09</h3>
+          <p class="price"><span class="original-price">380,000 VND</span> Giá: 350,000 VND</p>
+            <button onclick="toggleModal('07')" class="quick-view" >Xem nhanh</button>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+            <div class="sale-badge">Sale</div> 
+          </div>           
         </div>
-        <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-          <img src="ImagesGK/GK10.png" alt="Sản phẩm 5">
-          <h3>GK10</h3>
-          <p class="price">Giá: 500,000 VND</p>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        
+        <div class="product" style="display: none;" data-price="380" data-material="titan" data-shape="round" data-date="2022-11-1" data-views="40">
+          <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK10.png" alt="Sản phẩm 10">              
+          <div style="text-align: center;">  
+          <h3>Mã sản phẩm: GK10</h3>
+          <p class="price"><span class="original-price">450,000 VND</span> Giá: 380,000 VND</p>
+            <button onclick="toggleModal('07')" class="quick-view" >Xem nhanh</button>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+            <div class="sale-badge">Sale</div> 
+          </div>           
         </div>
+        
+        <div class="product" style="display: none;" data-price="300" data-material="metal" data-shape="" data-date="2020-6-1" data-views="32">
+          <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK11.png" alt="Sản phẩm 11">              
+          <div style="text-align: center;">  
+          <h3>Mã sản phẩm: GK11</h3>
+          <p class="price"><span class="original-price">650,000 VND</span> Giá: 599,000 VND</p>
+            <button onclick="toggleModal('07')" class="quick-view" >Xem nhanh</button>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+            <div class="sale-badge">Sale</div> 
+          </div>           
+        </div>
+
+        <div class="product" style="display: none;" data-price="750" data-material="metal" data-shape="round" data-date="2021-3-10" data-views="23">
+          <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK12.png" alt="Sản phẩm 12">              
+          <div style="text-align: center;">  
+          <h3>Mã sản phẩm: GK12</h3>
+          <p class="price"><span class="original-price">870,000 VND</span> Giá: 750,000 VND</p>
+            <button onclick="toggleModal('12')" class="quick-view" >Xem nhanh</button>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+            <div class="sale-badge">Sale</div> 
+          </div>           
+        </div>
+        
+        <div class="product" style="display: none;" data-price="180" data-material="plastic2" data-shape="round" data-date="2022-11-1" data-views="40">
+          <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK13.png" alt="Sản phẩm 13">              
+          <div style="text-align: center;">  
+          <h3>Mã sản phẩm: GK13</h3>
+          <p class="price"><span class="original-price">350,000 VND</span> Giá: 180,000 VND</p>
+            <button onclick="toggleModal('13')" class="quick-view" >Xem nhanh</button>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+            <div class="sale-badge">Sale</div> 
+          </div>           
+        </div>
+        
+        <div class="product" style="display: none;" data-price="849" data-material="metal" data-shape="" data-date="2023-12-12" data-views="52">
+          <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK14.png" alt="Sản phẩm 14">              
+          <div style="text-align: center;">  
+          <h3>Mã sản phẩm: GK14</h3>
+          <p class="price"><span class="original-price">950,000 VND</span> Giá: 849,000 VND</p>
+            <button onclick="toggleModal('14')" class="quick-view" >Xem nhanh</button>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+            <div class="sale-badge">Sale</div> 
+          </div>           
+        </div>
+        
+        <div class="product" style="display: none;" data-price="849" data-material="metal" data-shape="" data-date="2021-11-10" data-views="22">
+          <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK14.png" alt="Sản phẩm 14">              
+          <div style="text-align: center;">  
+          <h3>Mã sản phẩm: GK15</h3>
+          <p class="price"><span class="original-price">550,000 VND</span> Giá: 449,000 VND</p>
+            <button onclick="toggleModal('14')" class="quick-view" >Xem nhanh</button>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+            <div class="sale-badge">Sale</div> 
+          </div>           
+        </div>
+
         <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
           <img src="ImagesGK/GK11.png" alt="Sản phẩm 6">
           <h3>GK11</h3>
