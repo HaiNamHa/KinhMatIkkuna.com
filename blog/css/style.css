@@ -195,7 +195,7 @@ ol {
 	text-align: center;
 	color: white;
 	padding: 100px 0;
-	background-image: url('/blog/img/blog/details1/bgg.jpg');
+	background-image: url('../img/blog/details1/bgg.jpg');
 	background-size: cover;
 	background-position: center;
   }
