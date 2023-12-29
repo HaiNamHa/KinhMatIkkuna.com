@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="../Trangchinh/css/bootstrap.min.css" rel="stylesheet"> 
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font1|Font2|Font3&display=swap">
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+	<link href="../Trangchinh/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Header 1-->
+	<header>
+		<div id="logo">
+			<a href="index.html"><img src="../Trangchinh/images/logo.png" alt="Your Logo" class="ikkuna"></a>
+		</div>
+
+		<div class="input-group" id="search-box">
+			<input type="text" class="form-control" id="search-input" placeholder="Tìm kiếm sản phẩm bạn yêu thích">
+			<div class="input-group-append">
+				<button class="btn btn-outline-light" type="button" onclick="searchProduct()">
+					<i class="fas fa-search"></i>
+				</button>
+			</div>
+		</div>
+
+		<div id="login-link">
+			<a class="nav-link" href="#"><img src="../Trangchinh/images/user.svg"></a>
+			<a class="nav-link" href="#"><img src="../Trangchinh/images/cart.svg"></a>
+		</div>
+	</header>
+	<!--End Header 1-->
+
+	<!-- Start Header/Navigation -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md nagvbar-dark b-dark" arial-label="Furni navigation bar">
+		<div class="container">
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav me-auto mb-2 mb-md-0">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Trang chủ</a>
+					</li>
+					<li>
+						<div class="dropdown">
+							<a class="nav-link" href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Sản phẩm</a>
+							<div class="dropdown-content">
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Gọng kính</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kính râm</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kính áp tròng</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kính trẻ em</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Mắt kính</a>
+							</div>
+						</div>
+					</li>
+					<li><a class="nav-link" href="GioiThieu.html">Giới thiệu</a></li>
+					<li><a class="nav-link" href="KhuyenMai.html">Khuyến mãi</a></li>
+					<li><a class="nav-link" href="/blog/blog1.html">Blog</a></li>
+					<li>
+						<div class="dropdown">
+							<a class="nav-link" href="blog/blog1.html">Blog</a>
+							<div class="dropdown-content">
+								<a href="/blog/tintucveikkuna.html">Tin tức về Ikkuna</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Góc tư vấn</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Bệnh về mắt</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kiến thức chung</a>
+							</div>
+						</div>
+					</li>
+					<li><a class="nav-link" href="#">Liên hệ</a></li>
+				</ul>
+
+				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+					<li>
+						<p class="nav-link">|</p>
+					</li>
+					<li>
+						<p class="nav-link">Hotline: </p>
+					</li>
+					<li><a class="nav-link" href="#">0366764577</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Tin Tức Về Ikkuna</h2>
+                        <div class="breadcrumb__option">
+                            <a href="/index.html">Home </a>
+                            <span>Blog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Blog Section Begin -->
+    <section class="blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5">
+                    <div class="blog__sidebar">
+                        <div class="blog__sidebar__search">
+                            <form action="#">
+                                <input type="text" placeholder="Search...">
+                                <button type="submit"><span class="icon_search"></span></button>
+                            </form>
+                        </div>
+                        <div class="blog__sidebar__item">
+                            <h4>Categories</h4>
+                            <ul>
+                                <li><a href="blog1.html">All</a></li>
+                                <li><a href="tintucveikkuna.html">Tin tức về Ikkuna</a></li>
+                                <li><a href="/blog/goctuvan.html">Góc tư vấn</a></li>
+                                <li><a href="/blog/benhvemat.html">Bệnh về mắt</a></li>
+                                <li><a href="/blog/kienthucchung.html">Kiến thức chung</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="blog__sidebar__item">
+                            <h4>Search By</h4>
+                            <div class="blog__sidebar__item__tags">
+                                <a href="#">Kính cận</a>
+                                <a href="#">Kính áp tròng</a>
+                                <a href="#">Kính râm</a>
+                                <a href="/TrangChuyenMucGK/TrangChuyenMucGK.html">Gọng kính</a>
+                                <a href="#">Gọng kính trẻ em</a>
+                                <a href="#">Tròng kính</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="blog__item">
+                                <div class="blog__item__pic">
+                                    <img src="img/store.jpg" alt="">
+                                </div>
+                                <div class="blog__item__text">
+                                    <ul>
+                                        <li><i class="fa fa-calendar-o"></i> Sep 16,2023</li>
+                                        <li><i class="fa fa-comment-o"></i> 5</li>
+                                    </ul>
+                                    <h5><a href="#">Các cửa hàng kính mắt Ikkuna mở cửa lúc mấy giờ?</a></h5>
+                                    <p>Nhiều khách hàng vẫn chưa rõ thời gian hoạt động hàng ngày của Kính mắt Ikkuna. Hãy cùng tìm hiểu để ghé thăm chúng mình nhé!</p>
+                                    <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                                       
+                        <div class="col-lg-12">
+                            <div class="product__pagination blog__pagination">
+                                <a href="tintucveikkuna.html">1</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/bootstrap.min.js"></script>
+<!-- Start Footer Section -->
+<footer class="footer-section">
+    <div class="container relative">
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="subscription-form">
+                    <h3 class="d-flex align-items-center"><span class="me-1"><img
+                                src="../Trangchinh/images/envelope-outline.svg" alt="Image"
+                                class="img-fluid"></span><span>Hãy gửi phản hồi cho chúng tôi nếu bạn gặp vấn đề
+                            gì.</span></h3>
+
+                    <form action="#" class="row g-3">
+                        <div class="col-auto">
+                            <input type="text" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="col-auto">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-primary">
+                                <span class="fa fa-paper-plane"></span>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5 mb-5">
+            <div class="col-lg-4">
+                <div class="mb-4 footer-logo-wrap"><a href="index.html" class="footer-logo">IKKUNA</a></div>
+                <p class="mb-4">Chúng tôi xin cam đoan rằng sản phẩm của IKKUNA là một lựa chọn đúng đắn cho quý
+                    khách hàng. Sự đảm bảo chất lượng sản phẩm và chính sách bảo hành tốt là những yếu tố quan trọng
+                    mà chúng tôi hướng đến. Đồng thời, chúng tôi cũng tự hào là cửa hàng cung cấp sản phẩm với giá
+                    tốt nhất trên thị trường.
+                </p>
+
+                <ul class="list-unstyled custom-social">
+                    <li><a href="https://www.facebook.com/profile.php?id=61553810680047" target="_blank"><span
+                                class="fa fa-brands fa-facebook-f"></span></a></li>
+                    <li><a href="https://www.tiktok.com/@kinhmatikkuna" target="_blank"><span
+                                class="fa fa-brands fa-tiktok"></span></a></li>
+                    <li><a href="https://www.instagram.com/kinhmat_ikkuna/" target="_blank"><span
+                                class="fa fa-brands fa-instagram"></span></a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="row links-wrap">
+                    <div class="col-6 col-sm-6 col-md-3">
+                        <ul class="list-unstyled">
+                            <li>
+                                <p style="color: black;"><b>Tất cả sản phẩm</b></p>
+                            </li>
+                            <li><a href="#">Gọng kính</a></li>
+                            <li><a href="#">Kính áp tròng</a></li>
+                            <li><a href="#">Kính râm</a></li>
+                            <li><a href="#">Kính mắt trẻ em</a></li>
+                            <li><a href="#">Mắt kính</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-3">
+                        <ul class="list-unstyled">
+                            <li>
+                                <p style="color: black;"><b>Chính sách mua hàng</b></p>
+                            </li>
+                            <li><a href="#">Hình thức thanh toán</a></li>
+                            <li><a href="#">Chính sách giao hàng</a></li>
+                            <li><a href="#">Chính sách bảo hành</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-3">
+                        <ul class="list-unstyled">
+                            <li>
+                                <p style="color: black;"><b>Thông tin liên hệ</b></p>
+                            </li>
+                            <li><a href="#">Hotline: 0366764577</a></li>
+                            <li><a href="#">Email: kinhmatIkkuna@gmail.com</a></li>
+                            <li><a href="#">Cơ sở 1: số 1 Chùa Bộc, Quang Trung, Đống Đa, Hà Nội </a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-sm-6 col-md-3">
+                        <ul class="list-unstyled">
+                            <li>
+                                <p style="color: black;"><b>Về Ikkuna</b></p>
+                            </li>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Hệ thống cửa hàng</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

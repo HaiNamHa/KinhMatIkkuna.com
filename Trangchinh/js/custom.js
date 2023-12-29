@@ -71,6 +71,49 @@
 
 
 })()
+
+//Tìm kiếm sản phẩm
+function searchProduct() {
+	// Lấy giá trị nhập vào ô tìm kiếm
+	var productName = document.getElementById("search-input").value;
+
+	// Kiểm tra xem tên sản phẩm có được nhập không
+	if (productName.trim() !== "") {
+		// Xác định trang cần chuyển hướng dựa trên tên sản phẩm
+		var pageToRedirect = getPageToRedirect(productName);
+
+		if (pageToRedirect) {
+			// Chuyển hướng đến trang được xác định
+			window.location.href = pageToRedirect;
+		} else {
+			// Hiển thị thông báo không có sản phẩm này
+			alert("Hiện cửa hàng không có sản phẩm này");
+		}
+	}
+}
+
+function getPageToRedirect(productName) {
+	// Ánh xạ giữa tên sản phẩm và các trang tương ứng
+	var productPages = {
+		"Kính áp tròng":"/TrangChuyenMucGK/TrangChuyenMucGK.html",
+		"Kính râm":"/TrangChuyenMucGK/TrangChuyenMucGK.html",
+		"Gọng kính":"/TrangChuyenMucGK/TrangChuyenMucGK.html",
+		"Tròng kính":"/TrangChuyenMucGK/TrangChuyenMucGK.html",
+		"Kính áp tròng Cosplay Crazy Red": "/GioiThieu.html",
+		"Kính áp tròng trong suốt có độ cận": "/KhuyenMai.html",
+		"TRÒNG KÍNH PHÁP ESSILOR PREVENCIA CRIZAL.ROCK CHIẾT SUẤT 1.56": "/TrongKinhPhap.html",
+		// Thêm các ánh xạ khác nếu cần
+	};
+
+	// Trả về đường dẫn trang tương ứng hoặc null nếu không tìm thấy
+	return productPages[productName] || null;
+}
+
+//Tìm kiếm sản phẩm
+
+
+
+
 /*slide show */
 let slideIndex1 = 0;
 showSlides1();

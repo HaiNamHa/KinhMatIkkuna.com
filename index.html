@@ -4,14 +4,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="shortcut icon" href="/Trangchinh/logo.png">
+	<link rel="shortcut icon" href="Trangchinh/logo.png">
 
 	<!-- Bootstrap CSS -->
-	<link href="/Trangchinh/css/bootstrap.min.css" rel="stylesheet">
+	<link href="Trangchinh/css/bootstrap.min.css" rel="stylesheet"> 
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font1|Font2|Font3&display=swap">
 	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
-	<link href="/Trangchinh/css/style.css" rel="stylesheet">
+	<link href="Trangchinh/css/style.css" rel="stylesheet"> 
 
 	<title>Trang chu</title>
 </head>
@@ -20,27 +20,27 @@
 	<!--Header 1-->
 	<header>
 		<div id="logo">
-			<a href="index.html"><img src="/Trangchinh/images/logo.png" alt="Your Logo" class="ikkuna"></a>
+			<a href="index.html"><img src="Trangchinh/images/logo.png" alt="Your Logo" class="ikkuna"></a>
 		</div>
 
 		<div class="input-group" id="search-box">
-			<input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm bạn yêu thích">
+			<input type="text" class="form-control" id="search-input" placeholder="Tìm kiếm sản phẩm bạn yêu thích">
 			<div class="input-group-append">
-				<button class="btn btn-outline-light" type="button">
+				<button class="btn btn-outline-light" type="button" onclick="searchProduct()">
 					<i class="fas fa-search"></i>
 				</button>
 			</div>
 		</div>
 
 		<div id="login-link">
-			<a class="nav-link" href="#"><img src="/Trangchinh/images/user.svg"></a>
-			<a class="nav-link" href="#"><img src="/Trangchinh/images/cart.svg"></a>
+			<a class="nav-link" href="#"><img src="Trangchinh/images/user.svg"></a>
+			<a class="nav-link" href="#"><img src="Trangchinh/images/cart.svg"></a>
 		</div>
 	</header>
 	<!--End Header 1-->
 
 	<!-- Start Header/Navigation -->
-	<nav class="custom-navbar navbar navbar navbar-expand-md nagvbar-dark b-dark" arial-label="Furni navigation bar" >
+	<nav class="custom-navbar navbar navbar navbar-expand-md nagvbar-dark b-dark" arial-label="Furni navigation bar">
 		<div class="container">
 			<div class="collapse navbar-collapse" id="navbarsFurni">
 				<ul class="custom-navbar-nav navbar-nav me-auto mb-2 mb-md-0">
@@ -49,19 +49,29 @@
 					</li>
 					<li>
 						<div class="dropdown">
-							<a class="nav-link" href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Sản phẩm</a>
+							<a class="nav-link" href="TrangChuyenMucGK/TrangChuyenMucGK.html">Sản phẩm</a>
 							<div class="dropdown-content">
-								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Gọng kính</a>
-								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kính râm</a>
-								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kính áp tròng</a>
-								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kính trẻ em</a>
-								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Mắt kính</a>
+								<a href="TrangChuyenMucGK/TrangChuyenMucGK.html">Gọng kính</a>
+								<a href="TrangChuyenMucGK/TrangChuyenMucGK.html">Kính râm</a>
+								<a href="TrangChuyenMucGK/TrangChuyenMucGK.html">Kính áp tròng</a>
+								<a href="TrangChuyenMucGK/TrangChuyenMucGK.html">Kính trẻ em</a>
+								<a href="TrangChuyenMucGK/TrangChuyenMucGK.html">Mắt kính</a>
 							</div>
 						</div>
 					</li>
-					<li><a class="nav-link" href="/GioiThieu.html">Giới thiệu</a></li>
-					<li><a class="nav-link" href="#">Khuyến mãi</a></li>
-					<li><a class="nav-link" href="/blog/blog-details.html">Blog</a></li>
+					<li><a class="nav-link" href="GioiThieu.html">Giới thiệu</a></li>
+					<li><a class="nav-link" href="KhuyenMai.html">Khuyến mãi</a></li>
+					<li>
+						<div class="dropdown">
+							<a class="nav-link" href="blog/blog1.html">Blog</a>
+							<div class="dropdown-content">
+								<a href="/blog/tintucveikkuna.html">Tin tức về Ikkuna</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Góc tư vấn</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Bệnh về mắt</a>
+								<a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kiến thức chung</a>
+							</div>
+						</div>
+					</li>
 					<li><a class="nav-link" href="#">Liên hệ</a></li>
 				</ul>
 
@@ -83,16 +93,16 @@
 
 
 	<!-- Slideshow container -->
-	
+
 	<div class="slideshow-container1">
 		<div class="mySlides1 fade1">
-			<img src="/Trangchinh/images/slide4.png" style="width:100%">
+			<img src="Trangchinh/images/Slide4.png" style="width:100%">
 		</div>
 		<div class="mySlides1 fade1">
-			<img src="/Trangchinh/images/slide1_sua.png" style="width:100%">
+			<img src="Trangchinh/images/slide1_sua.png" style="width:100%">
 		</div>
 		<div class="mySlides1 fade1">
-			<img src="/Trangchinh/images/slide.jpg" style="width:100%">
+			<img src="Trangchinh/images/slide.jpg" style="width:100%">
 		</div>
 	</div>
 	<br>
@@ -109,11 +119,11 @@
 	<div class="BT">
 		<div class="cro-buttons">
 			<a href="https://www.facebook.com/profile.php?id=61553810680047" class="facebook" target="_blank"><img
-					src="/Trangchinh/images/facebook.jpg" alt="Facebook"></a>
+					src="Trangchinh/images/facebook.jpg" alt="Facebook"></a>
 			<a href="https://www.tiktok.com/@kinhmatikkuna" class="tiktok" target="_blank"><img
-					src="/Trangchinh/images/tiktok.png" alt="TikTok"></a>
+					src="Trangchinh/images/tiktok.png" alt="TikTok"></a>
 			<a href="https://www.instagram.com/kinhmat_ikkuna/" class="instagram" target="_blank"><img
-					src="/Trangchinh/images/ig.png" alt="Instagram"></a>
+					src="Trangchinh/images/ig.png" alt="Instagram"></a>
 		</div>
 	</div>
 	<!--CRO-BT-->
@@ -122,14 +132,14 @@
 	<div class="overlay" id="overlay">
 		<div class="popup">
 			<span class="close-btn" onclick="closePopup()">×</span>
-			<img src="/Trangchinh/images/christmas_menu_specials_1_4_.jpg" alt="Khuyến Mãi" class="imgpop">
+			<img src="Trangchinh/images/christmas_menu_specials_1_4_.jpg" alt="Khuyến Mãi" class="imgpop">
 			<div class="countdown" id="countdown"></div>
 		</div>
 	</div>
 
 	<script>
 		window.onload = function () {
-			var endDate = new Date("Dec 31, 2023 00:00:00").getTime(); // Đặt ngày kết thúc khuyến mãi
+			var endDate = new Date("Jan 3, 2024 00:00:00").getTime(); // Đặt ngày kết thúc khuyến mãi
 			function updateCountdown() {
 				var now = new Date().getTime();
 				var timeLeft = endDate - now;
@@ -156,7 +166,7 @@
 		}
 	</script>
 	<!--Phần popup-->
-
+	<img src="Trangchinh/images/flashsale.png" alt="" class="imgflashsale">
 	<!-- Start Product Section_1 -->
 	<div class="product-section">
 		<div class="container">
@@ -165,7 +175,8 @@
 				<!-- Start Column 1 -->
 				<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
 					<h2 class="mb-4 section-title">SĂN FLASH SALE NGAY</h2>
-					<p class="mb-4">Hàng trăm sản phẩm bắt trend mới nhất</p>
+					<!--<p class="mb-4">Hàng trăm sản phẩm bắt trend mới nhất</p> -->
+
 					<p><a href="shop.html" class="btn">Xem thêm</a></p>
 				</div>
 				<!-- End Column 1 -->
@@ -173,13 +184,13 @@
 				<!-- Start Column 2 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Kính áp tròng Cosplay Crazy Red.jpg"
+						<img src="Trangchinh/images/Kính áp tròng Cosplay Crazy Red.jpg"
 							class="img-fluid product-thumbnail">
-						<h3 class="product-title">Nordic Chair</h3>
-						<strong class="product-price">$50.00</strong>
+						<h3 class="product-title">Kính áp tròng Cosplay Crazy Red</h3>
+						<p class="product-price">200.000 VNĐ</p>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -188,13 +199,13 @@
 				<!-- Start Column 3 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Kính áp tròng trong suốt có độ cận.jpg"
+						<img src="Trangchinh/images/Kính áp tròng trong suốt có độ cận.jpg"
 							class="img-fluid product-thumbnail">
 						<h3 class="product-title">Kính áp tròng trong suốt có độ cận</h3>
-						<strong class="product-price">$78.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -203,13 +214,13 @@
 				<!-- Start Column 4 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Kính áp tròng trong suốt có độ cận.jpg"
+						<img src="Trangchinh/images/Kính áp tròng trong suốt có độ cận.jpg"
 							class="img-fluid product-thumbnail">
 						<h3 class="product-title">Kính áp tròng trong suốt có độ cận</h3>
-						<strong class="product-price">$43.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -228,13 +239,13 @@
 				<!-- Start Column 1 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/TRÒNG KÍNH PHÁP ESSILOR PREVENCIA CRIZAL.ROCK CHIẾT SUẤT 1.56.png"
+						<img src="Trangchinh/images/TRÒNG KÍNH PHÁP ESSILOR PREVENCIA CRIZAL.ROCK CHIẾT SUẤT 1.56.png"
 							class="img-fluid product-thumbnail">
 						<h3 class="product-title">TRÒNG KÍNH PHÁP ESSILOR PREVENCIA CRIZAL.ROCK CHIẾT SUẤT 1.56</h3>
-						<strong class="product-price">$50.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -243,13 +254,13 @@
 				<!-- Start Column 2 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/TRÒNG KÍNH PHÁP ESSILOR CRIZAL.EASY CHIẾT SUẤT 1.56.png"
+						<img src="Trangchinh/images/TRÒNG KÍNH PHÁP ESSILOR CRIZAL.EASY CHIẾT SUẤT 1.56.png"
 							class="img-fluid product-thumbnail">
 						<h3 class="product-title">TRÒNG KÍNH PHÁP ESSILOR CRIZAL.EASY CHIẾT SUẤT 1.56</h3>
-						<strong class="product-price">$50.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -258,13 +269,13 @@
 				<!-- Start Column 3 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Gọng kính Clubmaster đen viền bạc.jpg"
+						<img src="Trangchinh/images/Gọng kính Clubmaster đen viền bạc.jpg"
 							class="img-fluid product-thumbnail">
 						<h3 class="product-title">Gọng kính Clubmaster đen viền bạ</h3>
-						<strong class="product-price">$78.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -273,12 +284,12 @@
 				<!-- Start Column 4 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Gọng kính đen nhám Oval.jpg" class="img-fluid product-thumbnail">
+						<img src="Trangchinh/images/Gọng kính đen nhám Oval.jpg" class="img-fluid product-thumbnail">
 						<h3 class="product-title">Gọng kính đen nhám Oval</h3>
-						<strong class="product-price">$43.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -302,7 +313,7 @@
 						<div class="col-6 col-md-6">
 							<div class="feature">
 								<div class="icon">
-									<img src="/Trangchinh/images/truck.svg" alt="Image" class="imf-fluid">
+									<img src="Trangchinh/images/truck.svg" alt="Image" class="imf-fluid">
 								</div>
 								<h3>Chính sách bảo hành</h3>
 								<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
@@ -313,7 +324,7 @@
 						<div class="col-6 col-md-6">
 							<div class="feature">
 								<div class="icon">
-									<img src="/Trangchinh/images/bag.svg" alt="Image" class="imf-fluid">
+									<img src="Trangchinh/images/bag.svg" alt="Image" class="imf-fluid">
 								</div>
 								<h3>Khám mắt miễn phí</h3>
 								<p>Ikkuna luôn hỗ trợ bạn khám mắt miễn phí nếu bạn đến cửa hàng.</p>
@@ -323,7 +334,7 @@
 						<div class="col-6 col-md-6">
 							<div class="feature">
 								<div class="icon">
-									<img src="/Trangchinh/images/support.svg" alt="Image" class="imf-fluid">
+									<img src="Trangchinh/images/support.svg" alt="Image" class="imf-fluid">
 								</div>
 								<h3>Vệ sinh và bảo quản kính mắt</h3>
 								<p>Bảo vệ sức khỏe mắt, duy trì độ sắc nét và tăng tuổi thọ kính mắt.</p>
@@ -333,7 +344,7 @@
 						<div class="col-6 col-md-6">
 							<div class="feature">
 								<div class="icon">
-									<img src="/Trangchinh/images/return.svg" alt="Image" class="imf-fluid">
+									<img src="Trangchinh/images/return.svg" alt="Image" class="imf-fluid">
 								</div>
 								<h3>Đổi trả dễ dàng</h3>
 								<p>Bảo hành 1 đổi 1 khi có lỗi của nhà sản xuất,
@@ -346,7 +357,7 @@
 
 				<div class="col-lg-5">
 					<div class="img-wrap">
-						<img src="/Trangchinh/images/we chose.jpg" alt="Image" class="img-fluid">
+						<img src="Trangchinh/images/we chose.jpg" alt="Image" class="img-fluid">
 					</div>
 				</div>
 
@@ -356,9 +367,8 @@
 	<!-- End Why Choose Us Section -->
 
 	<!-- Tab-->
-
+	<img src="Trangchinh/images/Vector-3-1.svg" class="vectoHM">
 	<h2 class="hangmoi">HÀNG MỚI LÊN KỆ</h2>
-	<p class="hangmoiht">Hot trend</p>
 	<!--Tab moi-->
 
 	<div class="tab">
@@ -376,13 +386,13 @@
 					<!-- Start Column 1 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính Clubmaster đen viền bạc.jpg"
+							<img src="Trangchinh/images/Gọng kính Clubmaster đen viền bạc.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính Clubmaster đen viền bạc</h3>
-							<strong class="product-price">$50.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -391,13 +401,13 @@
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính kim loại vuông.jpg"
+							<img src="Trangchinh/images/Gọng kính kim loại vuông.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính kim loại vuông</h3>
-							<strong class="product-price">$50.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -406,13 +416,13 @@
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính kim loại vàng hồng.jpg"
+							<img src="Trangchinh/images/Gọng kính kim loại vàng hồng.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính kim loại vàng hồng</h3>
-							<strong class="product-price">$78.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -421,13 +431,13 @@
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính kim loại đa giác.jpg"
+							<img src="Trangchinh/images/Gọng kính kim loại đa giác.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính kim loại đa giác</h3>
-							<strong class="product-price">$43.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -446,13 +456,13 @@
 					<!-- Start Column 1 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính nâu vàng Oval.jpg"
+							<img src="Trangchinh/images/Gọng kính nâu vàng Oval.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính nâu vàng Oval</h3>
-							<strong class="product-price">$50.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -461,13 +471,13 @@
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính nửa viền thân gỗ.jpg"
+							<img src="Trangchinh/images/Gọng kính nửa viền thân gỗ.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính nửa viền thân gỗ</h3>
-							<strong class="product-price">$50.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -476,13 +486,13 @@
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính đen bóng vuông.jpg"
+							<img src="Trangchinh/images/Gọng kính đen bóng vuông.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính đen bóng vuông</h3>
-							<strong class="product-price">$78.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -491,13 +501,13 @@
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Gọng kính đen nhám Oval.jpg"
+							<img src="Trangchinh/images/Gọng kính đen nhám Oval.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Gọng kính đen nhám Oval</h3>
-							<strong class="product-price">$43.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -519,13 +529,13 @@
 					<!-- Start Column 1 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Kính áp tròng Cosplay Crazy Red.jpg"
+							<img src="Trangchinh/images/Kính áp tròng Cosplay Crazy Red.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Kính áp tròng Cosplay Crazy Red</h3>
-							<strong class="product-price">$50.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -534,13 +544,13 @@
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Kính áp tròng màu Magic Black có độ cận.jpg"
+							<img src="Trangchinh/images/Kính áp tròng màu Magic Black có độ cận.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Kính áp tròng màu Magic Black có độ cận</h3>
-							<strong class="product-price">$50.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -549,13 +559,13 @@
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Kính áp tròng mắt nhỏ Fuji Gray.jpg"
+							<img src="Trangchinh/images/Kính áp tròng mắt nhỏ Fuji Gray.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Kính áp tròng mắt nhỏ Fuji Gray</h3>
-							<strong class="product-price">$78.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -564,13 +574,13 @@
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Kính áp tròng nâu tây tự nhiên có độ cận Nami.jpg"
+							<img src="Trangchinh/images/Kính áp tròng nâu tây tự nhiên có độ cận Nami.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Kính áp tròng nâu tây tự nhiên có độ cận Nami</h3>
-							<strong class="product-price">$43.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -589,13 +599,13 @@
 					<!-- Start Column 1 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Kính áp tròng trong suốt có độ cận.jpg"
+							<img src="Trangchinh/images/Kính áp tròng trong suốt có độ cận.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Kính áp tròng trong suốt có độ cận</h3>
-							<strong class="product-price">$50.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -604,13 +614,13 @@
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Kính áp tròng xám tây tự nhiên Build A Barbie.jpg"
+							<img src="Trangchinh/images/Kính áp tròng xám tây tự nhiên Build A Barbie.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Kính áp tròng xám tây tự nhiên Build A Barbie</h3>
-							<strong class="product-price">$50.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -619,13 +629,13 @@
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Kính áp tròng xám xanh có độ cận Sog.jpg"
+							<img src="Trangchinh/images/Kính áp tròng xám xanh có độ cận Sog.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Kính áp tròng xám xanh có độ cận Sog</h3>
-							<strong class="product-price">$78.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -634,13 +644,13 @@
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/Kính áp tròng đen có độ cận Tokyo Night.jpg"
+							<img src="Trangchinh/images/Kính áp tròng đen có độ cận Tokyo Night.jpg"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">Kính áp tròng đen có độ cận Tokyo Night</h3>
-							<strong class="product-price">$43.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -662,13 +672,13 @@
 					<!-- Start Column 1 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/TRÒNG KÍNH HÀN QUỐC CHEMI U1 CHIẾT SUẤT 1.56-1.png"
+							<img src="Trangchinh/images/TRÒNG KÍNH HÀN QUỐC CHEMI U1 CHIẾT SUẤT 1.56-1.png"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">TRÒNG KÍNH HÀN QUỐC CHEMI U1 CHIẾT SUẤT 1.56-1</h3>
-							<strong class="product-price">$50.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -677,13 +687,13 @@
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/TRÒNG KÍNH HÀN QUỐC CHEMI U2 CHIẾT SUẤT 1.60-1.png"
+							<img src="Trangchinh/images/TRÒNG KÍNH HÀN QUỐC CHEMI U2 CHIẾT SUẤT 1.60-1.png"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">TRÒNG KÍNH HÀN QUỐC CHEMI U2 CHIẾT SUẤT 1.60-1</h3>
-							<strong class="product-price">$50.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -692,13 +702,13 @@
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/TRÒNG KÍNH HÀN QUỐC CHEMI U2 CHIẾT SUẤT 1.67-1.png"
+							<img src="Trangchinh/images/TRÒNG KÍNH HÀN QUỐC CHEMI U2 CHIẾT SUẤT 1.67-1.png"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">TRÒNG KÍNH HÀN QUỐC CHEMI U2 CHIẾT SUẤT 1.67-1</h3>
-							<strong class="product-price">$78.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -707,13 +717,13 @@
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/TRÒNG KÍNH HÀN QUỐC CHEMI U6 CHIẾT SUẤT 1.56.png"
+							<img src="Trangchinh/images/TRÒNG KÍNH HÀN QUỐC CHEMI U6 CHIẾT SUẤT 1.56.png"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">TRÒNG KÍNH HÀN QUỐC CHEMI U6 CHIẾT SUẤT 1.56</h3>
-							<strong class="product-price">$43.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -732,13 +742,13 @@
 					<!-- Start Column 1 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/TRÒNG KÍNH PHÁP ESSILOR CRIZAL.EASY CHIẾT SUẤT 1.56.png"
+							<img src="Trangchinh/images/TRÒNG KÍNH PHÁP ESSILOR CRIZAL.EASY CHIẾT SUẤT 1.56.png"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">TRÒNG KÍNH PHÁP ESSILOR CRIZAL.EASY CHIẾT SUẤT 1.56</h3>
-							<strong class="product-price">$50.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -747,14 +757,14 @@
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/TRÒNG KÍNH PHÁP ESSILOR PREVENCIA CRIZAL.ROCK CHIẾT SUẤT 1.56-1.png"
+							<img src="Trangchinh/images/TRÒNG KÍNH PHÁP ESSILOR PREVENCIA CRIZAL.ROCK CHIẾT SUẤT 1.56-1.png"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">TRÒNG KÍNH PHÁP ESSILOR PREVENCIA CRIZAL.ROCK CHIẾT SUẤT
 								1.56-1</h3>
-							<strong class="product-price">$50.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -763,14 +773,14 @@
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/TRÒNG KÍNH PHÁP ESSILOR PREVENCIA CRIZAL.ROCK CHIẾT SUẤT 1.56.png"
+							<img src="Trangchinh/images/TRÒNG KÍNH PHÁP ESSILOR PREVENCIA CRIZAL.ROCK CHIẾT SUẤT 1.56.png"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">TRÒNG KÍNH PHÁP ESSILOR PREVENCIA CRIZAL.ROCK CHIẾT SUẤT 1.56
 							</h3>
-							<strong class="product-price">$78.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -779,13 +789,13 @@
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<img src="/Trangchinh/images/TRÒNG KÍNH ĐỔI MẦU HÀN QUỐC CHEMI U2 CHIẾT SUẤT 1.56-1.png"
+							<img src="Trangchinh/images/TRÒNG KÍNH ĐỔI MẦU HÀN QUỐC CHEMI U2 CHIẾT SUẤT 1.56-1.png"
 								class="img-fluid product-thumbnail">
 							<h3 class="product-title">TRÒNG KÍNH ĐỔI MẦU HÀN QUỐC CHEMI U2 CHIẾT SUẤT 1.56-1</h3>
-							<strong class="product-price">$43.00</strong>
+							<strong class="product-price">200.000 VNĐ</strong>
 
 							<span class="icon-cross">
-								<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+								<img src="Trangchinh/images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
@@ -800,7 +810,7 @@
 	<br><br>
 
 	<!--Mục sản phẩm giá tốt-->
-
+	<img src="Trangchinh/images/SPGIATOT.png" alt="" class="imgSPGT">
 	<!-- Start Product Section_1 -->
 	<div class="product-section">
 		<div class="container">
@@ -809,13 +819,13 @@
 				<!-- Start Column 1 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/TRÒNG KÍNH PHÁP ESSILOR CRIZAL.EASY CHIẾT SUẤT 1.56.png"
+						<img src="Trangchinh/images/TRÒNG KÍNH PHÁP ESSILOR CRIZAL.EASY CHIẾT SUẤT 1.56.png"
 							class="img-fluid product-thumbnail">
 						<h3 class="product-title">TRÒNG KÍNH PHÁP ESSILOR CRIZAL.EASY CHIẾT SUẤT 1.56</h3>
-						<strong class="product-price">$78.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -824,13 +834,13 @@
 				<!-- Start Column 2 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/TRÒNG KÍNH HÀN QUỐC CHEMI U2 CHIẾT SUẤT 1.67-1.png"
+						<img src="Trangchinh/images/TRÒNG KÍNH HÀN QUỐC CHEMI U2 CHIẾT SUẤT 1.67-1.png"
 							class="img-fluid product-thumbnail">
 						<h3 class="product-title">TRÒNG KÍNH HÀN QUỐC CHEMI U2 CHIẾT SUẤT 1.67-1</h3>
-						<strong class="product-price">$50.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -839,13 +849,13 @@
 				<!-- Start Column 3 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/TRÒNG KÍNH HÀN QUỐC CHEMI U1 CHIẾT SUẤT 1.56-1.png"
+						<img src="Trangchinh/images/TRÒNG KÍNH HÀN QUỐC CHEMI U1 CHIẾT SUẤT 1.56-1.png"
 							class="img-fluid product-thumbnail">
 						<h3 class="product-title">TRÒNG KÍNH HÀN QUỐC CHEMI U1 CHIẾT SUẤT 1.56-1</h3>
-						<strong class="product-price">$78.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -853,9 +863,11 @@
 
 				<!-- Start Column 4 -->
 				<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-					<h2 class="mb-4 section-title">SĂN FLASH SALE NGAY</h2>
-					<p class="mb-4">Hàng trăm sản phẩm bắt trend mới nhất</p>
-					<p><a href="shop.html" class="btn">Xem thêm</a></p>
+					<h2 class="mb-4 section-title2"
+						style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ">
+						SẢN PHẨM <br>GIÁ TỐT</h2>
+
+					<p><a href="shop.html" class="btn" id="xemthem">Xem thêm</a></p>
 				</div>
 				<!-- End Column 4 -->
 
@@ -872,12 +884,12 @@
 				<!-- Start Column 1 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Gọng kính nâu vàng Oval.jpg" class="img-fluid product-thumbnail">
+						<img src="Trangchinh/images/Gọng kính nâu vàng Oval.jpg" class="img-fluid product-thumbnail">
 						<h3 class="product-title">Gọng kính nâu vàng Oval</h3>
-						<strong class="product-price">$50.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -886,13 +898,13 @@
 				<!-- Start Column 2 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Gọng kính kim loại vàng hồng.jpg"
+						<img src="Trangchinh/images/Gọng kính kim loại vàng hồng.jpg"
 							class="img-fluid product-thumbnail">
 						<h3 class="product-title">Gọng kính kim loại vàng hồng</h3>
-						<strong class="product-price">$50.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -901,12 +913,12 @@
 				<!-- Start Column 3 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Gọng kính kim loại vuông.jpg" class="img-fluid product-thumbnail">
+						<img src="Trangchinh/images/Gọng kính kim loại vuông.jpg" class="img-fluid product-thumbnail">
 						<h3 class="product-title">Gọng kính kim loại vuông</h3>
-						<strong class="product-price">$78.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -915,13 +927,13 @@
 				<!-- Start Column 4 -->
 				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 					<a class="product-item" href="cart.html">
-						<img src="/Trangchinh/images/Gọng kính kim loại đa giác.jpg"
+						<img src="Trangchinh/images/Gọng kính kim loại đa giác.jpg"
 							class="img-fluid product-thumbnail">
 						<h3 class="product-title">Gọng kính kim loại đa giác</h3>
-						<strong class="product-price">$43.00</strong>
+						<strong class="product-price">200.000 VNĐ</strong>
 
 						<span class="icon-cross">
-							<img src="/Trangchinh/images/cross.svg" class="img-fluid">
+							<img src="Trangchinh/images/cross.svg" class="img-fluid">
 						</span>
 					</a>
 				</div>
@@ -940,11 +952,11 @@
 				<div class="col-lg-7 mb-5 mb-lg-0">
 					<div class="imgs-grid">
 						<div class="grid grid-1"><a href="https://www.instagram.com/kinhmat_ikkuna/"
-								target="_blank"><img src="/Trangchinh/images/ig1.png" alt="Untree.co"></a></div>
+								target="_blank"><img src="Trangchinh/images/ig1.png" alt="Untree.co"></a></div>
 						<div class="grid grid-2"><a href="https://www.tiktok.com/@kinhmatikkuna" target="_blank"><img
-									src="/Trangchinh/images/tt2.png" alt="Untree.co"></a></div>
+									src="Trangchinh/images/tt2.png" alt="Untree.co"></a></div>
 						<div class="grid grid-3"><a href="https://www.facebook.com/profile.php?id=61553810680047"
-								target="_blank"><img src="/Trangchinh/images/fb3.png" alt="Untree.co"></a></div>
+								target="_blank"><img src="Trangchinh/images/fb3.png" alt="Untree.co"></a></div>
 					</div>
 				</div>
 				<div class="col-lg-5 ps-lg-5">
@@ -972,6 +984,7 @@
 	<!-- End Vutrutruyenthong -->
 
 	<!-- start Khách hàng thân thiết-->
+	<img src="Trangchinh/images/Vector-3-1.svg" class="vectoHM2">
 	<h2 class="PKHTT">KHÁCH HÀNG THÂN THIẾT</h2>
 	<section class="section-slide">
 
@@ -1066,8 +1079,6 @@
 	</section>
 	<!-- scripts -->
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
-
-
 	<!--end Khách hàng thân thiết-->
 
 	<!-- Start Blog Section -->
@@ -1086,7 +1097,7 @@
 
 				<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
 					<div class="post-entry">
-						<a href="#" class="post-thumbnail"><img src="/Trangchinh/images/blog.png" alt="Image"
+						<a href="#" class="post-thumbnail"><img src="Trangchinh/images/blog.png" alt="Image"
 								class="img-fluid"></a>
 						<div class="post-content-entry">
 							<h6 style="margin-top: 10px;"><a href="#">[GIẢI ĐÁP] BỊ CẬN CÓ NÊN ĐEO KÍNH KHI DÙNG MÁY
@@ -1101,7 +1112,7 @@
 
 				<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
 					<div class="post-entry">
-						<a href="#" class="post-thumbnail"><img src="/Trangchinh/images/blog1.jpg" alt="Image"
+						<a href="#" class="post-thumbnail"><img src="Trangchinh/images/blog1.jpg" alt="Image"
 								class="img-fluid"></a>
 						<div class="post-content-entry">
 							<h6 style="margin-top: 10px;"><a href="#">NÊN CHỌN GỌNG KÍNH CHO NGƯỜI CẬN NẶNG NHƯ THẾ
@@ -1116,7 +1127,7 @@
 
 				<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
 					<div class="post-entry">
-						<a href="#" class="post-thumbnail"><img src="/Trangchinh/images/blog4.png" alt="Image"
+						<a href="#" class="post-thumbnail"><img src="Trangchinh/images/blog4.png" alt="Image"
 								class="img-fluid"></a>
 						<div class="post-content-entry">
 							<h6 style="margin-top: 10px;"><a href="#">5+ CÁCH ĐEO KHẨU TRANG KHÔNG BỊ MỜ KÍNH</a></h6>
@@ -1141,7 +1152,7 @@
 				<div class="col-lg-8">
 					<div class="subscription-form">
 						<h3 class="d-flex align-items-center"><span class="me-1"><img
-									src="/Trangchinh/images/envelope-outline.svg" alt="Image"
+									src="Trangchinh/images/envelope-outline.svg" alt="Image"
 									class="img-fluid"></span><span>Hãy gửi phản hồi cho chúng tôi nếu bạn gặp vấn đề
 								gì.</span></h3>
 
@@ -1166,11 +1177,11 @@
 			<div class="row g-5 mb-5">
 				<div class="col-lg-4">
 					<div class="mb-4 footer-logo-wrap"><a href="index.html" class="footer-logo">IKKUNA</a></div>
-					<p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl
-						dapibus
-						malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor
-						tristique.
-						Pellentesque habitant</p>
+					<p class="mb-4">Chúng tôi xin cam đoan rằng sản phẩm của IKKUNA là một lựa chọn đúng đắn cho quý
+						khách hàng. Sự đảm bảo chất lượng sản phẩm và chính sách bảo hành tốt là những yếu tố quan trọng
+						mà chúng tôi hướng đến. Đồng thời, chúng tôi cũng tự hào là cửa hàng cung cấp sản phẩm với giá
+						tốt nhất trên thị trường.
+					</p>
 
 					<ul class="list-unstyled custom-social">
 						<li><a href="https://www.facebook.com/profile.php?id=61553810680047" target="_blank"><span
@@ -1238,7 +1249,7 @@
 		</div>
 	</footer>
 	<!-- End Footer Section -->
-	<script src="/Trangchinh/js/custom.js"></script>
+	<script src="Trangchinh/js/custom.js"></script>
 </body>
 
 </html>

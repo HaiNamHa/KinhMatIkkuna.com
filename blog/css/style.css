@@ -36,6 +36,8 @@ body {
 	font-family: "Cairo", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+	background-color: white;
+
 }
 
 h1,
@@ -188,6 +190,15 @@ ol {
 	align-items: center;
 	padding: 45px 0 40px;
 }
+.breadcrumb-section {
+	position: relative;
+	text-align: center;
+	color: white;
+	padding: 100px 0;
+	background-image: url('../img/blog/details1/bgg.jpg');
+	background-size: cover;
+	background-position: center;
+  }
 
 .breadcrumb__text h2 {
 	font-size: 46px;
@@ -431,8 +442,8 @@ ol {
 .blog__sidebar__recent__item__pic {
 	float: left;
 	margin-right: 20px;
-	width: 70px;
-	height: 70px;
+	width: 75px;
+	height: 75px;
 }
 
 .blog__sidebar__recent__item__text {
@@ -467,6 +478,9 @@ ol {
 -----------------------*/
 
 .blog-details-hero {
+	background-image: url('/blog/img/blog/details1/bgg.jpg');
+	background-size: cover;
+	background-position: center;
 	height: 350px;
 	display: flex;
 	align-items: center;
@@ -531,6 +545,8 @@ ol {
 
 .blog__details__text img {
 	margin-bottom: 30px;
+	display: block;
+    margin: auto;
 }
 
 .blog__details__text p {
