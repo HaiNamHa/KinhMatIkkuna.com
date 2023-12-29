@@ -779,8 +779,68 @@ header {
 .swiper-3d .swiper-slide-shadow-right {
   background-image: none;
 }
-
 /*Phần KHTT*/
+
+/*Đối tác*/
+
+.partners-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.partners-section h2 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 28px;
+  color: rgb(41, 49, 46);
+}
+
+.partner-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.partner-images a {
+  display: block;
+  margin: 10px;
+  position: relative;
+}
+
+.partner-images img {
+  width: 165px;
+  height: 95px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.partner-images a:hover img {
+  transform: scale(1.1);
+}
+
+.partner-images a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.partner-images a:hover::after {
+  opacity: 1;
+}
+
+.partner-images a:hover {
+  cursor: pointer;
+}
+
+/*Đối tác*/
 
 
 
