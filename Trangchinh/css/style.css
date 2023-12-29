@@ -851,7 +851,7 @@ header {
 .footer-section .subscription-form h3 {
   font-size: 18px;
   font-weight: 500;
-  color: #3b5d50;
+  color: #212422;
 }
 
 .footer-section .subscription-form .form-control {
@@ -865,7 +865,7 @@ header {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-color: #3b5d50;
+  border-color: #171a19;
   -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
 }
@@ -908,7 +908,7 @@ header {
   font-size: 32px;
   font-weight: 500;
   text-decoration: none;
-  color: #3b5d50;
+  color: #000000;
 }
 
 .footer-section .custom-social li {
@@ -923,12 +923,12 @@ header {
   line-height: 40px;
   display: inline-block;
   background: #dce5e4;
-  color: #3b5d50;
+  color: #000000;
   border-radius: 50%;
 }
 
 .footer-section .custom-social li a:hover {
-  background: #3b5d50;
+  background: #f7afaf;
   color: #ffffff;
 }
 
