@@ -20,9 +20,7 @@ body{
         /* CSS cho ảnh banner */
         .header-image {
             width: 100%;
-            opacity: 0.5;
-            
-           /* filter: contrast(30%); */
+            opacity: 0.6;
             /* filter: brightness(80%); */
         }
 
@@ -50,8 +48,8 @@ body{
             font-family: Arial, sans-serif;
             font-size: 14px;
             text-shadow: none;
-            text-decoration:underline;
         }
+
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -71,7 +69,8 @@ h1 {
 }
 
 .filter-container {
-  background-color: rgb(255, 99, 71,0.2);
+  /* background-color: #FFD1DC; */
+  background-color: #cccccc34;
   padding: 10px;
   color: rgb(97, 97, 97);
   border-radius: 10px;
@@ -85,60 +84,6 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
 }
-
-.product {
-  position: relative;
-  border: 1px solid #fff;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-  background-color: #fff;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-    box-shadow: 0 2px 4px rgb(255, 255, 255);
-
-}
-
-.product img {
-  max-width: 100%;
-  height: auto;
-  transition: filter 0.3s ease-in-out;
-}
-
-.product:hover img {
-  filter: brightness(80%);
-}
-
-.product h3 {
-  margin-top: 10px;
-  font-size: 18px;
-  color:#414141;
-}
-
-.product .price {
-  font-weight: bold;
-  margin-top: 10px;
-  font-size: 16px;
-  color: #414141;
-}
-
-.add-to-cart{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ffd1dcd2;
-  padding: 10px;
-  display: none;
-  cursor: pointer;
-  border-radius: 10px; 
-  z-index: 1;
-}
-
-.product:hover .add-to-cart,
-.product:hover  {
-  display: block;
-}
-
 .pagination {
   margin-top: 10px;
   text-align: center;
@@ -158,6 +103,120 @@ h1 {
   background-color: #ccc;
   color: #fff;
 }
+
+/* Sản phẩm */
+.product {
+  position: relative;
+  border: 1px solid #fff;
+  padding: 10px;
+  /* text-align: center; */
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  transition: filter 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.product h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #414141;
+}
+
+.product .price {
+  /* font-weight: bold; */
+  margin-top: 10px;
+  font-size: 16px;
+  color: #414141;
+}
+
+.product .price .original-price {
+  text-decoration: line-through;
+  color: #999999;
+}
+.add-to-cart {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ffd1dc;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* width: fit-content; */
+}
+
+
+.quick-view {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffd1dcd2;
+  padding: 10px;
+  display: none;
+  cursor: pointer;
+  z-index: 1;
+  width: fit-content;
+}
+
+.product:hover .quick-view,
+.product:hover .add-to-cart {
+  display: block;
+}
+
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.product-item {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 300px;
+  margin-right: 10px;
+  scroll-snap-align: start;
+  background-color: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  /* text-align: center; */
+  box-shadow: 0 2px 4px rgb(255, 255, 255);
+}
+
+.product-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.product-item h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: black;
+}
+
+.product-item p {
+  margin: 5px 0;
+}
+
+.product-item p.price {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+/* code sửa */
 
 /* Sản phẩm nổi bật */
 .product-container {
@@ -186,12 +245,6 @@ h1 {
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
-.product-img {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-}
-
 .product-item h3 {
   margin-top: 10px;
   font-size: 16px;
@@ -211,19 +264,98 @@ h1 {
 .page-link {
       margin-right: 5px;
     }
+
+/* CSS Xem nhanh */
+#product {
+  display: flex;
+  align-items: center;
+}
+.container {
+  padding: 16px;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto; 
+  border: 2px solid #f4d2d2;
+  width: 60%; 
+}
+
+.product-image {
+  flex: 0 0 200px;
+  margin-right: 20px;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+}
+button {
+  background-color: #ffd1dcd2;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+}
+button:hover {
+  opacity: 0.8;
+}
   </style>
 </head>
 <body>
   <header>
     <div class="header">
         <img src="ImagesGK/bannerHong.jpgut.jpg" alt="Banner" class="header-image">
-        <h1 class="header-title">Gọng kính</h1>
-        <!-- <a href="path/to/home" class="home-button"><i>Trang chủ</i></a> -->
+        <h1 class="header-title" style="font-size: 50px;">Gọng kính</h1>
     </div>
   </header>
 <main>
   <div class="product-list-container">
     <div class="filter-container">
+      <h3>Chất liệu:</h3>
+      <label><input type="checkbox" class="filter-material" value="metal"> Kim loại</label><br>
+      <label><input type="checkbox" class="filter-material" value="plastic1"> Nhựa</label><br>
+      <label><input type="checkbox" class="filter-material" value="plastic2"> Nhựa Acetate</label><br>
+      <label><input type="checkbox" class="filter-material" value="titan"> Titan</label><br>
+
+
+      <h3>Hình dáng:</h3>
+      <label><input type="checkbox" class="filter-shape" value="round"> Tròn</label><br>
+      <label><input type="checkbox" class="filter-shape" value="square"> Vuông</label><br>
+      <label><input type="checkbox" class="filter-shape" value="5-tangle"> Ngũ giác</label><br>
+      <label><input type="checkbox" class="filter-shape" value="rectangle"> Hình chữ nhật</label><br>
+
       <h3>Giá:</h3>
         <div class="price-filter">
           <label><input type="radio" name="price" value="100-200">100,000-200,000</label><br>
@@ -231,16 +363,6 @@ h1 {
           <label><input type="radio" name="price" value="300-500">300,000-500,000</label><br>
           <label><input type="radio" name="price" value="all">Tất cả</label><br>
         </div>
-      <h3>Chất liệu:</h3>
-      <label><input type="checkbox" class="filter-material" value="metal"> Kim loại</label><br>
-      <label><input type="checkbox" class="filter-material" value="plastic1"> Nhựa</label><br>
-      <label><input type="checkbox" class="filter-material" value="plasti2"> Nhựa dẻo</label><br>
-
-      <h3>Hình dáng:</h3>
-      <label><input type="checkbox" class="filter-shape" value="round"> Tròn</label><br>
-      <label><input type="checkbox" class="filter-shape" value="square"> Vuông</label><br>
-      <label><input type="checkbox" class="filter-shape" value="oval"> Oval</label><br>
-      <label><input type="checkbox" class="filter-shape" value="cat"> Mắt mèo</label><br>
     </div>
     <div>
       <div class="filters">
@@ -256,54 +378,204 @@ h1 {
         </div>
       </div>
       <div id="product-list">
-        <div class="product" data-price="250" data-material="wood" data-shape="round" data-date="2022-01-01" data-views="10">
-          <img src="ImagesGK/GK01.png" alt="Sản phẩm 1">
-          <h3>GK01</h3>
-          <p class="price">Giá: 250,000 VND</p>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        <div class="product" data-price="250" data-material="plastic2" data-shape="5-tangle" data-date="2022-01-01" data-views="10">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK01.png" alt="Sản phẩm 1">              
+            <div style="text-align: center;">  
+            <h3>Mã sản phẩm: GK01</h3>
+            <p class="price"><span class="original-price">350,000 VND</span> Giá: 250,000 VND</p>
+              <button onclick="toggleModal('01')" class="quick-view" >Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div> 
+            </div>           
+            <div id="01" class="modal">
+              <form class="modal-content"  method="post">
+                    <span class="close" onclick="toggleModal('01')">&times;</span>
+              <div id="product">
+                    <img src="ImagesGK/GK01.png" alt="Product Image" style="width: 200px; height: 200px;">
+                <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK01</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 250,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Nhựa Acetate | Kiểu dáng: Ngũ giác</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+              </div>
+              </form>
+            </div>
+        </div>           
+        
+        <div class="product" data-price="250" data-material="metal" data-shape="round" data-date="2022-12-03" data-views="17">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK02.png" alt="Sản phẩm 2">              
+            <div style="text-align: center;">  
+            <h3>Mã sản phẩm: GK02</h3>
+            <p class="price"><span class="original-price">350,000 VND</span> Giá: 250,000 VND</p>
+              <button onclick="toggleModal('02')" class="quick-view" >Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div> 
+            </div>           
+            <div id="02" class="modal">
+              <form class="modal-content"  method="post">
+                    <span class="close" onclick="toggleModal('02')">&times;</span>
+              <div id="product">
+                    <img src="ImagesGK/GK02.png" alt="Product Image" style="width: 200px; height: 200px;">
+                <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK02</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 250,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Kim Loại | Kiểu dáng: Gọng tròn</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+              </div>
+              </form>
+            </div>
+        </div>           
+        <div class="product" data-price="700" data-material="plastic2" data-shape="rectangle" data-date="2023-01-01" data-views="50">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK03.png" alt="Sản phẩm 3">              
+            <div style="text-align: center;">  
+            <h3>Mã sản phẩm: GK03</h3>
+            <p class="price"><span class="original-price">800,000 VND</span> Giá: 700,000 VND</p>
+              <button onclick="toggleModal('03')" class="quick-view" >Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div> 
+            </div>           
+            <div id="03" class="modal">
+              <form class="modal-content"  method="post">
+                    <span class="close" onclick="toggleModal('03')">&times;</span>
+              <div id="product">
+                    <img src="ImagesGK/GK01.png" alt="Product Image" style="width: 200px; height: 200px;">
+                <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK03</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 700,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Nhựa Acetate | Kiểu dáng: Hình chữ nhật</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+              </div>
+              </form>
+            </div>
+        </div>           
+
+        <div class="product" data-price="250" data-material="metal" data-shape="round" data-date="2012-01-01" data-views="30">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK04.png" alt="Sản phẩm 4">              
+            <div style="text-align: center;">  
+            <h3>Mã sản phẩm: GK04</h3>
+            <p class="price"><span class="original-price">350,000 VND</span> Giá: 250,000 VND</p>
+              <button onclick="toggleModal('04')" class="quick-view" >Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div> 
+            </div>           
+            <div id="04" class="modal">
+              <form class="modal-content"  method="post">
+                    <span class="close" onclick="toggleModal('04')">&times;</span>
+              <div id="product">
+                    <img src="ImagesGK/GK04.png" alt="Product Image" style="width: 200px; height: 200px;">
+                <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK04</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 250,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Nhựa Acetate, Kim loại | Kiểu dáng: Tròn</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+              </div>
+              </form>
+            </div>
         </div>
-        <div class="product" data-price="500" data-material="metal" data-shape="square" data-date="2023-01-01" data-views="30">
-          <img src="ImagesGK/GK02.png" alt="Sản phẩm 2">
-          <h3>GK02</h3>
-          <p class="price">Giá: 500,000 VND</p>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+
+        <div class="product" data-price="450" data-material="plastic1" data-shape="rectangle" data-date="2019-06-10" data-views="2">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK05.png" alt="Sản phẩm 5">              
+            <div style="text-align: center;">  
+            <h3>Mã sản phẩm: GK05</h3>
+            <p class="price"><span class="original-price">550,000 VND</span> Giá: 450,000 VND</p>
+              <button onclick="toggleModal('05')" class="quick-view" >Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div> 
+            </div>           
+            <div id="05" class="modal">
+              <form class="modal-content"  method="post">
+                    <span class="close" onclick="toggleModal('05')">&times;</span>
+              <div id="product">
+                    <img src="ImagesGK/GK05.png" alt="Product Image" style="width: 200px; height: 200px;">
+                <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK05</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 450,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Kim loại, nhựa | Kiểu dáng: Hình chữ nhật</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+              </div>
+              </form>
+            </div>
         </div>
-        <div class="product" data-price="100" data-material="wood" data-shape="round"  data-date="2023-01-01" data-views="5">
-          <img src="ImagesGK/GK03.png" alt="Sản phẩm 3">
-          <h3>GK03</h3>
-          <p class="price">Giá: 100,000 VND</p>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+
+        <div class="product" data-price="450" data-material="plastic1" data-shape="rectangle" data-date="2022-01-01" data-views="11">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK06.png" alt="Sản phẩm 6">              
+            <div style="text-align: center;">  
+            <h3>Mã sản phẩm: GK06</h3>
+            <p class="price"><span class="original-price">550,000 VND</span> Giá: 450,000 VND</p>
+              <button onclick="toggleModal('06')" class="quick-view" >Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div> 
+            </div>           
+            <div id="06" class="modal">
+              <form class="modal-content"  method="post">
+                    <span class="close" onclick="toggleModal('06')">&times;</span>
+              <div id="product">
+                    <img src="ImagesGK/GK06.png" alt="Product Image" style="width: 200px; height: 200px;">
+                <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK06</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 450,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Nhựa | Kiểu dáng: Hình chữ nhật</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+              </div>
+              </form>
+            </div>
         </div>
-        <div class="product" data-price="100" data-material="wood" data-shape="round">
-          <img src="ImagesGK/GK04.png" alt="Sản phẩm 4">
-          <h3>GK04</h3>
-          <p class="price">Giá: 100,000 VND</p>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+
+        <div class="product" data-price="450" data-material="titan" data-shape="round" data-date="2023-12-11" data-views="14">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK07.png" alt="Sản phẩm 7">              
+            <div style="text-align: center;">  
+            <h3>Mã sản phẩm: GK07</h3>
+            <p class="price"><span class="original-price">550,000 VND</span> Giá: 450,000 VND</p>
+              <button onclick="toggleModal('07')" class="quick-view" >Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div> 
+            </div>           
+            <div id="07" class="modal">
+              <form class="modal-content"  method="post">
+                    <span class="close" onclick="toggleModal('07')">&times;</span>
+              <div id="product">
+                    <img src="ImagesGK/GK07.png" alt="Product Image" style="width: 200px; height: 200px;">
+                <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK07</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 450,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Titan | Kiểu dáng: Tròn</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+              </div>
+              </form>
+            </div>
         </div>
-        <div class="product" data-price="100" data-material="wood" data-shape="round">
-          <img src="ImagesGK/GK05.png" alt="Sản phẩm 5">
-          <h3>GK05</h3>
-          <p class="price">Giá: 100,000 VND</p>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        <div class="product" data-price="300" data-material="metal" data-shape="5-tangle" data-date="2010-01-01" data-views="9">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK08.png" alt="Sản phẩm 8">              
+            <div style="text-align: center;">  
+            <h3>Mã sản phẩm: GK08</h3>
+            <p class="price"><span class="original-price">380,000 VND</span> Giá: 300,000 VND</p>
+              <button onclick="toggleModal('08')" class="quick-view" >Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div> 
+            </div>           
+            <div id="08" class="modal">
+              <form class="modal-content"  method="post">
+                    <span class="close" onclick="toggleModal('08')">&times;</span>
+              <div id="product">
+                    <img src="ImagesGK/GK08.png" alt="Product Image" style="width: 200px; height: 200px;">
+                <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK08</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 300,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Kim loại | Kiểu dáng: Ngũ giác</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+              </div>
+              </form>
+            </div>
         </div>
-        <div class="product" data-price="500" data-material="metal" data-shape="square">
-          <img src="ImagesGK/GK06.png" alt="Sản phẩm 6">
-          <h3>GK06</h3>
-          <p class="price">Giá: 500,000 VND</p>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        </div>
-        <div class="product" data-price="100" data-material="wood" data-shape="round">
-          <img src="ImagesGK/GK07.png" alt="Sản phẩm 7">
-          <h3>GK07</h3>
-          <p class="price">Giá: 100,000 VND</p>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        </div>
-        <div class="product" data-price="100" data-material="wood" data-shape="round">
-          <img src="ImagesGK/GK08.png" alt="Sản phẩm 8">
-          <h3>GK08</h3>
-          <p class="price">Giá: 100,000 VND</p>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        </div>
+        
         <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
           <img src="ImagesGK/GK09.png" alt="Sản phẩm 5">
           <h3>GK09</h3>
@@ -617,6 +889,24 @@ filterContainer.style.top = productContainerRect.top + 'px';
 // Cập nhật vị trí sticky của pagination-container
 var paginationContainer = document.querySelector('.pagination');
 paginationContainer.style.top = productContainerRect.bottom + 'px';
+
+// Hiện xem nhanh
+
+function toggleModal(modalId) {
+  var modal = document.getElementById(modalId);
+  modal.style.display = modal.style.display === "block" ? "none" : "block";
+}
+
+// Đóng xem nhanh
+window.onclick = function(event) {
+  var modals = document.getElementsByClassName("modal");
+  for (var i = 0; i < modals.length; i++) {
+    var modal = modals[i];
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
   </script>
   </main>
 </body>
