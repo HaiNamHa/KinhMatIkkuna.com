@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>IKUNNA</title>
+    <title>IKKUNA</title>
     <style>
 
         .carousel-inner img {
@@ -117,7 +117,19 @@ h3.text-center {
     color: #ffc107; /* Set rating star color to yellow */
 }
 
+.zoom {
+        overflow: hidden;
+        width: 100%; /* Thêm thuộc tính width để điều chỉnh kích thước ban đầu của figure */
+    }
 
+    .zoom img {
+        transition: transform 0.5s ease;
+        width: 100%; /* Thêm thuộc tính width để điều chỉnh kích thước ban đầu của ảnh */
+    }
+
+    .zoom:hover img {
+        transform: scale(1.2);
+    }
     </style>
 </head>
 <body>
@@ -129,7 +141,9 @@ h3.text-center {
             <div id="product-slider" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="TK01/2.png" class="d-block w-100" alt="Lenses">
+                        <figure class="zoom" onmousemove="zoom(event)">
+                            <img src="TK01/2.png" class="d-block w-100" alt="Lenses">
+                        </figure>
                     </div>
 
                 </div>
@@ -337,5 +351,19 @@ h3.text-center {
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<!-- jQuery script -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+        // JavaScript for zoom effect
+        function zoom(event) {
+            var zoomer = event.currentTarget;
+            var img = zoomer.querySelector('img');
+            x = event.offsetX / zoomer.offsetWidth * 100;
+            y = event.offsetY / zoomer.offsetHeight * 100;
+            img.style.transformOrigin = x + '% ' + y + '%';
+        }
+    </script>
+</script>
 </body>
 </html>
+
