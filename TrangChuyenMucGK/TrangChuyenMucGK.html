@@ -364,6 +364,174 @@ button:hover {
           <label><input type="radio" name="price" value="300-500">300,000-500,000</label><br>
           <label><input type="radio" name="price" value="all">Tất cả</label><br>
         </div>
+        <h3>Chất liệu:</h3>
+        <label><input type="checkbox" class="filter-material" value="metal"> Kim loại</label><br>
+        <label><input type="checkbox" class="filter-material" value="plastic1"> Nhựa</label><br>
+        <label><input type="checkbox" class="filter-material" value="plasti2"> Nhựa dẻo</label><br>
+
+        <h3>Hình dáng:</h3>
+        <label><input type="checkbox" class="filter-shape" value="round"> Tròn</label><br>
+        <label><input type="checkbox" class="filter-shape" value="square"> Vuông</label><br>
+        <label><input type="checkbox" class="filter-shape" value="oval"> Oval</label><br>
+        <label><input type="checkbox" class="filter-shape" value="cat"> Mắt mèo</label><br>
+      </div>
+      <div>
+        <div id="product-list">
+          <div class="product" data-price="100" data-material="wood" data-shape="round">
+            <img src="ImagesGK/GK01.png" alt="Sản phẩm 1">
+            <h3>GK01</h3>
+            <p class="price">Giá: 100,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" data-price="500" data-material="metal" data-shape="square">
+            <img src="ImagesGK/GK02.png" alt="Sản phẩm 2">
+            <h3>GK02</h3>
+            <p class="price">Giá: 500,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" data-price="100" data-material="wood" data-shape="round">
+            <img src="ImagesGK/GK03.png" alt="Sản phẩm 3">
+            <h3>GK03</h3>
+            <p class="price">Giá: 100,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" data-price="100" data-material="wood" data-shape="round">
+            <img src="ImagesGK/GK04.png" alt="Sản phẩm 4">
+            <h3>GK04</h3>
+            <p class="price">Giá: 100,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" data-price="100" data-material="wood" data-shape="round">
+            <img src="ImagesGK/GK05.png" alt="Sản phẩm 5">
+            <h3>GK05</h3>
+            <p class="price">Giá: 100,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" data-price="500" data-material="metal" data-shape="square">
+            <img src="ImagesGK/GK06.png" alt="Sản phẩm 6">
+            <h3>GK06</h3>
+            <p class="price">Giá: 500,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" data-price="100" data-material="wood" data-shape="round">
+            <img src="ImagesGK/GK07.png" alt="Sản phẩm 7">
+            <h3>GK07</h3>
+            <p class="price">Giá: 100,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" data-price="100" data-material="wood" data-shape="round">
+            <img src="ImagesGK/GK08.png" alt="Sản phẩm 8">
+            <h3>GK08</h3>
+            <p class="price">Giá: 100,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+            <img src="ImagesGK/GK09.png" alt="Sản phẩm 5">
+            <h3>GK09</h3>
+            <p class="price">Giá: 500,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+            <img src="ImagesGK/GK10.png" alt="Sản phẩm 5">
+            <h3>GK10</h3>
+            <p class="price">Giá: 500,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+            <img src="ImagesGK/GK11.png" alt="Sản phẩm 6">
+            <h3>GK11</h3>
+            <p class="price">Giá: 500,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
+            <img src="ImagesGK/GK12.png" alt="Sản phẩm 7">
+            <h3>GK12</h3>
+            <p class="price">Giá: 150,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
+            <img src="ImagesGK/GK13.png" alt="Sản phẩm 8">
+            <h3>GK13</h3>
+            <p class="price">Giá: 250,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+            <img src="ImagesGK/GK14.png" alt="Sản phẩm 5">
+            <h3>GK14</h3>
+            <p class="price">Giá: 500,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+        
+            <img src="ImagesGK/GK15.png" alt="Sản phẩm 6">
+            <h3>GK15</h3>
+            <p class="price">Giá: 500,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+
+          </div>
+          <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
+            <img src="ImagesGK/GK16.png" alt="Sản phẩm 7">
+            <h3>GK16</h3>
+            <p class="price">Giá: 150,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
+            <img src="ImagesGK/GK17.png" alt="Sản phẩm 8">
+            <h3>GK17</h3>
+            <p class="price">Giá: 250,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+            <img src="ImagesGK/GK18.png" alt="Sản phẩm 6">
+            <h3>GK18</h3>
+            <p class="price">Giá: 500,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
+            <img src="ImagesGK/GK19.png" alt="Sản phẩm 7">
+            <h3>GK19</h3>
+            <p class="price">Giá: 150,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
+            <img src="ImagesGK/GK20.png" alt="Sản phẩm 8">
+            <h3>GK20</h3>
+            <p class="price">Giá: 250,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+            <img src="ImagesGK/GK21.png" alt="Sản phẩm 5">
+            <h3>GK21</h3>
+            <p class="price">Giá: 500,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
+            <img src="ImagesGK/GK22.png" alt="Sản phẩm 6">
+            <h3>GK22</h3>
+            <p class="price">Giá: 500,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
+            <img src="ImagesGK/GK23.png" alt="Sản phẩm 7">
+            <h3>GK23</h3>
+            <p class="price">Giá: 150,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+          <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
+            <img src="ImagesGK/GK24.png" alt="Sản phẩm 8">
+            <h3>GK24</h3>
+            <p class="price">Giá: 250,000 VND</p>
+            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          </div>
+        </div>
+        <div class="pagination" style="margin-top: 10px;">
+          <ul>
+            <a href="#" class="page-link">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link">3</a>
+          </ul>
+        </div>
+      </div>
     </div>
     <div>
       <div class="filters">
