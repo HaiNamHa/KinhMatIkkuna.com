@@ -102,6 +102,7 @@ function getPageToRedirect(productName) {
 		"Kính áp tròng Cosplay Crazy Red": "/GioiThieu.html",
 		"Kính áp tròng trong suốt có độ cận": "/KhuyenMai.html",
 		"TRÒNG KÍNH PHÁP ESSILOR PREVENCIA CRIZAL.ROCK CHIẾT SUẤT 1.56": "/TrongKinhPhap.html",
+		"GK2":"/chitietsp/ana2.html",
 		// Thêm các ánh xạ khác nếu cần
 	};
 
