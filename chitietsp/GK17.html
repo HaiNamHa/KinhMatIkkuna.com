@@ -133,7 +133,19 @@ h3.text-center {
 .card-text .rating-star {
     color: #ffc107; /* Set rating star color to yellow */
 }
+.zoom {
+        overflow: hidden;
+        width: 100%; /* Thêm thuộc tính width để điều chỉnh kích thước ban đầu của figure */
+    }
 
+    .zoom img {
+        transition: transform 0.5s ease;
+        width: 100%; /* Thêm thuộc tính width để điều chỉnh kích thước ban đầu của ảnh */
+    }
+
+    .zoom:hover img {
+        transform: scale(1.2);
+    }
 
     </style>
 </head>
@@ -146,19 +158,29 @@ h3.text-center {
             <div id="product-slider" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="300CN020(GK17)/7.png" class="d-block w-100" alt="Pink Glass">
+                        <figure class="zoom" onmousemove="zoom(event)">
+                            <img src="300CN020(GK17)/7.png" class="d-block w-100" alt="Pink Glass">
+                        </figure>
                     </div>
                     <div class="carousel-item">
-                        <img src="300CN020(GK17)/8.png" class="d-block w-100" alt="Black Glass">
+                        <figure class="zoom" onmousemove="zoom(event)">
+                            <img src="300CN020(GK17)/8.png" class="d-block w-100" alt="Black Glass">
+                        </figure>
                     </div>
                     <div class="carousel-item">
-                        <img src="300CN020(GK17)/9.png" class="d-block w-100" alt="Black Glass">
+                        <figure class="zoom" onmousemove="zoom(event)">
+                            <img src="300CN020(GK17)/9.png" class="d-block w-100" alt="Black Glass">
+                        </figure>
                     </div>
                     <div class="carousel-item">
-                        <img src="300CN020(GK17)/10.png" class="d-block w-100" alt="Black Glass">
+                        <figure class="zoom" onmousemove="zoom(event)">
+                            <img src="300CN020(GK17)/10.png" class="d-block w-100" alt="Black Glass">
+                        </figure>
                     </div>
                     <div class="carousel-item">
-                        <img src="300CN020(GK17)/11.png" class="d-block w-100" alt="Black Glass">
+                        <figure class="zoom" onmousemove="zoom(event)">
+                            <img src="300CN020(GK17)/11.png" class="d-block w-100" alt="Black Glass">
+                        </figure>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#product-slider" role="button" data-slide="prev">
@@ -194,8 +216,8 @@ h3.text-center {
                 <select class="form-control" id="colorSelect">
                     <option value="gray">Xám</option>
                     <option value="black">Đen</option>
-                    <option value="gray">Đen trắng</option>
-                    <option value="black">Xám trắng</option>
+                    <option value="black">Đen trắng</option>
+                    <option value="gray">Xám trắng</option>
                 </select>
             </div>
             <!-- Rating Stars -->
@@ -374,5 +396,26 @@ h3.text-center {
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+
+<!-- jQuery script -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+        // JavaScript for zoom effect
+        function zoom(event) {
+            var zoomer = event.currentTarget;
+            var img = zoomer.querySelector('img');
+            x = event.offsetX / zoomer.offsetWidth * 100;
+            y = event.offsetY / zoomer.offsetHeight * 100;
+            img.style.transformOrigin = x + '% ' + y + '%';
+        }
+    </script>
+</script>
+
+
+
+</script>
+
+</script>
 </body>
 </html>
+
