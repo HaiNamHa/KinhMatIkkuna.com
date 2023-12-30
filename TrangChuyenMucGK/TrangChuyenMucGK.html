@@ -1,4 +1,3 @@
-<!-- color: ffd1dcd2 -->
 <!DOCTYPE html>
 <html>
 
@@ -30,7 +29,7 @@
       opacity: 0.6;
     }
 
-    /* CSS cho tiêu đề 
+    /* CSS cho tiêu đề */
     .header-title {
       position: absolute;
       top: 50%;
@@ -42,7 +41,7 @@
       text-align: center;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-*/
+
     /* CSS cho nút về trang chủ */
     .home-button {
       position: absolute;
@@ -84,13 +83,16 @@
     }
 
     .filter-container {
-      /* background-color: #FFD1DC; */
       background-color: #cccccc34;
       padding: 10px;
       color: rgb(97, 97, 97);
       border-radius: 10px;
     }
-
+    .filter-container h3{
+      font-weight: bold;
+      font-size: 20px;
+      font-family: "Arial", sans-serif;
+    }
 
     #product-list {
       position: relative;
@@ -140,6 +142,7 @@
       margin-top: 10px;
       font-size: 18px;
       color: #414141;
+      font-weight: bold;
     }
 
     .product .price {
@@ -163,6 +166,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      text-align: center;
       /* width: fit-content; */
     }
 
@@ -187,11 +191,11 @@
 
     .sale-badge {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 5px;
+      right: 5px;
       background-color: #ff0000;
       color: #fff;
-      padding: 5px;
+      padding: 2px 5px;
       font-size: 12px;
       border-radius: 5px;
     }
@@ -470,21 +474,11 @@
 
         <h3>Giá:</h3>
         <div class="price-filter">
-          <label><input type="radio" name="price" value="100-200">100,000-200,000</label><br>
-          <label><input type="radio" name="price" value="200-300">200,000-300,000</label><br>
+          <label><input type="radio" name="price" value="100-300">100,000-300,000</label><br>
           <label><input type="radio" name="price" value="300-500">300,000-500,000</label><br>
+          <label><input type="radio" name="price" value="500-1000">500,000-1,000,000</label><br>
           <label><input type="radio" name="price" value="all">Tất cả</label><br>
         </div>
-        <h3>Chất liệu:</h3>
-        <label><input type="checkbox" class="filter-material" value="metal"> Kim loại</label><br>
-        <label><input type="checkbox" class="filter-material" value="plastic1"> Nhựa</label><br>
-        <label><input type="checkbox" class="filter-material" value="plasti2"> Nhựa dẻo</label><br>
-
-        <h3>Hình dáng:</h3>
-        <label><input type="checkbox" class="filter-shape" value="round"> Tròn</label><br>
-        <label><input type="checkbox" class="filter-shape" value="square"> Vuông</label><br>
-        <label><input type="checkbox" class="filter-shape" value="oval"> Oval</label><br>
-        <label><input type="checkbox" class="filter-shape" value="cat"> Mắt mèo</label><br>
       </div>
 
       <div>
@@ -960,49 +954,49 @@
           <a href="../chitietsp/GK02.html">
             <h3>Mã sản phẩm: GK02</h3>
           </a>
-          <p>Giá: 250,000 VND</p>
+          <p style="text-align: center;">Giá: 250,000 VND</p>
         </div>
         <div class="product-item">
           <img src="ImagesGK/GK05.png" alt="Product 5" class="product-img">
           <a href="../chitietsp/GK05.html">
             <h3>Mã sản phẩm: GK05</h3>
           </a>
-          <p>Giá: 450,000 VND</p>
+          <p style="text-align: center;">Giá: 450,000 VND</p>
         </div>
         <div class="product-item">
           <img src="ImagesGK/GK20.png" alt="Product 20" class="product-img">
           <a href="../chitietsp/GK20.html">
             <h3>Mã sản phẩm: GK20</h3>
           </a>
-          <p>Giá: 350,000 VND</p>
+          <p style="text-align: center ;">Giá: 350,000 VND</p>
         </div>
         <div class="product-item">
           <img src="ImagesGK/GK09.png" alt="Product 9" class="product-img">
           <a href="../chitietsp/GK09.html">
             <h3>Mã sản phẩm: GK09</h3>
           </a>
-          <p>Giá: 300,000 VND</p>
+          <p style="text-align: center;">Giá: 300,000 VND</p>
         </div>
         <div class="product-item">
           <img src="ImagesGK/GK07.png" alt="Product 5" class="product-img">
           <a href="../chitietsp/GK07.html">
             <h3>Mã sản phẩm: GK07</h3>
           </a>
-          <p>Giá: 450,000 VND</p>
+          <p style="text-align: center;">Giá: 450,000 VND</p>
         </div>
         <div class="product-item">
           <img src="ImagesGK/GK11.png" alt="Product 5" class="product-img">
           <a href="../chitietsp/GK11.html">
             <h3>Mã sản phẩm: GK11</h3>
           </a>
-          <p>Giá: 300,000 VND</p>
+          <p style="text-align: center;">Giá: 300,000 VND</p>
         </div>
         <div class="product-item">
           <img src="ImagesGK/GK19.png" alt="Product 5" class="product-img">
           <a href="../chitietsp/GK19.html">
             <h3>Mã sản phẩm: GK19</h3>
           </a>
-          <p>Giá: 300,000 VND</p>
+          <p style="text-align: center;">Giá: 300,000 VND</p>
         </div>
       </div>
     </div>
