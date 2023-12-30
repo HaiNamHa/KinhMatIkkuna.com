@@ -1,528 +1,941 @@
+<!-- color: ffd1dcd2 -->
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Chuyên mục Sản phẩm</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="ImagesGK/LOGO.png">
-
+  <link href="../Trangchinh/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font1|Font2|Font3&display=swap">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+  <link href="../Trangchinh/css/style.css" rel="stylesheet">
   <style>
-/* CSS chỉnh giao diện trang */
-body{
-  font-family:Arial, Helvetica, sans-serif;
-}
-.header {
-            position: relative;
-            height: 300px;
-            overflow: hidden;
-        }
+    /* CSS chỉnh giao diện trang */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-        /* CSS cho ảnh banner */
-        .header-image {
-            width: 100%;
-            opacity: 0.6;
-        }
+    .headerbn {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
 
-        /* CSS cho tiêu đề */
-        .header-title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-size: 32px;
-            font-weight: bold;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
+    /* CSS cho ảnh banner  */
+    .header-image {
+      width: 100%;
+      opacity: 0.6;
+    }
 
-        /* CSS cho nút về trang chủ */
-        .home-button {
-            position: absolute;
-            /* bottom: 20px;
+    /* CSS cho tiêu đề */
+    .header-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* CSS cho nút về trang chủ */
+    .home-button {
+      position: absolute;
+      /* bottom: 20px;
             left: 20px; */
-            text-align: center;
-            padding: 10px 20px;
-            color: #fff;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            text-shadow: none;
-        }
-a{
-    text-decoration: none;
-}
-a:hover {
-  color: ffd1dcd2; 
-}
-body {
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
-}
+      text-align: center;
+      padding: 10px 20px;
+      color: #fff;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      text-shadow: none;
+    }
 
-h1 {
-  text-align: center;
-  margin-top: 20px;
-}
+    a {
+      text-decoration: none;
+    }
 
-.product-list-container {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  grid-gap: 20px;
-  padding: 20px;
-}
+    a:hover {
+      color: ffd1dcd2;
+    }
 
-.filter-container {
-  /* background-color: #FFD1DC; */
-  background-color: #cccccc34;
-  padding: 10px;
-  color: rgb(97, 97, 97);
-  border-radius: 10px;
-}
+    body {
+      font-family: "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .product-list-container {
+      display: grid;
+      grid-template-columns: 20% 80%;
+      grid-gap: 20px;
+      padding: 20px;
+    }
+
+    .filter-container {
+      background-color: #cccccc34;
+      padding: 10px;
+      color: rgb(97, 97, 97);
+      border-radius: 10px;
+    }
+    .filter-container h3{
+      font-weight: bold;
+      font-size: 20px;
+      font-family: "Arial", sans-serif;
+    }
+
+    #product-list {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+    }
+
+    .pagination {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .pagination a {
+      display: inline-block;
+      margin-left: 5px;
+      padding: 5px 10px;
+      background-color: #f1f1f1;
+      text-decoration: none;
+      color: #333333;
+    }
+
+    .pagination a.current {
+      background-color: #ccc;
+      color: #fff;
+    }
+
+    /* Sản phẩm */
+    .product {
+      position: relative;
+      border: 1px solid #fff;
+      padding: 10px;
+      /* text-align: center; */
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+      transition: filter 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #414141;
+      font-weight: bold;
+    }
+
+    .product .price {
+      /* font-weight: bold; */
+      margin-top: 10px;
+      font-size: 16px;
+      color: #414141;
+    }
+
+    .product .price .original-price {
+      text-decoration: line-through;
+      color: #999999;
+    }
+
+    .add-to-cart {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #ffd1dc;
+      color: #ffffff;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      /* width: fit-content; */
+    }
 
 
-#product-list {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-}
-.pagination {
-  margin-top: 10px;
-  text-align: center;
-}
+    .quick-view {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffd1dcd2;
+      padding: 10px;
+      display: none;
+      cursor: pointer;
+      z-index: 1;
+      width: fit-content;
+    }
 
-.pagination a {
-  display: inline-block;
-  margin-left: 5px;
-  padding: 5px 10px;
-  background-color: #f1f1f1;
-  text-decoration: none;
-  color: #333333;
-}
+    .product:hover .quick-view,
+    .product:hover .add-to-cart {
+      display: block;
+    }
 
-.pagination a.current {
-  background-color: #ccc;
-  color: #fff;
-}
+    .sale-badge {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: #ff0000;
+      color: #fff;
+      padding: 2px 5px;
+      font-size: 12px;
+      border-radius: 5px;
+    }
 
-/* Sản phẩm */
-.product {
-  position: relative;
-  border: 1px solid #fff;
-  padding: 10px;
-  /* text-align: center; */
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    .product-item {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 300px;
+      margin-right: 10px;
+      scroll-snap-align: start;
+      background-color: #fff;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      padding: 10px;
+      /* text-align: center; */
+      box-shadow: 0 2px 4px rgb(255, 255, 255);
+    }
 
-.product img {
-  max-width: 100%;
-  height: auto;
-  transition: filter 0.3s ease-in-out;
-  border-radius: 10px;
-}
+    .product-img {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
 
-.product h3 {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #414141;
-}
+    .product-item h3 {
+      margin-top: 10px;
+      font-size: 16px;
+      color: black;
+    }
 
-.product .price {
-  /* font-weight: bold; */
-  margin-top: 10px;
-  font-size: 16px;
-  color: #414141;
-}
+    .product-item p {
+      margin: 5px 0;
+    }
 
-.product .price .original-price {
-  text-decoration: line-through;
-  color: #999999;
-}
-.add-to-cart {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #ffd1dc;
-  color: #ffffff;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  /* width: fit-content; */
-}
+    .product-item p.price {
+      font-weight: bold;
+      color: black;
+      font-size: 14px;
+    }
 
+    /* code sửa */
 
-.quick-view {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ffd1dcd2;
-  padding: 10px;
-  display: none;
-  cursor: pointer;
-  z-index: 1;
-  width: fit-content;
-}
+    /* Sản phẩm nổi bật */
+    .product-container {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      /* Ẩn thanh cuộn */
+      -ms-overflow-style: none;
+      /* Ẩn thanh cuộn trên Microsoft Edge */
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
 
-.product:hover .quick-view,
-.product:hover .add-to-cart {
-  display: block;
-}
+    .product-item {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 300px;
+      margin-right: 10px;
+      scroll-snap-align: start;
+      background-color: #fff;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgb(255, 255, 255);
+    }
 
-.sale-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #ff0000;
-  color: #fff;
-  padding: 5px;
-  font-size: 12px;
-  border-radius: 5px;
-}
+    .product-item h3 {
+      margin-top: 10px;
+      font-size: 16px;
+      color: black;
+    }
 
-.product-item {
-  flex: 0 0 auto;
-  width: 300px;
-  height: 300px;
-  margin-right: 10px;
-  scroll-snap-align: start;
-  background-color: #fff;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  padding: 10px;
-  /* text-align: center; */
-  box-shadow: 0 2px 4px rgb(255, 255, 255);
-}
+    .product-item p {
+      margin: 5px 0;
+    }
 
-.product-img {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-}
+    .product-item p.price {
+      font-weight: bold;
+      color: black;
+      font-size: 14px;
+    }
 
-.product-item h3 {
-  margin-top: 10px;
-  font-size: 16px;
-  color: black;
-}
-
-.product-item p {
-  margin: 5px 0;
-}
-
-.product-item p.price {
-  font-weight: bold;
-  color: black;
-  font-size: 14px;
-}
-/* code sửa */
-
-/* Sản phẩm nổi bật */
-.product-container {
-  display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Ẩn thanh cuộn */
-  -ms-overflow-style: none; /* Ẩn thanh cuộn trên Microsoft Edge */
-  padding: 20px;
-  background-color: #f1f1f1;
-}
-
-.product-item {
-  flex: 0 0 auto;
-  width: 300px;
-  height: 300px;
-  margin-right: 10px;
-  scroll-snap-align: start;
-  background-color: #fff;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgb(255, 255, 255);
-}
-
-.product-item h3 {
-  margin-top: 10px;
-  font-size: 16px;
-  color: black;
-}
-
-.product-item p {
-  margin: 5px 0;
-}
-
-.product-item p.price {
-  font-weight: bold;
-  color: black;
-  font-size: 14px;
-}
-/* phân trang */
-.page-link {
+    /* phân trang */
+    .page-link {
       margin-right: 5px;
     }
 
-/* CSS Xem nhanh */
-#product {
-  display: flex;
-  align-items: center;
-}
-.container {
-  padding: 16px;
-}
-.modal {
-  display: none; 
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%;
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
+    /* CSS Xem nhanh */
+    #product {
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+      padding-top: 60px;
+    }
 
 
-.modal-content {
-  background-color: #fefefe;
-  margin: auto; 
-  border: 2px solid #f4d2d2;
-  width: 60%; 
-}
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      border: 2px solid #f4d2d2;
+      width: 60%;
+    }
 
-.product-image {
-  flex: 0 0 200px;
-  margin-right: 20px;
-}
+    .product-image {
+      flex: 0 0 200px;
+      margin-right: 20px;
+    }
 
-.product-image img {
-  max-width: 100%;
-  height: auto;
-}
+    .product-image img {
+      max-width: 100%;
+      height: auto;
+    }
 
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #888;
-  cursor: pointer;
-}
-.close:hover,
-.close:focus {
-  color: #000;
-}
-button {
-  background-color: #ffd1dcd2;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  border-radius: 10px;
-}
-button:hover {
-  opacity: 0.8;
-}
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #888;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+    }
+
+    button {
+      background-color: #ffd1dcd2;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
   </style>
 </head>
+
 <body>
+  <!--Header 1-->
   <header>
-    <div class="header">
-        <img src="ImagesGK/bannerHong.jpgut.jpg" alt="Banner" class="header-image">
-        <h1 class="header-title" style="font-size: 50px;">Gọng kính</h1>
+    <div id="logo">
+      <a href="index.html"><img src="../Trangchinh/images/logo.png" alt="Your Logo" class="ikkuna"></a>
+    </div>
+
+    <div class="input-group" id="search-box">
+      <input type="text" class="form-control" id="search-input" placeholder="Tìm kiếm sản phẩm bạn yêu thích">
+      <div class="input-group-append">
+        <button class="btn btn-outline-light" type="button" onclick="searchProduct()">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="login-link">
+      <a class="nav-link" href="#"><img src="../Trangchinh/images/user.svg"></a>
+      <a class="nav-link" href="#"><img src="../Trangchinh/images/cart.svg"></a>
     </div>
   </header>
-<main>
-  <div class="product-list-container">
-    <div class="filter-container">
-      <h3>Chất liệu:</h3>
-      <label><input type="checkbox" class="filter-material" value="metal"> Kim loại</label><br>
-      <label><input type="checkbox" class="filter-material" value="plastic1"> Nhựa</label><br>
-      <label><input type="checkbox" class="filter-material" value="plastic2"> Nhựa Acetate</label><br>
-      <label><input type="checkbox" class="filter-material" value="titan"> Titan</label><br>
+  <!--End Header 1-->
 
+  <!-- Start Header/Navigation -->
+  <nav class="custom-navbar navbar navbar navbar-expand-md nagvbar-dark b-dark" arial-label="Furni navigation bar">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarsFurni">
+        <ul class="custom-navbar-nav navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Trang chủ</a>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a class="nav-link" href="TrangChuyenMucGK/TrangChuyenMucGK.html">Sản phẩm</a>
+              <div class="dropdown-content">
+                <a href="TrangChuyenMucGK/TrangChuyenMucGK.html">Gọng kính</a>
+                <a href="TrangChuyenMucGK/TrangChuyenMucGK.html">Kính râm</a>
+                <a href="TrangChuyenMucGK/TrangChuyenMucGK.html">Kính áp tròng</a>
+                <a href="TrangChuyenMucGK/TrangChuyenMucGK.html">Kính trẻ em</a>
+                <a href="TrangChuyenMucGK/TrangChuyenMucGK.html">Mắt kính</a>
+              </div>
+            </div>
+          </li>
+          <li><a class="nav-link" href="GioiThieu.html">Giới thiệu</a></li>
+          <li><a class="nav-link" href="KhuyenMai.html">Khuyến mãi</a></li>
+          <li>
+            <div class="dropdown">
+              <a class="nav-link" href="blog/blog1.html">Blog</a>
+              <div class="dropdown-content">
+                <a href="/blog/tintucveikkuna.html">Tin tức về Ikkuna</a>
+                <a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Góc tư vấn</a>
+                <a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Bệnh về mắt</a>
+                <a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kiến thức chung</a>
+              </div>
+            </div>
+          </li>
+          <li><a class="nav-link" href="#">Liên hệ</a></li>
+        </ul>
 
-      <h3>Hình dáng:</h3>
-      <label><input type="checkbox" class="filter-shape" value="round"> Tròn</label><br>
-      <label><input type="checkbox" class="filter-shape" value="square"> Vuông</label><br>
-      <label><input type="checkbox" class="filter-shape" value="5-tangle"> Ngũ giác</label><br>
-      <label><input type="checkbox" class="filter-shape" value="rectangle"> Hình chữ nhật</label><br>
+        <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+          <li>
+            <p class="nav-link">|</p>
+          </li>
+          <li>
+            <p class="nav-link">Hotline: </p>
+          </li>
+          <li><a class="nav-link" href="#">0366764577</a></li>
 
-      <h3>Giá:</h3>
-        <div class="price-filter">
-          <label><input type="radio" name="price" value="100-200">100,000-200,000</label><br>
-          <label><input type="radio" name="price" value="200-300">200,000-300,000</label><br>
-          <label><input type="radio" name="price" value="300-500">300,000-500,000</label><br>
-          <label><input type="radio" name="price" value="all">Tất cả</label><br>
-        </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div>
+    <div class="headerbn">
+      <img src="ImagesGK/bannerHong.jpgut.jpg" alt="Banner" class="header-image">
+      <h1 class="header-title" style="font-size: 50px;">Gọng kính</h1>
+    </div>
+  </div>
+  <main>
+    <!--CRO-BT-->
+    <div class="BT">
+      <div class="cro-buttons">
+        <a href="https://www.facebook.com/profile.php?id=61553810680047" class="facebook" target="_blank"><img
+            src="../Trangchinh/images/facebook.jpg" alt="Facebook"></a>
+        <a href="https://www.tiktok.com/@kinhmatikkuna" class="tiktok" target="_blank"><img
+            src="../Trangchinh/images/tiktok.png" alt="TikTok"></a>
+        <a href="https://www.instagram.com/kinhmat_ikkuna/" class="instagram" target="_blank"><img
+            src="../Trangchinh/images/ig.png" alt="Instagram"></a>
+      </div>
+    </div>
+    <!--CRO-BT-->
+    <div class="product-list-container">
+      <div class="filter-container">
         <h3>Chất liệu:</h3>
         <label><input type="checkbox" class="filter-material" value="metal"> Kim loại</label><br>
         <label><input type="checkbox" class="filter-material" value="plastic1"> Nhựa</label><br>
-        <label><input type="checkbox" class="filter-material" value="plasti2"> Nhựa dẻo</label><br>
+        <label><input type="checkbox" class="filter-material" value="plastic2"> Nhựa Acetate</label><br>
+        <label><input type="checkbox" class="filter-material" value="titan"> Titan</label><br>
+
 
         <h3>Hình dáng:</h3>
         <label><input type="checkbox" class="filter-shape" value="round"> Tròn</label><br>
         <label><input type="checkbox" class="filter-shape" value="square"> Vuông</label><br>
-        <label><input type="checkbox" class="filter-shape" value="oval"> Oval</label><br>
-        <label><input type="checkbox" class="filter-shape" value="cat"> Mắt mèo</label><br>
-      </div>
-      <div>
-        <div id="product-list">
-          <div class="product" data-price="100" data-material="wood" data-shape="round">
-            <img src="ImagesGK/GK01.png" alt="Sản phẩm 1">
-            <h3>GK01</h3>
-            <p class="price">Giá: 100,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" data-price="500" data-material="metal" data-shape="square">
-            <img src="ImagesGK/GK02.png" alt="Sản phẩm 2">
-            <h3>GK02</h3>
-            <p class="price">Giá: 500,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" data-price="100" data-material="wood" data-shape="round">
-            <img src="ImagesGK/GK03.png" alt="Sản phẩm 3">
-            <h3>GK03</h3>
-            <p class="price">Giá: 100,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" data-price="100" data-material="wood" data-shape="round">
-            <img src="ImagesGK/GK04.png" alt="Sản phẩm 4">
-            <h3>GK04</h3>
-            <p class="price">Giá: 100,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" data-price="100" data-material="wood" data-shape="round">
-            <img src="ImagesGK/GK05.png" alt="Sản phẩm 5">
-            <h3>GK05</h3>
-            <p class="price">Giá: 100,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" data-price="500" data-material="metal" data-shape="square">
-            <img src="ImagesGK/GK06.png" alt="Sản phẩm 6">
-            <h3>GK06</h3>
-            <p class="price">Giá: 500,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" data-price="100" data-material="wood" data-shape="round">
-            <img src="ImagesGK/GK07.png" alt="Sản phẩm 7">
-            <h3>GK07</h3>
-            <p class="price">Giá: 100,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" data-price="100" data-material="wood" data-shape="round">
-            <img src="ImagesGK/GK08.png" alt="Sản phẩm 8">
-            <h3>GK08</h3>
-            <p class="price">Giá: 100,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-            <img src="ImagesGK/GK09.png" alt="Sản phẩm 5">
-            <h3>GK09</h3>
-            <p class="price">Giá: 500,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-            <img src="ImagesGK/GK10.png" alt="Sản phẩm 5">
-            <h3>GK10</h3>
-            <p class="price">Giá: 500,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-            <img src="ImagesGK/GK11.png" alt="Sản phẩm 6">
-            <h3>GK11</h3>
-            <p class="price">Giá: 500,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
-            <img src="ImagesGK/GK12.png" alt="Sản phẩm 7">
-            <h3>GK12</h3>
-            <p class="price">Giá: 150,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
-            <img src="ImagesGK/GK13.png" alt="Sản phẩm 8">
-            <h3>GK13</h3>
-            <p class="price">Giá: 250,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-            <img src="ImagesGK/GK14.png" alt="Sản phẩm 5">
-            <h3>GK14</h3>
-            <p class="price">Giá: 500,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          </div>
-          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-        
-            <img src="ImagesGK/GK15.png" alt="Sản phẩm 6">
-            <h3>GK15</h3>
-            <p class="price">Giá: 500,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        <label><input type="checkbox" class="filter-shape" value="5-tangle"> Ngũ giác</label><br>
+        <label><input type="checkbox" class="filter-shape" value="rectangle"> Hình chữ nhật</label><br>
 
+        <h3>Giá:</h3>
+        <div class="price-filter">
+          <label><input type="radio" name="price" value="100-300">100,000-300,000</label><br>
+          <label><input type="radio" name="price" value="300-500">300,000-500,000</label><br>
+          <label><input type="radio" name="price" value="500-1000">500,000-1,000,000</label><br>
+          <label><input type="radio" name="price" value="all">Tất cả</label><br>
+        </div>
+      </div>
+
+      <div>
+        <div class="filters">
+          <div class="filter-item">
+            <label for="sort">Sắp xếp:</label>
+            <select id="sort" onchange="sortProducts()">
+              <option value="price-high-low">Tùy chọn</option>
+              <option value="price-high-low">Giá cao đến thấp</option>
+              <option value="price-low-high">Giá thấp đến cao</option>
+              <option value="newest">Mới nhất</option>
+              <option value="popularity">Quan tâm nhiều</option>
+            </select>
           </div>
-          <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
-            <img src="ImagesGK/GK16.png" alt="Sản phẩm 7">
-            <h3>GK16</h3>
-            <p class="price">Giá: 150,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+        </div>
+        <div id="product-list">
+          <div class="product" data-price="250" data-material="plastic2" data-shape="5-tangle" data-date="2022-01-01"
+            data-views="10">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK01.png" alt="Sản phẩm 1">
+            <div style="text-align: center;">
+              <a href="../chitietsp/ana2.html">
+                <h3>Mã sản phẩm: GK01</h3>
+              </a>
+              <p class="price"><span class="original-price">350,000 VND</span> Giá: 250,000 VND</p>
+              <button onclick="toggleModal('01')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+            <div id="01" class="modal">
+              <form class="modal-content" method="post">
+                <span class="close" onclick="toggleModal('01')">&times;</span>
+                <div id="product">
+                  <img src="ImagesGK/GK01.png" alt="Product Image" style="width: 200px; height: 200px;">
+                  <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK01</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 250,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Nhựa Acetate | Kiểu dáng: Ngũ giác</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
-            <img src="ImagesGK/GK17.png" alt="Sản phẩm 8">
-            <h3>GK17</h3>
-            <p class="price">Giá: 250,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+
+          <div class="product" data-price="250" data-material="metal" data-shape="round" data-date="2022-12-03"
+            data-views="17">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK02.png" alt="Sản phẩm 2">
+            <div style="text-align: center;">
+              <a href="../chitietsp/GK02.html">
+                <h3>Mã sản phẩm: GK02</h3>
+              </a>
+              <p class="price"><span class="original-price">350,000 VND</span> Giá: 250,000 VND</p>
+              <button onclick="toggleModal('02')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+            <div id="02" class="modal">
+              <form class="modal-content" method="post">
+                <span class="close" onclick="toggleModal('02')">&times;</span>
+                <div id="product">
+                  <img src="ImagesGK/GK02.png" alt="Product Image" style="width: 200px; height: 200px;">
+                  <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK02</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 250,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Kim Loại | Kiểu dáng: Gọng tròn</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-            <img src="ImagesGK/GK18.png" alt="Sản phẩm 6">
-            <h3>GK18</h3>
-            <p class="price">Giá: 500,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          <div class="product" data-price="700" data-material="plastic2" data-shape="rectangle" data-date="2023-01-01"
+            data-views="50">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK03.png" alt="Sản phẩm 3">
+            <div style="text-align: center;">
+              <a href="../chitietsp/GK03.html">
+                <h3>Mã sản phẩm: GK03</h3>
+              </a>
+              <p class="price"><span class="original-price">800,000 VND</span> Giá: 700,000 VND</p>
+              <button onclick="toggleModal('03')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+            <div id="03" class="modal">
+              <form class="modal-content" method="post">
+                <span class="close" onclick="toggleModal('03')">&times;</span>
+                <div id="product">
+                  <img src="ImagesGK/GK01.png" alt="Product Image" style="width: 200px; height: 200px;">
+                  <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK03</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 700,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Nhựa Acetate | Kiểu dáng: Hình chữ nhật</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
-            <img src="ImagesGK/GK19.png" alt="Sản phẩm 7">
-            <h3>GK19</h3>
-            <p class="price">Giá: 150,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+
+          <div class="product" data-price="250" data-material="metal" data-shape="round" data-date="2012-01-01"
+            data-views="30">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK04.png" alt="Sản phẩm 4">
+            <div style="text-align: center;">
+              <a href="../chitietsp/GK04.html">
+                <h3>Mã sản phẩm: GK04</h3>
+              </a>
+              <p class="price"><span class="original-price">350,000 VND</span> Giá: 250,000 VND</p>
+              <button onclick="toggleModal('04')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+            <div id="04" class="modal">
+              <form class="modal-content" method="post">
+                <span class="close" onclick="toggleModal('04')">&times;</span>
+                <div id="product">
+                  <img src="ImagesGK/GK04.png" alt="Product Image" style="width: 200px; height: 200px;">
+                  <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK04</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 250,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Nhựa Acetate, Kim loại | Kiểu dáng: Tròn
+                    </p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
-            <img src="ImagesGK/GK20.png" alt="Sản phẩm 8">
-            <h3>GK20</h3>
-            <p class="price">Giá: 250,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+
+          <div class="product" data-price="450" data-material="plastic1" data-shape="rectangle" data-date="2019-06-10"
+            data-views="2">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK05.png" alt="Sản phẩm 5">
+            <div style="text-align: center;">
+              <a href="../chitietsp/GK05.html">
+                <h3>Mã sản phẩm: GK05</h3>
+              </a>
+              <p class="price"><span class="original-price">550,000 VND</span> Giá: 450,000 VND</p>
+              <button onclick="toggleModal('05')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+            <div id="05" class="modal">
+              <form class="modal-content" method="post">
+                <span class="close" onclick="toggleModal('05')">&times;</span>
+                <div id="product">
+                  <img src="ImagesGK/GK05.png" alt="Product Image" style="width: 200px; height: 200px;">
+                  <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK05</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 450,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Kim loại, nhựa | Kiểu dáng: Hình chữ nhật
+                    </p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-            <img src="ImagesGK/GK21.png" alt="Sản phẩm 5">
-            <h3>GK21</h3>
-            <p class="price">Giá: 500,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+
+          <div class="product" data-price="450" data-material="plastic1" data-shape="rectangle" data-date="2022-01-01"
+            data-views="11">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK06.png" alt="Sản phẩm 6">
+            <div style="text-align: center;">
+              <a href="../chitietsp/GK06.html">
+                <h3>Mã sản phẩm: GK06</h3>
+              </a>
+              <p class="price"><span class="original-price">550,000 VND</span> Giá: 450,000 VND</p>
+              <button onclick="toggleModal('06')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+            <div id="06" class="modal">
+              <form class="modal-content" method="post">
+                <span class="close" onclick="toggleModal('06')">&times;</span>
+                <div id="product">
+                  <img src="ImagesGK/GK06.png" alt="Product Image" style="width: 200px; height: 200px;">
+                  <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK06</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 450,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Nhựa | Kiểu dáng: Hình chữ nhật</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="product" style="display: none;" data-price="500" data-material="metal" data-shape="square">
-            <img src="ImagesGK/GK22.png" alt="Sản phẩm 6">
-            <h3>GK22</h3>
-            <p class="price">Giá: 500,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+
+          <div class="product" data-price="450" data-material="titan" data-shape="round" data-date="2023-12-11"
+            data-views="14">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK07.png" alt="Sản phẩm 7">
+            <div style="text-align: center;">
+              <a href="../chitietsp/GK07.html">
+                <h3>Mã sản phẩm: GK07</h3>
+              </a>
+              <p class="price"><span class="original-price">550,000 VND</span> Giá: 450,000 VND</p>
+              <button onclick="toggleModal('07')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+            <div id="07" class="modal">
+              <form class="modal-content" method="post">
+                <span class="close" onclick="toggleModal('07')">&times;</span>
+                <div id="product">
+                  <img src="ImagesGK/GK07.png" alt="Product Image" style="width: 200px; height: 200px;">
+                  <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK07</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 450,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Titan | Kiểu dáng: Tròn</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="product" style="display: none;" data-price="150" data-material="plastic" data-shape="rectangle">
-            <img src="ImagesGK/GK23.png" alt="Sản phẩm 7">
-            <h3>GK23</h3>
-            <p class="price">Giá: 150,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+          <div class="product" data-price="150" data-material="metal" data-shape="5-tangle" data-date="2010-01-01"
+            data-views="9">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK08.png" alt="Sản phẩm 8">
+            <div style="text-align: center;">
+              <a href="../chitietsp/GK08.html">
+                <h3>Mã sản phẩm: GK08</h3>
+              </a>
+              <p class="price"><span class="original-price">200,000 VND</span> Giá: 150,000 VND</p>
+              <button onclick="toggleModal('08')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+            <div id="08" class="modal">
+              <form class="modal-content" method="post">
+                <span class="close" onclick="toggleModal('08')">&times;</span>
+                <div id="product">
+                  <img src="ImagesGK/GK08.png" alt="Product Image" style="width: 200px; height: 200px;">
+                  <div style="margin-left: 10px;">
+                    <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK08</h4>
+                    <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 300,000 VND</h4>
+                    <p style="  margin-top: 5px; color: #999999;">Chất liệu: Kim loại | Kiểu dáng: Ngũ giác</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="product" style="display: none;" data-price="250" data-material="plastic" data-shape="rectangle">
-            <img src="ImagesGK/GK24.png" alt="Sản phẩm 8">
-            <h3>GK24</h3>
-            <p class="price">Giá: 250,000 VND</p>
-            <p class="add-to-cart">Thêm vào giỏ hàng</p>
+
+          <div class="product" style="display: none;" data-price="700" data-material="metal" data-shape="5-tangle"
+            data-date="2023-11-1" data-views="4">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK09.png" alt="Sản phẩm 9">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK09</h3>
+              <p class="price"><span class="original-price">750,000 VND</span> Giá: 700,000 VND</p>
+              <button onclick="toggleModal('07')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
           </div>
+
+          <div class="product" style="display: none;" data-price="199" data-material="metal" data-shape="round"
+            data-date="2022-11-1" data-views="40">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK10.png" alt="Sản phẩm 10">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK10</h3>
+              <p class="price"><span class="original-price">250,000 VND</span> Giá: 199,000 VND</p>
+              <button onclick="toggleModal('07')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="599" data-material="metal" data-shape="square"
+            data-date="2020-6-1" data-views="32">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK11.png" alt="Sản phẩm 11">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK11</h3>
+              <p class="price"><span class="original-price">650,000 VND</span> Giá: 599,000 VND</p>
+              <button onclick="toggleModal('07')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="750" data-material="metal" data-shape="round"
+            data-date="2021-3-10" data-views="23">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK12.png" alt="Sản phẩm 12">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK12</h3>
+              <p class="price"><span class="original-price">870,000 VND</span> Giá: 750,000 VND</p>
+              <button onclick="toggleModal('12')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="180" data-material="plastic2" data-shape="rectangle"
+            data-date="2022-11-1" data-views="40">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK13.png" alt="Sản phẩm 13">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK13</h3>
+              <p class="price"><span class="original-price">350,000 VND</span> Giá: 180,000 VND</p>
+              <button onclick="toggleModal('13')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="849" data-material="plastic2" data-shape="square"
+            data-date="2023-12-12" data-views="52">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK14.png" alt="Sản phẩm 14">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK14</h3>
+              <p class="price"><span class="original-price">950,000 VND</span> Giá: 849,000 VND</p>
+              <button onclick="toggleModal('14')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="449" data-material="plastic2" data-shape="round"
+            data-date="2020-11-10" data-views="11">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK15.png" alt="Sản phẩm 15">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK15</h3>
+              <p class="price"><span class="original-price">550,000 VND</span> Giá: 449,000 VND</p>
+              <button onclick="toggleModal('14')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="279" data-material="titan" data-shape="round"
+            data-date="2021-6-10" data-views="31">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK16.png" alt="Sản phẩm 16">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK16</h3>
+              <p class="price"><span class="original-price">350,000 VND</span> Giá: 279,000 VND</p>
+              <button onclick="toggleModal('16')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="190" data-material="plastic1" data-shape="rectangle"
+            data-date="2020-1-2" data-views="12">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK17.png" alt="Sản phẩm 17">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK017</h3>
+              <p class="price"><span class="original-price">280,000 VND</span> Giá: 190,000 VND</p>
+              <button onclick="toggleModal('07')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="149" data-material="plastic1" data-shape="square"
+            data-date="2022-2-2" data-views="19">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK18.png" alt="Sản phẩm 18">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK18</h3>
+              <p class="price"><span class="original-price">200,000 VND</span> Giá: 149,000 VND</p>
+              <button onclick="toggleModal('07')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="600" data-material="plastic2" data-shape="square"
+            data-date="2020-3-6" data-views="8">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK19.png" alt="Sản phẩm 19">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK19</h3>
+              <p class="price"><span class="original-price">659,000 VND</span> Giá: 600,000 VND</p>
+              <button onclick="toggleModal('07')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="350" data-material="plastic2" data-shape="square"
+            data-date="2021-4-11" data-views="21">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK20.png" alt="Sản phẩm 20">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK20</h3>
+              <p class="price"><span class="original-price">400,000 VND</span> Giá: 350,000 VND</p>
+              <button onclick="toggleModal('12')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="799" data-material="plastic1" data-shape="rectangle"
+            data-date="2022-5-6" data-views="26">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK21.png" alt="Sản phẩm 21">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK21</h3>
+              <p class="price"><span class="original-price">850,000 VND</span> Giá: 799,000 VND</p>
+              <button onclick="toggleModal('13')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="749" data-material="plastic1" data-shape="square"
+            data-date="2019-5-12" data-views="2">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK22.png" alt="Sản phẩm 22">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK22</h3>
+              <p class="price"><span class="original-price">800,000 VND</span> Giá: 749,000 VND</p>
+              <button onclick="toggleModal('14')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="580" data-material="plastic2" data-shape="square"
+            data-date="2020-1-10" data-views="17">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK23.png" alt="Sản phẩm 23">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK23</h3>
+              <p class="price"><span class="original-price">600,000 VND</span> Giá: 580,000 VND</p>
+              <button onclick="toggleModal('14')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
+          <div class="product" style="display: none;" data-price="179" data-material="plastic1" data-shape="rectangle"
+            data-date="2021-6-10" data-views="31">
+            <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';"
+              onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK24.png" alt="Sản phẩm 24">
+            <div style="text-align: center;">
+              <h3>Mã sản phẩm: GK24</h3>
+              <p class="price"><span class="original-price">250,000 VND</span> Giá: 179,000 VND</p>
+              <button onclick="toggleModal('16')" class="quick-view">Xem nhanh</button>
+              <p class="add-to-cart">Thêm vào giỏ hàng</p>
+              <div class="sale-badge">Sale</div>
+            </div>
+          </div>
+
         </div>
         <div class="pagination" style="margin-top: 10px;">
           <ul>
@@ -533,628 +946,348 @@ button:hover {
         </div>
       </div>
     </div>
+    <!-- Sản phẩm nổi bật -->
     <div>
-      <div class="filters">
-        <div class="filter-item">
-          <label for="sort">Sắp xếp:</label>
-          <select id="sort" onchange="sortProducts()">
-            <option value="price-high-low">Tùy chọn</option>
-            <option value="price-high-low">Giá cao đến thấp</option>
-            <option value="price-low-high">Giá thấp đến cao</option>
-            <option value="newest">Mới nhất</option>
-            <option value="popularity">Quan tâm nhiều</option>
-          </select>
+      <h2 style="text-align: center;">Sản phẩm nổi bật</h2>
+      <div class="product-container">
+        <div class="product-item">
+          <img src="ImagesGK/GK02.png" alt="Product 2" class="product-img">
+          <a href="../chitietsp/GK02.html">
+            <h3>Mã sản phẩm: GK02</h3>
+          </a>
+          <p style="text-align: center;">Giá: 250,000 VND</p>
+        </div>
+        <div class="product-item">
+          <img src="ImagesGK/GK05.png" alt="Product 5" class="product-img">
+          <a href="../chitietsp/GK05.html">
+            <h3>Mã sản phẩm: GK05</h3>
+          </a>
+          <p style="text-align: center;">Giá: 450,000 VND</p>
+        </div>
+        <div class="product-item">
+          <img src="ImagesGK/GK20.png" alt="Product 20" class="product-img">
+          <a href="../chitietsp/GK20.html">
+            <h3>Mã sản phẩm: GK20</h3>
+          </a>
+          <p style="text-align: center ;">Giá: 350,000 VND</p>
+        </div>
+        <div class="product-item">
+          <img src="ImagesGK/GK09.png" alt="Product 9" class="product-img">
+          <a href="../chitietsp/GK09.html">
+            <h3>Mã sản phẩm: GK09</h3>
+          </a>
+          <p style="text-align: center;">Giá: 300,000 VND</p>
+        </div>
+        <div class="product-item">
+          <img src="ImagesGK/GK07.png" alt="Product 5" class="product-img">
+          <a href="../chitietsp/GK07.html">
+            <h3>Mã sản phẩm: GK07</h3>
+          </a>
+          <p style="text-align: center;">Giá: 450,000 VND</p>
+        </div>
+        <div class="product-item">
+          <img src="ImagesGK/GK11.png" alt="Product 5" class="product-img">
+          <a href="../chitietsp/GK11.html">
+            <h3>Mã sản phẩm: GK11</h3>
+          </a>
+          <p style="text-align: center;">Giá: 300,000 VND</p>
+        </div>
+        <div class="product-item">
+          <img src="ImagesGK/GK19.png" alt="Product 5" class="product-img">
+          <a href="../chitietsp/GK19.html">
+            <h3>Mã sản phẩm: GK19</h3>
+          </a>
+          <p style="text-align: center;">Giá: 300,000 VND</p>
         </div>
       </div>
-  <div id="product-list">
-    <div class="product" data-price="250" data-material="plastic2" data-shape="5-tangle" data-date="2022-01-01" data-views="10">
-        <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK01.png" alt="Sản phẩm 1">              
-        <div style="text-align: center;">  
-          <a href="../chitietsp/ana2.html"> <h3>Mã sản phẩm: GK01</h3></a>
-          <p class="price"><span class="original-price">350,000 VND</span> Giá: 250,000 VND</p>
-          <button onclick="toggleModal('01')" class="quick-view" >Xem nhanh</button>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          <div class="sale-badge">Sale</div> 
-        </div>           
-        <div id="01" class="modal">
-          <form class="modal-content"  method="post">
-                <span class="close" onclick="toggleModal('01')">&times;</span>
-          <div id="product">
-                <img src="ImagesGK/GK01.png" alt="Product Image" style="width: 200px; height: 200px;">
-            <div style="margin-left: 10px;">
-                <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK01</h4>
-                <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 250,000 VND</h4>
-                <p style="  margin-top: 5px; color: #999999;">Chất liệu: Nhựa Acetate | Kiểu dáng: Ngũ giác</p>
-                <button class="add-to-cart">Thêm vào giỏ hàng</button>
-            </div>
-          </div>
-          </form>
-        </div>
-    </div>           
-    
-    <div class="product" data-price="250" data-material="metal" data-shape="round" data-date="2022-12-03" data-views="17">
-        <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK02.png" alt="Sản phẩm 2">              
-        <div style="text-align: center;">  
-        <a href="../chitietsp/GK02.html"><h3>Mã sản phẩm: GK02</h3></a>
-        <p class="price"><span class="original-price">350,000 VND</span> Giá: 250,000 VND</p>
-          <button onclick="toggleModal('02')" class="quick-view" >Xem nhanh</button>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          <div class="sale-badge">Sale</div> 
-        </div>           
-        <div id="02" class="modal">
-          <form class="modal-content"  method="post">
-                <span class="close" onclick="toggleModal('02')">&times;</span>
-          <div id="product">
-                <img src="ImagesGK/GK02.png" alt="Product Image" style="width: 200px; height: 200px;">
-            <div style="margin-left: 10px;">
-                <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK02</h4>
-                <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 250,000 VND</h4>
-                <p style="  margin-top: 5px; color: #999999;">Chất liệu: Kim Loại | Kiểu dáng: Gọng tròn</p>
-                <button class="add-to-cart">Thêm vào giỏ hàng</button>
-            </div>
-          </div>
-          </form>
-        </div>
-    </div>           
-    <div class="product" data-price="700" data-material="plastic2" data-shape="rectangle" data-date="2023-01-01" data-views="50">
-        <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK03.png" alt="Sản phẩm 3">              
-        <div style="text-align: center;">  
-        <a href="../chitietsp/GK03.html"><h3>Mã sản phẩm: GK03</h3></a>
-        <p class="price"><span class="original-price">800,000 VND</span> Giá: 700,000 VND</p>
-          <button onclick="toggleModal('03')" class="quick-view" >Xem nhanh</button>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          <div class="sale-badge">Sale</div> 
-        </div>           
-        <div id="03" class="modal">
-          <form class="modal-content"  method="post">
-                <span class="close" onclick="toggleModal('03')">&times;</span>
-          <div id="product">
-                <img src="ImagesGK/GK01.png" alt="Product Image" style="width: 200px; height: 200px;">
-            <div style="margin-left: 10px;">
-                <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK03</h4>
-                <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 700,000 VND</h4>
-                <p style="  margin-top: 5px; color: #999999;">Chất liệu: Nhựa Acetate | Kiểu dáng: Hình chữ nhật</p>
-                <button class="add-to-cart">Thêm vào giỏ hàng</button>
-            </div>
-          </div>
-          </form>
-        </div>
-    </div>           
+    </div>
+    <script>
+      // Pagination
+      document.addEventListener('DOMContentLoaded', function () {
+        // Lấy danh sách các sản phẩm
+        var productList = document.getElementById('product-list').children;
 
-    <div class="product" data-price="250" data-material="metal" data-shape="round" data-date="2012-01-01" data-views="30">
-        <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK04.png" alt="Sản phẩm 4">              
-        <div style="text-align: center;">  
-        <a href="../chitietsp/GK04.html"><h3>Mã sản phẩm: GK04</h3></a>
-        <p class="price"><span class="original-price">350,000 VND</span> Giá: 250,000 VND</p>
-          <button onclick="toggleModal('04')" class="quick-view" >Xem nhanh</button>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          <div class="sale-badge">Sale</div> 
-        </div>           
-        <div id="04" class="modal">
-          <form class="modal-content"  method="post">
-                <span class="close" onclick="toggleModal('04')">&times;</span>
-          <div id="product">
-                <img src="ImagesGK/GK04.png" alt="Product Image" style="width: 200px; height: 200px;">
-            <div style="margin-left: 10px;">
-                <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK04</h4>
-                <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 250,000 VND</h4>
-                <p style="  margin-top: 5px; color: #999999;">Chất liệu: Nhựa Acetate, Kim loại | Kiểu dáng: Tròn</p>
-                <button class="add-to-cart">Thêm vào giỏ hàng</button>
-            </div>
-          </div>
-          </form>
-        </div>
-    </div>
+        // Lấy danh sách các link phân trang
+        var pageLinks = document.getElementsByClassName('page-link');
 
-    <div class="product" data-price="450" data-material="plastic1" data-shape="rectangle" data-date="2019-06-10" data-views="2">
-        <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK05.png" alt="Sản phẩm 5">              
-        <div style="text-align: center;">  
-        <a href="../chitietsp/GK05.html"><h3>Mã sản phẩm: GK05</h3></a>
-        <p class="price"><span class="original-price">550,000 VND</span> Giá: 450,000 VND</p>
-          <button onclick="toggleModal('05')" class="quick-view" >Xem nhanh</button>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          <div class="sale-badge">Sale</div> 
-        </div>           
-        <div id="05" class="modal">
-          <form class="modal-content"  method="post">
-                <span class="close" onclick="toggleModal('05')">&times;</span>
-          <div id="product">
-                <img src="ImagesGK/GK05.png" alt="Product Image" style="width: 200px; height: 200px;">
-            <div style="margin-left: 10px;">
-                <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK05</h4>
-                <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 450,000 VND</h4>
-                <p style="  margin-top: 5px; color: #999999;">Chất liệu: Kim loại, nhựa | Kiểu dáng: Hình chữ nhật</p>
-                <button class="add-to-cart">Thêm vào giỏ hàng</button>
-            </div>
-          </div>
-          </form>
-        </div>
-    </div>
+        // Xử lý sự kiện khi nhấp vào một link phân trang
+        for (var i = 0; i < pageLinks.length; i++) {
+          pageLinks[i].addEventListener('click', function (e) {
+            e.preventDefault();
 
-    <div class="product" data-price="450" data-material="plastic1" data-shape="rectangle" data-date="2022-01-01" data-views="11">
-        <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK06.png" alt="Sản phẩm 6">              
-        <div style="text-align: center;">  
-        <a href="../chitietsp/GK06.html"><h3>Mã sản phẩm: GK06</h3></a>
-        <p class="price"><span class="original-price">550,000 VND</span> Giá: 450,000 VND</p>
-          <button onclick="toggleModal('06')" class="quick-view" >Xem nhanh</button>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          <div class="sale-badge">Sale</div> 
-        </div>           
-        <div id="06" class="modal">
-          <form class="modal-content"  method="post">
-                <span class="close" onclick="toggleModal('06')">&times;</span>
-          <div id="product">
-                <img src="ImagesGK/GK06.png" alt="Product Image" style="width: 200px; height: 200px;">
-            <div style="margin-left: 10px;">
-                <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK06</h4>
-                <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 450,000 VND</h4>
-                <p style="  margin-top: 5px; color: #999999;">Chất liệu: Nhựa | Kiểu dáng: Hình chữ nhật</p>
-                <button class="add-to-cart">Thêm vào giỏ hàng</button>
-            </div>
-          </div>
-          </form>
-        </div>
-    </div>
+            // Lấy số trang từ nội dung của link
+            var page = parseInt(this.textContent);
 
-    <div class="product" data-price="450" data-material="titan" data-shape="round" data-date="2023-12-11" data-views="14">
-        <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK07.png" alt="Sản phẩm 7">              
-        <div style="text-align: center;">  
-        <a href="../chitietsp/GK07.html"><h3>Mã sản phẩm: GK07</h3></a>
-        <p class="price"><span class="original-price">550,000 VND</span> Giá: 450,000 VND</p>
-          <button onclick="toggleModal('07')" class="quick-view" >Xem nhanh</button>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          <div class="sale-badge">Sale</div> 
-        </div>           
-        <div id="07" class="modal">
-          <form class="modal-content"  method="post">
-                <span class="close" onclick="toggleModal('07')">&times;</span>
-          <div id="product">
-                <img src="ImagesGK/GK07.png" alt="Product Image" style="width: 200px; height: 200px;">
-            <div style="margin-left: 10px;">
-                <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK07</h4>
-                <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 450,000 VND</h4>
-                <p style="  margin-top: 5px; color: #999999;">Chất liệu: Titan | Kiểu dáng: Tròn</p>
-                <button class="add-to-cart">Thêm vào giỏ hàng</button>
-            </div>
-          </div>
-          </form>
-        </div>
-    </div>
-    <div class="product" data-price="150" data-material="metal" data-shape="5-tangle" data-date="2010-01-01" data-views="9">
-        <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK08.png" alt="Sản phẩm 8">              
-        <div style="text-align: center;">  
-        <a href="../chitietsp/GK08.html"><h3>Mã sản phẩm: GK08</h3></a>
-        <p class="price"><span class="original-price">200,000 VND</span> Giá: 150,000 VND</p>
-          <button onclick="toggleModal('08')" class="quick-view" >Xem nhanh</button>
-          <p class="add-to-cart">Thêm vào giỏ hàng</p>
-          <div class="sale-badge">Sale</div> 
-        </div>           
-        <div id="08" class="modal">
-          <form class="modal-content"  method="post">
-                <span class="close" onclick="toggleModal('08')">&times;</span>
-          <div id="product">
-                <img src="ImagesGK/GK08.png" alt="Product Image" style="width: 200px; height: 200px;">
-            <div style="margin-left: 10px;">
-                <h4 style=" font-size: 18px; margin-top: 0;margin-left: 5px ;">GK08</h4>
-                <h4 style=" font-weight: bold; margin-top: 5px;">Giá: 300,000 VND</h4>
-                <p style="  margin-top: 5px; color: #999999;">Chất liệu: Kim loại | Kiểu dáng: Ngũ giác</p>
-                <button class="add-to-cart">Thêm vào giỏ hàng</button>
-            </div>
-          </div>
-          </form>
-        </div>
-    </div>
-    
-    <div class="product" style="display: none;" data-price="700" data-material="metal" data-shape="5-tangle" data-date="2023-11-1" data-views="4">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK09.png" alt="Sản phẩm 9">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK09</h3>
-      <p class="price"><span class="original-price">750,000 VND</span> Giá: 700,000 VND</p>
-        <button onclick="toggleModal('07')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-    
-    <div class="product" style="display: none;" data-price="199" data-material="metal" data-shape="round" data-date="2022-11-1" data-views="40">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK10.png" alt="Sản phẩm 10">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK10</h3>
-      <p class="price"><span class="original-price">250,000 VND</span> Giá: 199,000 VND</p>
-        <button onclick="toggleModal('07')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-    
-    <div class="product" style="display: none;" data-price="599" data-material="metal" data-shape="square" data-date="2020-6-1" data-views="32">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK11.png" alt="Sản phẩm 11">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK11</h3>
-      <p class="price"><span class="original-price">650,000 VND</span> Giá: 599,000 VND</p>
-        <button onclick="toggleModal('07')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-
-    <div class="product" style="display: none;" data-price="750" data-material="metal" data-shape="round" data-date="2021-3-10" data-views="23">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK12.png" alt="Sản phẩm 12">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK12</h3>
-      <p class="price"><span class="original-price">870,000 VND</span> Giá: 750,000 VND</p>
-        <button onclick="toggleModal('12')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-    
-    <div class="product" style="display: none;" data-price="180" data-material="plastic2" data-shape="rectangle" data-date="2022-11-1" data-views="40">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK13.png" alt="Sản phẩm 13">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK13</h3>
-      <p class="price"><span class="original-price">350,000 VND</span> Giá: 180,000 VND</p>
-        <button onclick="toggleModal('13')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-    
-    <div class="product" style="display: none;" data-price="849" data-material="plastic2" data-shape="square" data-date="2023-12-12" data-views="52">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK14.png" alt="Sản phẩm 14">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK14</h3>
-      <p class="price"><span class="original-price">950,000 VND</span> Giá: 849,000 VND</p>
-        <button onclick="toggleModal('14')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-    
-    <div class="product" style="display: none;" data-price="449" data-material="plastic2" data-shape="round" data-date="2020-11-10" data-views="11">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK15.png" alt="Sản phẩm 15">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK15</h3>
-      <p class="price"><span class="original-price">550,000 VND</span> Giá: 449,000 VND</p>
-        <button onclick="toggleModal('14')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-
-    <div class="product" style="display: none;" data-price="279" data-material="titan" data-shape="round" data-date="2021-6-10" data-views="31">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK16.png" alt="Sản phẩm 16">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK16</h3>
-      <p class="price"><span class="original-price">350,000 VND</span> Giá: 279,000 VND</p>
-        <button onclick="toggleModal('16')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-
-    <div class="product" style="display: none;" data-price="190" data-material="plastic1" data-shape="rectangle" data-date="2020-1-2" data-views="12">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK17.png" alt="Sản phẩm 17">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK017</h3>
-      <p class="price"><span class="original-price">280,000 VND</span> Giá: 190,000 VND</p>
-        <button onclick="toggleModal('07')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-    
-    <div class="product" style="display: none;" data-price="149" data-material="plastic1" data-shape="square" data-date="2022-2-2" data-views="19">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK18.png" alt="Sản phẩm 18">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK18</h3>
-      <p class="price"><span class="original-price">200,000 VND</span> Giá: 149,000 VND</p>
-        <button onclick="toggleModal('07')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-    
-    <div class="product" style="display: none;" data-price="600" data-material="plastic2" data-shape="square" data-date="2020-3-6" data-views="8">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK19.png" alt="Sản phẩm 19">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK19</h3>
-      <p class="price"><span class="original-price">659,000 VND</span> Giá: 600,000 VND</p>
-        <button onclick="toggleModal('07')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-
-    <div class="product" style="display: none;" data-price="350" data-material="plastic2" data-shape="square" data-date="2021-4-11" data-views="21">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK20.png" alt="Sản phẩm 20">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK20</h3>
-      <p class="price"><span class="original-price">400,000 VND</span> Giá: 350,000 VND</p>
-        <button onclick="toggleModal('12')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-    
-    <div class="product" style="display: none;" data-price="799" data-material="plastic1" data-shape="rectangle" data-date="2022-5-6" data-views="26">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK21.png" alt="Sản phẩm 21">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK21</h3>
-      <p class="price"><span class="original-price">850,000 VND</span> Giá: 799,000 VND</p>
-        <button onclick="toggleModal('13')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-    
-    <div class="product" style="display: none;" data-price="749" data-material="plastic1" data-shape="square" data-date="2019-5-12" data-views="2">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK22.png" alt="Sản phẩm 22">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK22</h3>
-      <p class="price"><span class="original-price">800,000 VND</span> Giá: 749,000 VND</p>
-        <button onclick="toggleModal('14')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-    
-    <div class="product" style="display: none;" data-price="580" data-material="plastic2" data-shape="square" data-date="2020-1-10" data-views="17">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK23.png" alt="Sản phẩm 23">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK23</h3>
-      <p class="price"><span class="original-price">600,000 VND</span> Giá: 580,000 VND</p>
-        <button onclick="toggleModal('14')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-
-    <div class="product" style="display: none;" data-price="179" data-material="plastic1" data-shape="rectangle" data-date="2021-6-10" data-views="31">
-      <img style="filter: brightness(100%);" onmouseover="this.style.filter='brightness(80%)';" onmouseout="this.style.filter='brightness(100%)';" src="ImagesGK/GK24.png" alt="Sản phẩm 24">              
-      <div style="text-align: center;">  
-      <h3>Mã sản phẩm: GK24</h3>
-      <p class="price"><span class="original-price">250,000 VND</span> Giá: 179,000 VND</p>
-        <button onclick="toggleModal('16')" class="quick-view" >Xem nhanh</button>
-        <p class="add-to-cart">Thêm vào giỏ hàng</p>
-        <div class="sale-badge">Sale</div> 
-      </div>           
-    </div>
-    
-  </div>
-    <div class="pagination" style="margin-top: 10px;">
-      <ul>
-        <a href="#" class="page-link">1</a>
-        <a href="#" class="page-link">2</a>
-        <a href="#" class="page-link">3</a>
-      </ul>
-    </div>
-  </div>
-</div>
-<!-- Sản phẩm nổi bật -->
-<div>
-<h2 style="text-align: center;">Sản phẩm nổi bật</h2>
-<div class="product-container">
-<div class="product-item">
-  <img src="ImagesGK/GK02.png" alt="Product 2" class="product-img">
-  <a href="../chitietsp/GK02.html"><h3>Mã sản phẩm: GK02</h3></a>
-  <p>Giá: 250,000 VND</p>
-</div>
-<div class="product-item">
-  <img src="ImagesGK/GK05.png" alt="Product 5" class="product-img">
-  <a href="../chitietsp/GK05.html"><h3>Mã sản phẩm: GK05</h3></a>
-  <p>Giá: 450,000 VND</p>
-</div>
-<div class="product-item">
-  <img src="ImagesGK/GK20.png" alt="Product 20" class="product-img">
-  <a href="../chitietsp/GK20.html"><h3>Mã sản phẩm: GK20</h3></a>
-  <p>Giá: 350,000 VND</p>
-</div>
-<div class="product-item">
-  <img src="ImagesGK/GK09.png" alt="Product 9" class="product-img">
-  <a href="../chitietsp/GK09.html"><h3>Mã sản phẩm: GK09</h3></a>
-  <p>Giá: 300,000 VND</p>
-</div>
-<div class="product-item">
-  <img src="ImagesGK/GK07.png" alt="Product 5" class="product-img">
-  <a href="../chitietsp/GK07.html"><h3>Mã sản phẩm: GK07</h3></a>
-  <p>Giá: 450,000 VND</p>
-</div>
-<div class="product-item">
-    <img src="ImagesGK/GK11.png" alt="Product 5" class="product-img">
-    <a href="../chitietsp/GK11.html"><h3>Mã sản phẩm: GK11</h3></a>
-    <p>Giá: 300,000 VND</p>
-  </div>
-  <div class="product-item">
-    <img src="ImagesGK/GK19.png" alt="Product 5" class="product-img">
-    <a href="../chitietsp/GK19.html"><h3>Mã sản phẩm: GK19</h3></a>
-    <p>Giá: 300,000 VND</p>
-  </div>
-</div>
-</div>
-  <script>
-// Pagination
-    document.addEventListener('DOMContentLoaded', function() {
-      // Lấy danh sách các sản phẩm
-      var productList = document.getElementById('product-list').children;
-
-      // Lấy danh sách các link phân trang
-      var pageLinks = document.getElementsByClassName('page-link');
-
-      // Xử lý sự kiện khi nhấp vào một link phân trang
-      for (var i = 0; i < pageLinks.length; i++) {
-        pageLinks[i].addEventListener('click', function(e) {
-          e.preventDefault();
-
-          // Lấy số trang từ nội dung của link
-          var page = parseInt(this.textContent);
-
-          // Ẩn tất cả các sản phẩm
-          for (var j = 0; j < productList.length; j++) {
-            productList[j].style.display = 'none';
-          }
-
-          // Hiển thị các sản phẩm ở trang tương ứng
-          var startIndex = (page - 1) * 8; // 8 là số sản phẩm hiển thị trên mỗi trang
-          var endIndex = startIndex + 8;
-          for (var k = startIndex; k < endIndex; k++) {
-            if (productList[k]) {
-              productList[k].style.display = 'block';
+            // Ẩn tất cả các sản phẩm
+            for (var j = 0; j < productList.length; j++) {
+              productList[j].style.display = 'none';
             }
+
+            // Hiển thị các sản phẩm ở trang tương ứng
+            var startIndex = (page - 1) * 8; // 8 là số sản phẩm hiển thị trên mỗi trang
+            var endIndex = startIndex + 8;
+            for (var k = startIndex; k < endIndex; k++) {
+              if (productList[k]) {
+                productList[k].style.display = 'block';
+              }
+            }
+          });
+        }
+      });
+      // Filter sản phẩm
+      document.addEventListener("DOMContentLoaded", function () {
+        var priceFilters = document.querySelectorAll(".price-filter input");
+        var products = document.querySelectorAll(".product");
+
+        for (var j = 0; j < priceFilters.length; j++) {
+          priceFilters[j].addEventListener("click", handlePriceFilterClick);
+        }
+
+        function handlePriceFilterClick(event) {
+          var selectedFilter = event.target;
+          var selectedPriceRange = selectedFilter.value;
+
+          // Xóa lớp ẩn/hiện tất cả các sản phẩm
+          for (var k = 0; k < products.length; k++) {
+            var product = products[k];
+            var productPrice = parseInt(product.getAttribute("data-price"));
+
+            if (selectedPriceRange === "all" || isProductWithinPriceRange(productPrice, selectedPriceRange)) {
+              product.style.display = "block";
+            } else {
+              product.style.display = "none";
+            }
+          }
+        }
+
+        function isProductWithinPriceRange(price, range) {
+          var priceRange = range.split("-");
+          var minPrice = parseInt(priceRange[0]);
+          var maxPrice = parseInt(priceRange[1]);
+          return price >= minPrice && price <= maxPrice;
+        }
+      });
+
+      const filterPriceCheckboxes = document.querySelectorAll('.filter-price');
+      const filterMaterialCheckboxes = document.querySelectorAll('.filter-material');
+      const filterShapeCheckboxes = document.querySelectorAll('.filter-shape');
+      const products = document.querySelectorAll('.product');
+
+      function filterProducts() {
+        const selectedPrices = Array.from(filterPriceCheckboxes)
+          .filter(checkbox => checkbox.checked)
+          .map(checkbox => parseInt(checkbox.value));
+
+        const selectedMaterials = Array.from(filterMaterialCheckboxes)
+          .filter(checkbox => checkbox.checked)
+          .map(checkbox => checkbox.value);
+
+        const selectedShapes = Array.from(filterShapeCheckboxes)
+          .filter(checkbox => checkbox.checked)
+          .map(checkbox => checkbox.value);
+
+        products.forEach(product => {
+          const price = parseInt(product.dataset.price);
+          const material = product.dataset.material;
+          const shape = product.dataset.shape;
+
+          const meetsPriceCriteria = selectedPrices.length === 0 || selectedPrices.includes(price);
+          const meetsMaterialCriteria = selectedMaterials.length === 0 || selectedMaterials.includes(material);
+          const meetsShapeCriteria = selectedShapes.length === 0 || selectedShapes.includes(shape);
+
+          if (meetsPriceCriteria && meetsMaterialCriteria && meetsShapeCriteria) {
+            product.style.display = 'block';
+          } else {
+            product.style.display = 'none';
           }
         });
       }
-    });
-// Filter sản phẩm
-    document.addEventListener("DOMContentLoaded", function() {
-      var priceFilters = document.querySelectorAll(".price-filter input");
-      var products = document.querySelectorAll(".product");
-  
-      for (var j = 0; j < priceFilters.length; j++) {
-        priceFilters[j].addEventListener("click", handlePriceFilterClick);
+
+      filterPriceCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', filterProducts);
+      });
+
+      filterMaterialCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', filterProducts);
+      });
+
+      filterShapeCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', filterProducts);
+      });
+      // Sắp xếp sản phẩm
+      function sortProducts() {
+        var sortCriteria = document.getElementById('sort').value;
+        var productList = document.getElementById('product-list');
+        var products = Array.from(productList.getElementsByClassName('product'));
+
+        if (sortCriteria === 'price-high-low') {
+          products.sort(function (a, b) {
+            var priceA = parseInt(a.getAttribute('data-price'));
+            var priceB = parseInt(b.getAttribute('data-price'));
+            return priceB - priceA;
+          });
+        } else if (sortCriteria === 'price-low-high') {
+          products.sort(function (a, b) {
+            var priceA = parseInt(a.getAttribute('data-price'));
+            var priceB = parseInt(b.getAttribute('data-price'));
+            return priceA - priceB;
+          });
+        } else if (sortCriteria === 'newest') {
+          products.sort(function (a, b) {
+            var dateA = new Date(a.getAttribute('data-date'));
+            var dateB = new Date(b.getAttribute('data-date'));
+            return dateB - dateA;
+          });
+        } else if (sortCriteria === 'popularity') {
+          products.sort(function (a, b) {
+            var viewsA = parseInt(a.getAttribute('data-views'));
+            var viewsB = parseInt(b.getAttribute('data-views'));
+            return viewsB - viewsA;
+          });
+        }
+
+        products.forEach(function (product) {
+          productList.appendChild(product);
+        });
       }
-  
-      function handlePriceFilterClick(event) {
-        var selectedFilter = event.target;
-        var selectedPriceRange = selectedFilter.value;
-  
-        // Xóa lớp ẩn/hiện tất cả các sản phẩm
-        for (var k = 0; k < products.length; k++) {
-          var product = products[k];
-          var productPrice = parseInt(product.getAttribute("data-price"));
-  
-          if (selectedPriceRange === "all" || isProductWithinPriceRange(productPrice, selectedPriceRange)) {
-            product.style.display = "block";
-          } else {
-            product.style.display = "none";
+      // Hiển thị sau khi lọc
+      var numberOfProducts = 8;
+
+      // Cập nhật chiều dài của filter-container
+      var filterContainer = document.querySelector('.filter-container');
+      filterContainer.style.height = numberOfProducts * 70 + 'px';
+
+      // Cập nhật vị trí sticky của filter-container
+      var productContainer = document.querySelector('.product-list-container');
+      var productContainerRect = productContainer.getBoundingClientRect();
+      filterContainer.style.top = productContainerRect.top + 'px';
+
+      // Cập nhật vị trí sticky của pagination-container
+      var paginationContainer = document.querySelector('.pagination');
+      paginationContainer.style.top = productContainerRect.bottom + 'px';
+
+      // Hiện xem nhanh
+
+      function toggleModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = modal.style.display === "block" ? "none" : "block";
+      }
+
+      // Đóng xem nhanh
+      window.onclick = function (event) {
+        var modals = document.getElementsByClassName("modal");
+        for (var i = 0; i < modals.length; i++) {
+          var modal = modals[i];
+          if (event.target == modal) {
+            modal.style.display = "none";
           }
         }
       }
-  
-      function isProductWithinPriceRange(price, range) {
-        var priceRange = range.split("-");
-        var minPrice = parseInt(priceRange[0]);
-        var maxPrice = parseInt(priceRange[1]);
-        return price >= minPrice && price <= maxPrice;
-      }
-    });
-  
-    const filterPriceCheckboxes = document.querySelectorAll('.filter-price');
-    const filterMaterialCheckboxes = document.querySelectorAll('.filter-material');
-    const filterShapeCheckboxes = document.querySelectorAll('.filter-shape');
-    const products = document.querySelectorAll('.product');
-  
-    function filterProducts() {
-      const selectedPrices = Array.from(filterPriceCheckboxes)
-        .filter(checkbox => checkbox.checked)
-        .map(checkbox => parseInt(checkbox.value));
-  
-      const selectedMaterials = Array.from(filterMaterialCheckboxes)
-        .filter(checkbox => checkbox.checked)
-        .map(checkbox => checkbox.value);
-  
-      const selectedShapes = Array.from(filterShapeCheckboxes)
-        .filter(checkbox => checkbox.checked)
-        .map(checkbox => checkbox.value);
-  
-      products.forEach(product => {
-        const price = parseInt(product.dataset.price);
-        const material = product.dataset.material;
-        const shape = product.dataset.shape;
-  
-        const meetsPriceCriteria = selectedPrices.length === 0 || selectedPrices.includes(price);
-        const meetsMaterialCriteria = selectedMaterials.length === 0 || selectedMaterials.includes(material);
-        const meetsShapeCriteria = selectedShapes.length === 0 || selectedShapes.includes(shape);
-  
-        if (meetsPriceCriteria && meetsMaterialCriteria && meetsShapeCriteria) {
-          product.style.display = 'block';
-        } else {
-          product.style.display = 'none';
-        }
-      });
-    }
-  
-    filterPriceCheckboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', filterProducts);
-    });
-  
-    filterMaterialCheckboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', filterProducts);
-    });
-  
-    filterShapeCheckboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', filterProducts);
-    });
-// Sắp xếp sản phẩm
-    function sortProducts() {
-  var sortCriteria = document.getElementById('sort').value;
-  var productList = document.getElementById('product-list');
-  var products = Array.from(productList.getElementsByClassName('product'));
-
-  if (sortCriteria === 'price-high-low') {
-    products.sort(function(a, b) {
-      var priceA = parseInt(a.getAttribute('data-price'));
-      var priceB = parseInt(b.getAttribute('data-price'));
-      return priceB - priceA;
-    });
-  } else if (sortCriteria === 'price-low-high') {
-    products.sort(function(a, b) {
-      var priceA = parseInt(a.getAttribute('data-price'));
-      var priceB = parseInt(b.getAttribute('data-price'));
-      return priceA - priceB;
-    });
-  } else if (sortCriteria === 'newest') {
-    products.sort(function(a, b) {
-      var dateA = new Date(a.getAttribute('data-date'));
-      var dateB = new Date(b.getAttribute('data-date'));
-      return dateB - dateA;
-    });
-  } else if (sortCriteria === 'popularity') {
-    products.sort(function(a, b) {
-      var viewsA = parseInt(a.getAttribute('data-views'));
-      var viewsB = parseInt(b.getAttribute('data-views'));
-      return viewsB - viewsA;
-    });
-  }
-
-  products.forEach(function(product) {
-    productList.appendChild(product);
-  });
-}
-// Hiển thị sau khi lọc
-var numberOfProducts = 8;
-
-// Cập nhật chiều dài của filter-container
-var filterContainer = document.querySelector('.filter-container');
-filterContainer.style.height = numberOfProducts * 70 + 'px';
-
-// Cập nhật vị trí sticky của filter-container
-var productContainer = document.querySelector('.product-list-container');
-var productContainerRect = productContainer.getBoundingClientRect();
-filterContainer.style.top = productContainerRect.top + 'px';
-
-// Cập nhật vị trí sticky của pagination-container
-var paginationContainer = document.querySelector('.pagination');
-paginationContainer.style.top = productContainerRect.bottom + 'px';
-
-// Hiện xem nhanh
-
-function toggleModal(modalId) {
-  var modal = document.getElementById(modalId);
-  modal.style.display = modal.style.display === "block" ? "none" : "block";
-}
-
-// Đóng xem nhanh
-window.onclick = function(event) {
-  var modals = document.getElementsByClassName("modal");
-  for (var i = 0; i < modals.length; i++) {
-    var modal = modals[i];
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-}
-  </script>
+    </script>
   </main>
+  <!-- Start Footer Section -->
+  <footer class="footer-section">
+    <div class="container relative">
+
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="subscription-form">
+            <h3 class="d-flex align-items-center"><span class="me-1"><img src="../Trangchinh/images/envelope-outline.svg"
+                  alt="Image" class="img-fluid"></span><span>Hãy gửi phản hồi cho chúng tôi nếu bạn gặp vấn đề
+                gì.</span></h3>
+
+            <form action="#" class="row g-3">
+              <div class="col-auto">
+                <input type="text" class="form-control" placeholder="Enter your name">
+              </div>
+              <div class="col-auto">
+                <input type="email" class="form-control" placeholder="Enter your email">
+              </div>
+              <div class="col-auto">
+                <button class="btn btn-primary">
+                  <span class="fa fa-paper-plane"></span>
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4">
+          <div class="mb-4 footer-logo-wrap"><a href="index.html" class="footer-logo">IKKUNA</a></div>
+          <p class="mb-4">Chúng tôi xin cam đoan rằng sản phẩm của IKKUNA là một lựa chọn đúng đắn cho quý
+            khách hàng. Sự đảm bảo chất lượng sản phẩm và chính sách bảo hành tốt là những yếu tố quan trọng
+            mà chúng tôi hướng đến. Đồng thời, chúng tôi cũng tự hào là cửa hàng cung cấp sản phẩm với giá
+            tốt nhất trên thị trường.
+          </p>
+
+          <ul class="list-unstyled custom-social">
+            <li><a href="https://www.facebook.com/profile.php?id=61553810680047" target="_blank"><span
+                  class="fa fa-brands fa-facebook-f"></span></a></li>
+            <li><a href="https://www.tiktok.com/@kinhmatikkuna" target="_blank"><span
+                  class="fa fa-brands fa-tiktok"></span></a></li>
+            <li><a href="https://www.instagram.com/kinhmat_ikkuna/" target="_blank"><span
+                  class="fa fa-brands fa-instagram"></span></a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="row links-wrap">
+            <div class="col-6 col-sm-6 col-md-3">
+              <ul class="list-unstyled">
+                <li>
+                  <p style="color: black;"><b>Tất cả sản phẩm</b></p>
+                </li>
+                <li><a href="#">Gọng kính</a></li>
+                <li><a href="#">Kính áp tròng</a></li>
+                <li><a href="#">Kính râm</a></li>
+                <li><a href="#">Kính mắt trẻ em</a></li>
+                <li><a href="#">Mắt kính</a></li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-3">
+              <ul class="list-unstyled">
+                <li>
+                  <p style="color: black;"><b>Chính sách mua hàng</b></p>
+                </li>
+                <li><a href="#">Hình thức thanh toán</a></li>
+                <li><a href="#">Chính sách giao hàng</a></li>
+                <li><a href="#">Chính sách bảo hành</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-3">
+              <ul class="list-unstyled">
+                <li>
+                  <p style="color: black;"><b>Thông tin liên hệ</b></p>
+                </li>
+                <li><a href="#">Hotline: 0366764577</a></li>
+                <li><a href="#">Email: kinhmatIkkuna@gmail.com</a></li>
+                <li><a href="#">Cơ sở 1: số 1 Chùa Bộc, Quang Trung, Đống Đa, Hà Nội </a></li>
+
+              </ul>
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-3">
+              <ul class="list-unstyled">
+                <li>
+                  <p style="color: black;"><b>Về Ikkuna</b></p>
+                </li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Hệ thống cửa hàng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
 </body>
+
 </html>
