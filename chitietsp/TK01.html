@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>IKKUNA</title>
+    <link href="../Trangchinh/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font1|Font2|Font3&display=swap">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+    <link href="../Trangchinh/css/style.css" rel="stylesheet">
     <style>
-
         .carousel-inner img {
             width: 100%;
             border-radius: 8px;
@@ -22,338 +27,449 @@
             background-color: pink;
             color: white;
         }
+
         /* Custom styles for Section 2 */
-.product-detail-container {
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f8f9fa;
-}
+        .product-detail-container {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+        }
 
-.product-detail-image {
-  max-width: 100%;
-  border-radius: 8px;
-}
+        .product-detail-image {
+            max-width: 100%;
+            border-radius: 8px;
+        }
 
-.product-detail-content {
-  margin-top: 20px;
-}
+        .product-detail-content {
+            margin-top: 20px;
+        }
 
-.product-detail-content h4 {
-  color: #333;
-}
+        .product-detail-content h4 {
+            color: #333;
+        }
 
-/* Styling for the active content */
-.product-detail-content.active {
-  display: block;
-}
-.product-info-container {
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f8f9fa;
-  border-bottom: 2px dashed #ccc; /* Add dashed border */
-}
+        /* Styling for the active content */
+        .product-detail-content.active {
+            display: block;
+        }
 
-.product-detail-container {
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-/* Optional: Add some spacing between sections */
-body {
-    margin: 0;
-    padding: 0;
-}
+        .product-info-container {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+            border-bottom: 2px dashed #ccc;
+            /* Add dashed border */
+        }
 
-/* Style for Section 3: Featured Products */
-.container.my-5 {
-    background-color: #f8f9fa; /* Set a background color for the section */
-    padding: 30px;
-}
+        .product-detail-container {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-h3.text-center {
-    color: #ff69b4; /* Set heading color to pink */
-}
+        /* Optional: Add some spacing between sections */
+        body {
+            margin: 0;
+            padding: 0;
+        }
 
-.row {
-    display: flex;
-    justify-content: center;
-}
+        /* Style for Section 3: Featured Products */
+        .container.my-5 {
+            background-color: #f8f9fa;
+            /* Set a background color for the section */
+            padding: 30px;
+        }
 
-/* Style for Featured Product Cards */
-.card {
-    transition: transform 0.2s; /* Add a smooth transition effect on hover */
-}
+        h3.text-center {
+            color: #ff69b4;
+            /* Set heading color to pink */
+        }
 
-.card:hover {
-    transform: scale(1.05); /* Increase size on hover */
-}
+        .row {
+            display: flex;
+            justify-content: center;
+        }
 
-.card-img-top {
-    max-height: 350px; /* Set a maximum height for the product images */
-}
+        /* Style for Featured Product Cards */
+        .card {
+            transition: transform 0.2s;
+            /* Add a smooth transition effect on hover */
+        }
 
-.card-title {
-    font-size: 1.2em; /* Increase font size for the product title */
-    margin-bottom: 0.5em;
-}
+        .card:hover {
+            transform: scale(1.05);
+            /* Increase size on hover */
+        }
 
-.card-text {
-    color: #6c757d; /* Set a color for the text */
-}
+        .card-img-top {
+            max-height: 350px;
+            /* Set a maximum height for the product images */
+        }
 
-.card-link {
-    text-decoration: none; /* Remove underline from links */
-    color: #000000; /* Set link color */
-}
+        .card-title {
+            font-size: 1.2em;
+            /* Increase font size for the product title */
+            margin-bottom: 0.5em;
+        }
 
-.card-link:hover {
-    text-decoration: underline; /* Underline on hover */
-}
+        .card-text {
+            color: #6c757d;
+            /* Set a color for the text */
+        }
 
-/* Style for Rating Stars */
-.card-text .rating-star {
-    color: #ffc107; /* Set rating star color to yellow */
-}
+        .card-link {
+            text-decoration: none;
+            /* Remove underline from links */
+            color: #000000;
+            /* Set link color */
+        }
 
-.zoom {
-        overflow: hidden;
-        width: 100%; /* Thêm thuộc tính width để điều chỉnh kích thước ban đầu của figure */
-    }
+        .card-link:hover {
+            text-decoration: underline;
+            /* Underline on hover */
+        }
 
-    .zoom img {
-        transition: transform 0.5s ease;
-        width: 100%; /* Thêm thuộc tính width để điều chỉnh kích thước ban đầu của ảnh */
-    }
+        /* Style for Rating Stars */
+        .card-text .rating-star {
+            color: #ffc107;
+            /* Set rating star color to yellow */
+        }
 
-    .zoom:hover img {
-        transform: scale(1.2);
-    }
+        .zoom {
+            overflow: hidden;
+            width: 100%;
+            /* Thêm thuộc tính width để điều chỉnh kích thước ban đầu của figure */
+        }
+
+        .zoom img {
+            transition: transform 0.5s ease;
+            width: 100%;
+            /* Thêm thuộc tính width để điều chỉnh kích thước ban đầu của ảnh */
+        }
+
+        .zoom:hover img {
+            transform: scale(1.2);
+        }
     </style>
 </head>
+
 <body>
+    <!--Header 1-->
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="../Trangchinh/images/logo.png" alt="Your Logo" class="ikkuna"></a>
+        </div>
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-6">
-            <!-- Image Slider -->
-            <div id="product-slider" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <figure class="zoom" onmousemove="zoom(event)">
-                            <img src="TK01/2.png" class="d-block w-100" alt="Lenses">
-                        </figure>
+        <div class="input-group" id="search-box">
+            <input type="text" class="form-control" id="search-input" placeholder="Tìm kiếm sản phẩm bạn yêu thích">
+            <div class="input-group-append">
+                <button class="btn btn-outline-light" type="button" onclick="searchProduct()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="login-link">
+            <a class="nav-link" href="#"><img src="../Trangchinh/images/user.svg"></a>
+            <a class="nav-link" href="#"><img src="../Trangchinh/images/cart.svg"></a>
+        </div>
+    </header>
+    <!--End Header 1-->
+
+    <!-- Start Header/Navigation -->
+    <nav class="custom-navbar navbar navbar navbar-expand-md nagvbar-dark b-dark" arial-label="Furni navigation bar">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav me-auto mb-2 mb-md-0">
+                    <li>
+                        <a class="nav-link" href="../index.html">Trang chủ</a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a class="nav-link" href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Sản phẩm</a>
+                            <div class="dropdown-content">
+                                <a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Gọng kính</a>
+                                <a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kính râm</a>
+                                <a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kính áp tròng</a>
+                                <a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Kính trẻ em</a>
+                                <a href="../TrangChuyenMucGK/TrangChuyenMucGK.html">Mắt kính</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="nav-link" href="../GioiThieu.html">Giới thiệu</a></li>
+                    <li><a class="nav-link" href="../KhuyenMai.html">Khuyến mãi</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a class="nav-link" href="../blog/blog1.html">Blog</a>
+                            <div class="dropdown-content">
+                                <a href="../blog/tintucveikkuna.html">Tin tức về Ikkuna</a>
+                                <a href="../blog/goctuvan.html">Góc tư vấn</a>
+                                <a href="../blog/benhvemat.html">Bệnh về mắt</a>
+                                <a href="../blog/kienthucchung.html">Kiến thức chung</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="nav-link" href="#">Liên hệ</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li>
+                        <p class="nav-link">|</p>
+                    </li>
+                    <li>
+                        <p class="nav-link">Hotline: </p>
+                    </li>
+                    <li><a class="nav-link" href="#">0366764577</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <!-- Image Slider -->
+                <div id="product-slider" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <figure class="zoom" onmousemove="zoom(event)">
+                                <img src="TK01/2.png" class="d-block w-100" alt="Lenses">
+                            </figure>
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev" href="#product-slider" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#product-slider" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 product-info-container">
+                <!-- Product Details -->
+                <h2>TRÒNG KÍNH SIÊU MỎNG CHIẾT SUẤT 1.67 CHEMI HÀN QUỐC</h2>
+                <p>
+                    <strong>Giá:</strong>
+                    <del class="text-muted">1.000,000đ</del>
+                    <span class="text-danger">950,000đ (On Sale)</span>
+                </p>
+                <p><strong>Mô tả:</strong>
+                    <br>Mã sản phẩm: TK01
+                    <br>Giá sản phẩm: 1.000.000
+                    <br>ĐẶC ĐIỂM NỔI BẬT:
+                    <br>Chiết suất cao, mỏng nhẹ, thích hợp với người có độ cận cao >6 diop / loạn thị cao >2 diop hoặc
+                    thích mắt mỏng.
+                    <br>Tròng kính có chức năng chống UV, giảm chói lóa.
+                    <br>Tròng kính chống xước, chống bám nước bám hiệu quả.
+                    <br>Góc nhìn rộng, mắt kính phẳng.
+                    <br>Khó vỡ, thích hợp cho cả các loại gọng khoan.
+                </p>
+                <p>
+                    <!-- Rating Stars -->
+                <div class="mb-3">
+                    <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                    <!-- Add more stars based on the rating -->
+                </div>
+                <button class="btn btn-pink">Thêm Vào Giỏ Hàng</button>
+            </div>
+        </div>
+    </div>
+    <!-- Section 2: Product Details -->
+    <section class="container my-5 product-detail-container">
+        <div class="row">
+            <div class="col-md-6 order-md-2">
+                <!-- Product Detail Image -->
+                <img src="TK01/1.png" alt="Product Detail Image" class="img-fluid product-detail-image">
+            </div>
+            <div class="col-md-6">
+                <!-- Content Description with Tabs -->
+                <h3> Một Số Thông Tin Thêm</h3>
+                <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="information-tab" data-toggle="tab" href="#information" role="tab"
+                            aria-controls="information" aria-selected="true">Thông Tin </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="privacy-tab" data-toggle="tab" href="#privacy" role="tab"
+                            aria-controls="privacy" aria-selected="false">Chính Sách Đổi Trả</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                            aria-controls="contact" aria-selected="false">Chính Sách Vận Chuyển</a>
+                    </li>
+                </ul>
+                <div class="tab-content mt-3">
+                    <!-- Information Section -->
+                    <div class="tab-pane fade show active" id="information" role="tabpanel"
+                        aria-labelledby="information-tab">
+                        <h4>Thông Tin</h4>
+                        <p>Chịu trách nhiệm sản phẩm: Công Ty TNHH Dịch vụ và Thương mại IKKUNA Việt Nam
+                        <div>Cảnh báo: Bảo quản trong hộp kính</div>
+                        <div> Hướng dẫn sử dụng:</div>
+                        <div>+ Tháo kính bằng 2 tay</div>
+                        <div> + Không bỏ kính vào cốp xe hoặc những nơi có nhiệt độ cao làm biến dạng kính.</div>
+                        <div> + Không bỏ kính vào túi sách nếu không có hộp kính, vật dụng nhọn như chìa khóa sẽ làm
+                            xước kính.</div>
+                        <div> + Không rửa kính lau kính bằng các chất có tính tẩy rửa mạnh làm bong tróc lớp váng phủ
+                        </div>
+                        </p>
                     </div>
 
+                    <!-- Privacy Section -->
+                    <div class="tab-pane fade" id="privacy" role="tabpanel" aria-labelledby="privacy-tab">
+                        <h4>Chính Sách Đổi Trả</h4>
+                        <p>
+                        <div> 1. Bảo hành một đổi một trong vòng 180 ngày sau khi mua hàng nếu lớp váng dầu của tròng
+                            kính gặp vấn đề về kỹ thuật như xô váng, mất váng mà không phải do nhiệt hay tác động vật lý
+                            như trầy xước, nứt, vỡ.</div>
+
+                        <div>2. Bảo hành lỗi người dùng nếu không may làm gẫy hoặc mất kính. Trợ giá 50% giá niêm yết
+                            khi khách hàng sử dụng lại sản phẩm cũ. Trong trường hợp sản phẩm cũ hết hàng có thể thay
+                            thế sang sản phẩm có giá trị bằng hoặc thấp hơn. Áp dụng một lần duy nhất trên tổng hóa đơn
+                            trong 60 ngày kể từ khi mua hàng.
+
+                            <div>3. Đổi mới sản phẩm hoặc thay thế phụ kiện trong 90 ngày nếu sản phẩm có lỗi do nhà sản
+                                xuất.</div>
+
+                            <div>4. Trong 30 ngày đầu tiên, bảo hành 1 đổi 1 tròng kính cho tới khi bạn cảm thấy thoải
+                                mái với thị lực của mình.</div>
+
+                            <div> 5. 7 ngày đầu sau khi mua hàng, Ikkuna hỗ trợ đổi màu gọng kính khi còn nguyên tem
+                                mác.</div>
+
+                            <div>6. Đo mắt, kiểm tra thị lực miễn phí.</div>
+
+                            <div>7. Miễn phí trọn đời sửa chữa, nắn chỉnh, vệ sinh kính, thay thế phụ kiện (nếu có), áp
+                                dụng ngay cả không phải sản phẩm.</div>
+
+                            <div>8. Số điện thoại của bạn là voucher tặng gọng kính miễn phí khi cắt từ tròng kính 450K
+                                cho những lần mua hàng sau. Voucher được sử dụng trọn đời.</div>
+
+                            <div> 9. Bảo hành không áp dụng với các chương trình, khuyến mại khác.</div>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <h4>Chính Sách Vận Chuyển</h4>
+                        <p>+ Miễn phí giao hàng toàn quốc.
+                            <br>+ Thời gian giao hàng dao động từ 2-4 ngày đối với đơn gọng kính, 3-5 ngày đối với đơn
+                            cắt cận.
+                        </p>
+                    </div>
                 </div>
-                <a class="carousel-control-prev" href="#product-slider" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section 3: Featured Products -->
+    <section class="container my-5">
+        <h3 class="text-center mb-4">Sản Phẩm Liên Quan</h3>
+        <div class="row">
+            <!-- Featured Product 2 -->
+            <div class="col-md-4 mb-4">
+                <a href="TK02.html" class="card-link">
+                    <div class="card">
+                        <img src="TK234/TK02.png" class="card-img-top" alt="Featured Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">TRÒNG KÍNH TRONG SUỐT VƯỢT TRỘI ESSILOR CRIZAL SAPPHIRE HR 1.59</h5>
+                            <p class="card-text">Giá: 2,950,000đ</p>
+                            <p class="card-text">&#9733; &#9733; &#9733; &#9733; &#9734;</p>
+                        </div>
+                    </div>
                 </a>
-                <a class="carousel-control-next" href="#product-slider" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+            </div>
+
+            <!-- Featured Product 3 -->
+            <div class="col-md-4 mb-4">
+                <a href="TK03.html" class="card-link">
+                    <div class="card">
+                        <img src="TK234/TK03.png" class="card-img-top" alt="Featured Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">KÍNH CHỐNG ÁNH SÁNG XANH VÀ BÁM HƠI NƯỚC HOYA BLUE CONTROL HVP NHẬT
+                                BẢN</h5>
+                            <p class="card-text">Giá: 850,000đ</p>
+                            <p class="card-text">&#9733; &#9733; &#9733; &#9734; &#9734;</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Featured Product 4 -->
+            <div class="col-md-4 mb-4">
+                <a href="TK04.html" class="card-link">
+                    <div class="card">
+                        <img src="TK234/TK04.png" class="card-img-top" alt="Featured Product 4">
+                        <div class="card-body">
+                            <h5 class="card-title">KÍNH CHỐNG ÁNH SÁNG XANH BLUE CUT 1.56</h5>
+                            <p class="card-text">Giá: 350,000đ</p>
+                            <p class="card-text">&#9733; &#9733; &#9733; &#9733; &#9734;</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Featured Product 5 -->
+            <div class="col-md-4 mb-4">
+                <a href="GK20.html" class="card-link">
+                    <div class="card">
+                        <img src="GK20/6.png" class="card-img-top" alt="Featured Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">GK20</h5>
+                            <p class="card-text">Giá: 400,000đ</p>
+                            <p class="card-text">&#9733; &#9733; &#9733; &#9733; &#9734;</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Featured Product 6 -->
+            <div class="col-md-4 mb-4">
+                <a href="GK21.html" class="card-link">
+                    <div class="card">
+                        <img src="GK21/7.png" class="card-img-top" alt="Featured Product 6">
+                        <div class="card-body">
+                            <h5 class="card-title">GK21</h5>
+                            <p class="card-text">Giá: 350,000đ</p>
+                            <p class="card-text">&#9733; &#9733; &#9733; &#9733; &#9734;</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Featured Product 7 -->
+            <div class="col-md-4 mb-4">
+                <a href="GK22.html" class="card-link">
+                    <div class="card">
+                        <img src="GK22/7.png" class="card-img-top" alt="Featured Product 7">
+                        <div class="card-body">
+                            <h5 class="card-title">GK22</h5>
+                            <p class="card-text">Giá: 450,000đ</p>
+                            <p class="card-text">&#9733; &#9733; &#9734; &#9734; &#9734;</p>
+                        </div>
+                    </div>
                 </a>
             </div>
         </div>
-        <div class="col-lg-6 product-info-container">
-            <!-- Product Details -->
-            <h2>TRÒNG KÍNH SIÊU MỎNG CHIẾT SUẤT 1.67 CHEMI HÀN QUỐC</h2>
-            <p>
-                <strong>Giá:</strong>
-                <del class="text-muted">1.000,000đ</del>
-                <span class="text-danger">950,000đ (On Sale)</span>
-            </p>
-            <p><strong>Mô tả:</strong> 
-                <br>Mã sản phẩm: TK01
-                <br>Giá sản phẩm: 1.000.000
-                <br>ĐẶC ĐIỂM NỔI BẬT:
-                <br>Chiết suất cao, mỏng nhẹ, thích hợp với người có độ cận cao >6 diop / loạn thị cao >2 diop hoặc thích mắt mỏng.
-                <br>Tròng kính có chức năng chống UV, giảm chói lóa.
-                <br>Tròng kính chống xước, chống bám nước bám hiệu quả.
-                <br>Góc nhìn rộng, mắt kính phẳng.
-                <br>Khó vỡ, thích hợp cho cả các loại gọng khoan.</p>
-            <p>
-            <!-- Rating Stars -->
-            <div class="mb-3">
-                <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-                <!-- Add more stars based on the rating -->
-            </div>
-            <button class="btn btn-pink">Thêm Vào Giỏ Hàng</button>
-        </div>
-    </div>
-</div>
-<!-- Section 2: Product Details -->
-<section class="container my-5 product-detail-container">
-    <div class="row">
-      <div class="col-md-6 order-md-2">
-        <!-- Product Detail Image -->
-        <img src="TK01/1.png" alt="Product Detail Image" class="img-fluid product-detail-image">
-      </div>
-      <div class="col-md-6">
-        <!-- Content Description with Tabs -->
-        <h3> Một Số Thông Tin Thêm</h3>
-        <ul class="nav nav-tabs" id="productTabs" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="information-tab" data-toggle="tab" href="#information" role="tab" aria-controls="information" aria-selected="true">Thông Tin </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="privacy-tab" data-toggle="tab" href="#privacy" role="tab" aria-controls="privacy" aria-selected="false">Chính Sách Đổi Trả</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Chính Sách Vận Chuyển</a>
-          </li>
-        </ul>
-        <div class="tab-content mt-3">
-          <!-- Information Section -->
-          <div class="tab-pane fade show active" id="information" role="tabpanel" aria-labelledby="information-tab">
-            <h4>Thông Tin</h4>
-            <p>Chịu trách nhiệm sản phẩm: Công Ty TNHH Dịch vụ và Thương mại IKKUNA Việt Nam
-                <div>Cảnh báo: Bảo quản trong hộp kính</div>
-               <div> Hướng dẫn sử dụng:</div>
-                <div>+ Tháo kính bằng 2 tay</div>
-            <div> + Không bỏ kính vào cốp xe hoặc những nơi có nhiệt độ cao làm biến dạng kính.</div>
-               <div> + Không bỏ kính vào túi sách nếu không có hộp kính, vật dụng nhọn như chìa khóa sẽ làm xước kính.</div>
-              <div> + Không rửa kính lau kính bằng các chất có tính tẩy rửa mạnh làm bong tróc lớp váng phủ</div></p>
-          </div>
-          
-         <!-- Privacy Section -->
-         <div class="tab-pane fade" id="privacy" role="tabpanel" aria-labelledby="privacy-tab">
-            <h4>Chính Sách Đổi Trả</h4>
-            <p><div> 1. Bảo hành một đổi một trong vòng 180 ngày sau khi mua hàng nếu lớp váng dầu của tròng kính gặp vấn đề về kỹ thuật như xô váng, mất váng mà không phải do nhiệt hay tác động vật lý như trầy xước, nứt, vỡ.</div>
+    </section>
 
-                <div>2. Bảo hành lỗi người dùng nếu không may làm gẫy hoặc mất kính. Trợ giá 50% giá niêm yết khi khách hàng sử dụng lại sản phẩm cũ. Trong trường hợp sản phẩm cũ hết hàng có thể thay thế sang sản phẩm có giá trị bằng hoặc thấp hơn. Áp dụng một lần duy nhất trên tổng hóa đơn trong 60 ngày kể từ khi mua hàng.
-                
-                <div>3. Đổi mới sản phẩm hoặc thay thế phụ kiện trong 90 ngày nếu sản phẩm có lỗi do nhà sản xuất.</div>
-                
-                <div>4. Trong 30 ngày đầu tiên, bảo hành 1 đổi 1 tròng kính cho tới khi bạn cảm thấy thoải mái với thị lực của mình.</div>
-                
-               <div> 5. 7 ngày đầu sau khi mua hàng, Ikkuna hỗ trợ đổi màu gọng kính khi còn nguyên tem mác.</div>
-                
-                <div>6. Đo mắt, kiểm tra thị lực miễn phí.</div>
-                
-                <div>7. Miễn phí trọn đời sửa chữa, nắn chỉnh, vệ sinh kính, thay thế phụ kiện (nếu có), áp dụng ngay cả không phải sản phẩm.</div>
-                
-                <div>8. Số điện thoại của bạn là voucher tặng gọng kính miễn phí khi cắt từ tròng kính 450K cho những lần mua hàng sau. Voucher được sử dụng trọn đời.</div>
-                
-               <div> 9. Bảo hành không áp dụng với các chương trình, khuyến mại khác.</div></p>
-          </div>
-        </div>
-          
-          <!-- Contact Section -->
-          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-            <h4>Chính Sách Vận Chuyển</h4>
-            <p>+ Miễn phí giao hàng toàn quốc.
-                <br>+ Thời gian giao hàng dao động từ 2-4 ngày đối với đơn gọng kính, 3-5 ngày đối với đơn cắt cận.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
 
- <!-- Section 3: Featured Products -->
- <section class="container my-5">
-    <h3 class="text-center mb-4">Sản Phẩm Liên Quan</h3>
-    <div class="row">
-        <!-- Featured Product 2 -->
-        <div class="col-md-4 mb-4">
-            <a href="TK02.html" class="card-link">
-                <div class="card">
-                    <img src="TK234/TK02.png" class="card-img-top" alt="Featured Product 1">
-                    <div class="card-body">
-                        <h5 class="card-title">TRÒNG KÍNH TRONG SUỐT VƯỢT TRỘI ESSILOR CRIZAL SAPPHIRE HR 1.59</h5>
-                        <p class="card-text">Giá: 2,950,000đ</p>
-                        <p class="card-text">&#9733; &#9733; &#9733; &#9733; &#9734;</p>
-                    </div>
-                </div>
-            </a>
-        </div>
 
-        <!-- Featured Product 3 -->
-        <div class="col-md-4 mb-4">
-            <a href="TK03.html" class="card-link">
-                <div class="card">
-                    <img src="TK234/TK03.png" class="card-img-top" alt="Featured Product 3">
-                    <div class="card-body">
-                        <h5 class="card-title">KÍNH CHỐNG ÁNH SÁNG XANH VÀ BÁM HƠI NƯỚC HOYA BLUE CONTROL HVP NHẬT BẢN</h5>
-                        <p class="card-text">Giá: 850,000đ</p>
-                        <p class="card-text">&#9733; &#9733; &#9733; &#9734; &#9734;</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <!-- Featured Product 4 -->
-        <div class="col-md-4 mb-4">
-            <a href="TK04.html" class="card-link">
-                <div class="card">
-                    <img src="TK234/TK04.png" class="card-img-top" alt="Featured Product 4">
-                    <div class="card-body">
-                        <h5 class="card-title">KÍNH CHỐNG ÁNH SÁNG XANH BLUE CUT 1.56</h5>
-                        <p class="card-text">Giá: 350,000đ</p>
-                        <p class="card-text">&#9733; &#9733; &#9733; &#9733; &#9734;</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <!-- Featured Product 5 -->
-        <div class="col-md-4 mb-4">
-            <a href="GK20.html" class="card-link">
-                <div class="card">
-                    <img src="GK20/6.png" class="card-img-top" alt="Featured Product 1">
-                    <div class="card-body">
-                        <h5 class="card-title">GK20</h5>
-                        <p class="card-text">Giá: 400,000đ</p>
-                        <p class="card-text">&#9733; &#9733; &#9733; &#9733; &#9734;</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <!-- Featured Product 6 -->
-        <div class="col-md-4 mb-4">
-            <a href="GK21.html" class="card-link">
-                <div class="card">
-                    <img src="GK21/7.png" class="card-img-top" alt="Featured Product 6">
-                    <div class="card-body">
-                        <h5 class="card-title">GK21</h5>
-                        <p class="card-text">Giá: 350,000đ</p>
-                        <p class="card-text">&#9733; &#9733; &#9733; &#9733; &#9734;</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    
-        <!-- Featured Product 7 -->
-        <div class="col-md-4 mb-4">
-            <a href="GK22.html" class="card-link">
-                <div class="card">
-                    <img src="GK22/7.png" class="card-img-top" alt="Featured Product 7">
-                    <div class="card-body">
-                        <h5 class="card-title">GK22</h5>
-                        <p class="card-text">Giá: 450,000đ</p>
-                        <p class="card-text">&#9733; &#9733; &#9734; &#9734; &#9734;</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
 
-  
-  
-  
-  
 
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- jQuery script -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- jQuery script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
         // JavaScript for zoom effect
         function zoom(event) {
             var zoomer = event.currentTarget;
@@ -363,7 +479,112 @@ h3.text-center {
             img.style.transformOrigin = x + '% ' + y + '%';
         }
     </script>
-</script>
-</body>
-</html>
+    </script>
+    <!-- Start Footer Section -->
+    <footer class="footer-section">
+        <div class="container relative">
 
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="subscription-form">
+                        <h3 class="d-flex align-items-center"><span class="me-1"><img
+                                    src="../Trangchinh/images/envelope-outline.svg" alt="Image"
+                                    class="img-fluid"></span><span>Hãy gửi phản hồi cho chúng tôi nếu bạn gặp vấn đề
+                                gì.</span></h3>
+
+                        <form action="#" class="row g-3">
+                            <div class="col-auto">
+                                <input type="text" class="form-control" placeholder="Enter your name">
+                            </div>
+                            <div class="col-auto">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-primary">
+                                    <span class="fa fa-paper-plane"></span>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="mb-4 footer-logo-wrap"><a href="index.html" class="footer-logo">IKKUNA</a></div>
+                    <p class="mb-4">Chúng tôi xin cam đoan rằng sản phẩm của IKKUNA là một lựa chọn đúng đắn cho quý
+                        khách hàng. Sự đảm bảo chất lượng sản phẩm và chính sách bảo hành tốt là những yếu tố quan trọng
+                        mà chúng tôi hướng đến. Đồng thời, chúng tôi cũng tự hào là cửa hàng cung cấp sản phẩm với giá
+                        tốt nhất trên thị trường.
+                    </p>
+
+                    <ul class="list-unstyled custom-social">
+                        <li><a href="https://www.facebook.com/profile.php?id=61553810680047" target="_blank"><span
+                                    class="fa fa-brands fa-facebook-f"></span></a></li>
+                        <li><a href="https://www.tiktok.com/@kinhmatikkuna" target="_blank"><span
+                                    class="fa fa-brands fa-tiktok"></span></a></li>
+                        <li><a href="https://www.instagram.com/kinhmat_ikkuna/" target="_blank"><span
+                                    class="fa fa-brands fa-instagram"></span></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row links-wrap">
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <p style="color: black;"><b>Tất cả sản phẩm</b></p>
+                                </li>
+                                <li><a href="#">Gọng kính</a></li>
+                                <li><a href="#">Kính áp tròng</a></li>
+                                <li><a href="#">Kính râm</a></li>
+                                <li><a href="#">Kính mắt trẻ em</a></li>
+                                <li><a href="#">Mắt kính</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <p style="color: black;"><b>Chính sách mua hàng</b></p>
+                                </li>
+                                <li><a href="#">Hình thức thanh toán</a></li>
+                                <li><a href="#">Chính sách giao hàng</a></li>
+                                <li><a href="#">Chính sách bảo hành</a></li>
+                                <li><a href="#">Chính sách bảo mật</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <p style="color: black;"><b>Thông tin liên hệ</b></p>
+                                </li>
+                                <li><a href="#">Hotline: 0366764577</a></li>
+                                <li><a href="#">Email: kinhmatIkkuna@gmail.com</a></li>
+                                <li><a href="#">Cơ sở 1: số 1 Chùa Bộc, Quang Trung, Đống Đa, Hà Nội </a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <p style="color: black;"><b>Về Ikkuna</b></p>
+                                </li>
+                                <li><a href="#">Giới thiệu</a></li>
+                                <li><a href="#">Liên hệ</a></li>
+                                <li><a href="#">Hệ thống cửa hàng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+</body>
+
+</html>
