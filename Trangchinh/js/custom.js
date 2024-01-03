@@ -99,8 +99,8 @@ function getPageToRedirect(productName) {
 		"Kính râm":"/TrangChuyenMucGK/TrangChuyenMucGK.html",
 		"Gọng kính":"/TrangChuyenMucGK/TrangChuyenMucGK.html",
 		"Tròng kính":"/TrangChuyenMucGK/TrangChuyenMucGK.html",
-		"Kính áp tròng Cosplay Crazy Red": "/GioiThieu.html",
-		"Kính áp tròng trong suốt có độ cận": "/KhuyenMai.html",
+		"Kính áp tròng Cosplay Crazy Red": "/TrangChuyenMucGK/TrangChuyenMucGK.html",
+		"Kính áp tròng trong suốt có độ cận": "/TrangChuyenMucGK/TrangChuyenMucGK.html",
 		"TRÒNG KÍNH PHÁP ESSILOR PREVENCIA CRIZAL.ROCK CHIẾT SUẤT 1.56": "/TrongKinhPhap.html",
 		"GK1":"/chitietsp/ana2.html",
 		// Thêm các ánh xạ khác nếu cần
@@ -182,3 +182,4 @@ function HOTTREND(evt, theloai) {
 	}
   });
   /*Phần khách hàng thân thiết */
+
